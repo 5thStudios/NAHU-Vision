@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_u>
+    <image>
+      <originalFileName>united-states-capitol-building.jpg</originalFileName>
+      <size>459088</size>
+      <dateLastModified>Fri, 15 Sep 2017 01:05:20 GMT</dateLastModified>
+      <width>1800</width>
+      <height>1196</height>
+      <cachedImage>
+        <fileName>UNI_4623390c1e0279d846b5b099e0876a5aa0bf1fa5a5bcf7b714aafecea9716721.jpeg</fileName>
+        <dateCreated>Fri, 15 Sep 2017 20:46:56 GMT</dateCreated>
+        <imageFormat>jpeg</imageFormat>
+        <compression>90</compression>
+        <width>1800</width>
+        <height>750</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+      </cachedImage>
+    </image>
+  </_u>
+</imageIndex>
