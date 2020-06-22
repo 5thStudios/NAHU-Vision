@@ -1,0 +1,82 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+
+<input type="hidden" runat="server" id="hfldRootClass" class="hfldRootClass" />
+
+<div id="dialogModal">
+    @*class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog"*@
+    <div class="bgDimmer">
+        <div class="grid-x">
+            <div id="innerModal" class="cell medium-12 medium-offset-6 large-8 large-offset-8 text-center">
+                <a class="close-reveal-modal" aria-label="Close">×</a>
+                <br>
+                <br>
+                <div class="grid-x">
+                    <div class="small-20 small-offset-2 cell">
+                        <div class="grid-x">
+                            <div class="cell">
+                                <img alt="NAHU" src="/Images/Common/NAHU_logo.png">
+                                <br>
+                                <br>
+                            </div>
+                            <div class="errorMsg cell text-right hide"></div>
+                            <div class="successMsg cell text-right hide"></div>
+                            <div class="cell">
+                                <input type="text" placeholder="Email Address" id="txbUserName">
+                            </div>
+                            <div id="loginControls" class="cell">
+                                <div class="grid-x">
+                                    <div class="cell">
+                                        <input type="password" placeholder="Password (case sensitive)" id="txbPassword">
+                                    </div>
+
+                                    <div class="cell">
+                                        <a class="button" id="btnSubmitLogin">Log In</a><br>
+                                    </div>
+
+                                    <div class="cell">
+                                        <br>
+                                        <h6>
+                                            Forgot
+                                            <strong>
+                                                <a href="https://members.nahu.org/NAHU_Prod_Imis/NAHU_Member/UAM/ForgotPassword/Nahu_Member/UAM/Forgot_Password.aspx?hkey=3d19850f-abc4-476a-8256-caaa2ff4a4c4" target="_blank">password</a>
+
+                                            </strong>?
+                                        </h6>
+                                        <br>
+                                    </div>
+
+                                    <hr>
+                                    <div class="cell">
+                                        <a id="1_hlnkJoinNow" class="button secondary" href="/membership/join-now">Join Now</a>
+                                        <br>
+                                        <br>
+                                    </div>
+
+                                    <div class="cell">
+                                        <a id="1_hlnkRenewMembership" class="button secondary" href="/membership/renew-now">Renew Membership</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="passwordResetControls" class="hide">
+                                <div class="cell">
+                                    <a class="button" id="btnSubmitPasswordReset">Retrieve Password</a>
+                                    <br>
+                                </div>
+                                <div class="cell">
+                                    <br>
+                                    <a class="button quaternary" id="btnCancelPasswordReset">Cancel</a>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

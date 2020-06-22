@@ -1,0 +1,25 @@
+﻿<style>
+.podcastFeedGeneratorController {}
+.podcastFeedGeneratorController p {}
+.podcastFeedGeneratorController h4 {color: #666;}
+.podcastFeedGeneratorController input[type=text] {font-weight: bold;color: #8d869c;border-width: 0; background-color: transparent;width: 100%;cursor: text;}
+.podcastFeedGeneratorController a {color: #549dd8; text-decoration: underline;}
+.podcastFeedGeneratorController a:hover {color: #2573B1;}
+.podcastFeedGeneratorController button {margin-right:24px;height: 28px;color: #fff;background-color: #41365a;border: 1px solid #2e2247;}
+.podcastFeedGeneratorController button:hover {background-color: #8d869c;}
+.podcastFeedGeneratorController .alertMsg {color: #B91800;}
+.podcastFeedGeneratorController .msg {color: green;}
+</style>
+
+
+<div class="podcastFeedGeneratorController" ng-controller="podcastFeedGeneratorController">
+    <!--<h4>Podcast Feed Generator</h4>-->
+    
+    <button class="btnGenerateFeed">Generate Feed</button>        
+    
+    <br /><br />
+    <div>
+        <label class="msg hide">Podcast feed update has been submitted.</label>
+        <label class="alertMsg hide">An error occured.  Please reach out to your development department to correct the issue.</label>
+    </div>
+</div>

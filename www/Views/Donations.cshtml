@@ -1,0 +1,146 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+@*<div>
+     @{ Html.RenderPartial("/UserControls/Donations.ascx"); }
+</div>*@
+
+
+@section finalScripts {
+    @*<script type="text/javascript">
+        $(function () {
+            try {
+                //Run only if element exists
+                if ($('.btnWebservice').length > 0) { jsDonationSubmission(); }
+
+                function jsDonationSubmission() {
+                    //  PROERTIES
+                    //--------------------------------------------------
+                    var btnWebservice = $('.btnWebservice');
+                    var userId = '-1';
+
+
+                    //  HANDLERS
+                    //--------------------------------------------------
+                    btnWebservice.click(function () {
+                        //get id from cookie
+                        getIdFromCookie();
+                        //login with id from cookie
+                        login();
+                    });
+
+
+                    //  METHODS
+                    //--------------------------------------------------
+                    function getIdFromCookie() {
+                        //Does cookie exist?
+                        var FullLoginResponse = Cookies.get('FullLoginResponse');
+                        if (FullLoginResponse == undefined) {
+                        }
+                        else {
+                            //Parse results
+                            var jResult = JSON.parse(FullLoginResponse);
+                            //
+                            userId = jResult.ImisUserId;
+                        }
+                    }
+                    function login() {
+                        //Instantiate variables
+                        var Type = "POST";
+                        var Url = "/Services/ImisWebservice.asmx/donationTest";
+                        var Data = CreateParameters();
+                        var ContentType = "application/json; charset=utf-8";
+                        var DataType = "json";
+                        var ProcessData = true;
+
+                        //Call service
+                        CallService();
+
+                        function CreateParameters() {
+                            //Instantiate an array of parameters to pass to handler
+                            var myData = {
+                                userId: userId
+                            };
+
+                            //Set array as json for use in ajax call
+                            return JSON.stringify(myData);
+                        }
+                        function CallService() {
+                            $.ajax({
+                                type: Type, //GET or POST or PUT or DELETE verb
+                                url: Url, // Location of the service
+                                data: Data, //Data sent to server
+                                contentType: ContentType, // content type sent to server
+                                dataType: DataType, //Expected data format from server
+                                processdata: ProcessData, //True or False
+                                success: function (msg) { ServiceSucceeded(msg); },
+                                error: function (msg) { ServiceFailed(msg); }
+                            });
+                        }
+                        function ServiceFailed(result) {
+                            console.log('Service call failed: ' + result.status + ' ' + result.statusText + ' ' + result.responseText);
+                            Type = null;
+                            varUrl = null;
+                            Data = null;
+                            ContentType = null;
+                            DataType = null;
+                            ProcessData = null;
+
+                            //Error message
+                            console.log('Error 1: ' + result);
+                        }
+                        function ServiceSucceeded(result) {
+                            //
+                            if (result.d.length == 0) {
+                                //Error proccessing request. Show msg
+                                //===========================
+                                console.log('Error 2: ' + result.err);
+                            }
+                            else {
+                                //Login successful
+                                //===========================
+
+                                //Parse results
+                                var jResult = JSON.parse(result.d);
+
+
+                                console.log(result);
+                                console.log(jResult);
+
+                                console.log(jResult.m_StatusCode);
+                                console.log(jResult.m_Uri);
+
+                                //window.location.href = jResult.m_Uri;
+
+
+
+
+
+
+
+
+                                ////Is user valid?
+                                //if (jResult.IsValidated === true) {
+                                //    console.log('Reload pg');
+                                //}
+                                //else {
+                                //    //Invalid login
+                                //    console.log('Error 3: ' + result.d);
+                                //}
+                            }
+                        }
+                    }
+                };
+            }
+            catch (err) {
+                console.log('ERROR: [jsDonationSubmission] ' + err.message);
+            }
+        });
+    </script>*@
+}

@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NAHUvision.Models.Link>>
+
+
+
+<div class="megaMenu hiddenPnl">
+    <div class=" grid-x grid-padding-x grid-padding-y small-up-1 medium-up-3 large-up-5">
+        @{
+            foreach (NAHUvision.Models.Link parentLink in Model)
+            {
+                <div class="cell">
+                    <div>
+                        <a href="@parentLink.Url" data-nodeid="@parentLink.Id">@parentLink.Name</a>
+                    </div>
+                    @foreach (NAHUvision.Models.Link chdNav in parentLink.LstChildrenLinks)
+                    {
+                        <div>
+                            <a href="@chdNav.Url" data-nodeid="@chdNav.Id">@chdNav.Name</a>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,3492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VimeoDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:VimeoDotNet.Authorization.AuthorizationClient">
+            <inheritdoc />
+            <summary>
+            Authorization client
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Authorization.AuthorizationClient.ClientId">
+            <summary>
+            Client Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Authorization.AuthorizationClient.ClientSecret">
+            <summary>
+            Client secret
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.#ctor(System.String,System.String)">
+            <summary>
+            Authorization client
+            </summary>
+            <param name="clientId">ClientId</param>
+            <param name="clientSecret">ClientSecret</param>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.GetAuthorizationEndpoint(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.GetAccessToken(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.GetAccessTokenAsync(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.VerifyAccessToken(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.VerifyAccessTokenAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.GetUnauthenticatedTokenAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.BuildAccessTokenRequest(System.String,System.String)">
+            <summary>
+            Build access token request
+            </summary>
+            <param name="authorizationCode">AuthorizationCode</param>
+            <param name="redirectUri">RedirectUri</param>
+            <returns>Access token request</returns>
+            <exception cref="T:System.InvalidOperationException">Empty ClientId</exception>
+            <exception cref="T:System.ArgumentException">Empty ClientSecret</exception>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.BuildUrl(System.String,System.String)">
+            <summary>
+            Build url
+            </summary>
+            <param name="route">Route</param>
+            <param name="queryString">QueryString</param>
+            <returns>URL</returns>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.BuildAuthorizeQueryString(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Build authorize query string
+            </summary>
+            <param name="redirectUri">RedirectUri</param>
+            <param name="scope">Scope</param>
+            <param name="state">State</param>
+            <returns>Authorize query string</returns>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClient.GetQueryString(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Return query string
+            </summary>
+            <param name="queryParams">QueryParams</param>
+            <returns>Query string</returns>
+        </member>
+        <member name="T:VimeoDotNet.Authorization.AuthorizationClientFactory">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.AuthorizationClientFactory.GetAuthorizationClient(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Authorization.IAuthorizationClient">
+            <summary>
+            IAuthorizationClient
+            Additional info https://developer.vimeo.com/api/authentication
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.GetAccessToken(System.String,System.String)">
+            <summary>
+            GetAccessToken
+            </summary>
+            <param name="authorizationCode">AuthorizationCode</param>
+            <param name="redirectUri">RedirectUri</param>
+            <returns>Access token response</returns>
+            [Obsolete("Use async API instead sync wrapper")]
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.GetAccessTokenAsync(System.String,System.String)">
+            <summary>
+            GetAccessTokenAsync
+            </summary>
+            <param name="authorizationCode">AuthorizationCode</param>
+            <param name="redirectUri">RedirectUri</param>
+            <returns>Access token response</returns>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.VerifyAccessToken(System.String)">
+            <summary>
+            VerifyAccessToken
+            </summary>
+            <param name="accessToken">AccessToken</param>
+            <returns>true if access token works, false otherwise</returns>
+            [Obsolete("Use async API instead sync wrapper")]
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.VerifyAccessTokenAsync(System.String)">
+            <summary>
+            VerifyAccessToken
+            </summary>
+            <param name="accessToken">AccessToken</param>
+            <returns>true if access token works, false otherwise</returns>
+            [Obsolete("Use async API instead sync wrapper")]
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.GetUnauthenticatedTokenAsync">
+            <summary>
+            Return unauthenticated token
+            </summary>
+            <returns>Access token response</returns>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClient.GetAuthorizationEndpoint(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            GetAuthorizationEndpoint
+            </summary>
+            <param name="redirectUri">RedirectUri</param>
+            <param name="scope">Scope</param>
+            <param name="state">State</param>
+            <returns>Authorization endpoint</returns>
+        </member>
+        <member name="T:VimeoDotNet.Authorization.IAuthorizationClientFactory">
+            <summary>
+            IAuthorizationClientFactory
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.IAuthorizationClientFactory.GetAuthorizationClient(System.String,System.String)">
+            <summary>
+            Return authorization client
+            </summary>
+            <param name="clientId">ClientId</param>
+            <param name="clientSecret">ClientSecret</param>
+            <returns>Authorization client</returns>
+        </member>
+        <member name="T:VimeoDotNet.Authorization.VimeoClientFactory">
+            <inheritdoc />
+        </member>
+        <member name="F:VimeoDotNet.Authorization.VimeoClientFactory.ApiRequestFactory">
+            <summary>
+            Api request factory
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Authorization.VimeoClientFactory.AuthClientFactory">
+            <summary>
+            Auth client factory
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.VimeoClientFactory.#ctor">
+            <summary>
+            Create new Vimeo client factory
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.VimeoClientFactory.#ctor(VimeoDotNet.Authorization.IAuthorizationClientFactory,VimeoDotNet.Net.IApiRequestFactory)">
+            <summary>
+            IOC Constructor for use with IVimeoClientFactory
+            </summary>
+            <param name="authClientFactory">The IAuthorizationClientFactory</param>
+            <param name="apiRequestFactory">The IApiRequestFactory</param>
+        </member>
+        <member name="M:VimeoDotNet.Authorization.VimeoClientFactory.GetVimeoClient(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Authorization.VimeoClientFactory.GetVimeoClient(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Enums.AccountTypeEnum">
+            <summary>
+            Account type
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.AccountTypeEnum.Unknown">
+            <summary>
+            Unknown account type
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.AccountTypeEnum.Basic">
+            <summary>
+            Basic account
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.AccountTypeEnum.Pro">
+            <summary>
+            Pro account
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.AccountTypeEnum.ProUnlimited">
+            <summary>
+            Pro Unlimited account
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.FileQualityEnum">
+            <summary>
+            File quality
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.FileQualityEnum.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.FileQualityEnum.Mobile">
+            <summary>
+            Mobile
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.FileQualityEnum.Standard">
+            <summary>
+            Standart
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.FileQualityEnum.HighDefinition">
+            <summary>
+            HD
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.FileQualityEnum.Streaming">
+            <summary>
+            Streaming
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.PictureTypeEnum">
+            <summary>
+            Picture type
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.PictureTypeEnum.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.PictureTypeEnum.Thumbnail">
+            <summary>
+            Thumbnail
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.PictureTypeEnum.Portrait">
+            <summary>
+            Portrait
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.UploadStatusEnum">
+            <summary>
+            Upload status
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.UploadStatusEnum.NotFound">
+            <summary>
+            NotFound
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.UploadStatusEnum.InProgress">
+            <summary>
+            InProgress
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.UploadStatusEnum.Completed">
+            <summary>
+            Completed
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.VideoCommentsEnum">
+            <summary>
+            Comment
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoCommentsEnum.Anybody">
+            <summary>
+            Anybody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoCommentsEnum.Nobody">
+            <summary>
+            Nobody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoCommentsEnum.Contacts">
+            <summary>
+            Only contacts
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.VideoEmbedPrivacyEnum">
+            <summary>
+            The videos new embed settings
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Public">
+            <summary>
+            Public
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Private">
+            <summary>
+            Private
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Whitelist">
+            <summary>
+            Whitelist domain
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.VideoPrivacyEnum">
+            <summary>
+            View privacy
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Nobody">
+            <summary>
+            Nobody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Anybody">
+            <summary>
+            Anybody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Contacts">
+            <summary>
+            Only contacts
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Users">
+            <summary>
+            Only users
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Disable">
+            <summary>
+            Disable
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoPrivacyEnum.Unlisted">
+            <summary>
+            Unlisted
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Enums.VideoStatusEnum">
+            <summary>
+            Video status
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoStatusEnum.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoStatusEnum.Available">
+            <summary>
+            Available
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Enums.VideoStatusEnum.UploadError">
+            <summary>
+            UploadError
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Exceptions.VimeoApiException">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Exceptions.VimeoApiException.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Exceptions.VimeoApiException.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Exceptions.VimeoApiException.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.GetVideoByTagDirection">
+            <summary>
+            Get video by tag direction type
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.GetVideoByTagDirection.Asc">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.GetVideoByTagDirection.Desc">
+            <summary>
+            Descending
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.GetVideoByTagDirectionEx">
+            <summary>
+            Get video by tag direction type
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.GetVideoByTagDirectionEx.GetStringValue(VimeoDotNet.GetVideoByTagDirection)">
+            <summary>
+            Return string representation for enum value
+            </summary>
+            <param name="direction">Value</param>
+            <returns>String representation</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Throw if value not handled.</exception>
+        </member>
+        <member name="T:VimeoDotNet.GetVideoByTagSort">
+            <summary>
+            Get video by tag sort type
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.GetVideoByTagSort.CreatedTime">
+            <summary>
+            By created time
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.GetVideoByTagSort.Duration">
+            <summary>
+            By duration
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.GetVideoByTagSort.Name">
+            <summary>
+            By name
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.GetVideoByTagSortEx.GetStringValue(VimeoDotNet.GetVideoByTagSort)">
+            <summary>
+            Return string representation for enum value
+            </summary>
+            <param name="sort">Value</param>
+            <returns>String representation</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Throw if value not handled.</exception>
+        </member>
+        <member name="T:VimeoDotNet.IVimeoClient">
+            <summary>
+            Interface of Vimeo API
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAccessTokenAsync(System.String,System.String)">
+            <summary>
+            Exchange the code for an access token asynchronously
+            </summary>
+            <param name="authorizationCode">A string token you must exchange for your access token</param>
+            <param name="redirectUrl">This field is required, and must match one of your application’s
+            redirect URI’s</param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetOauthUrl(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Return authorztion URL
+            </summary>
+            <param name="redirectUri"></param>
+            <param name="scope">Defaults to "public" and "private"; this is a space-separated list of <a href="#supported-scopes">scopes</a> you want to access</param>
+            <param name="state">A unique value which the client will return alongside access tokens</param>
+            <returns>Authorization URL</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetUserInformationAsync(System.Int64)">
+            <summary>
+            Get user information async
+            </summary>
+            <param name="userId">User Id</param>
+            <returns>User information object</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetVideoAsync(System.Int64,System.String[])">
+            <summary>
+            Get video by ClipId asynchronously
+            </summary>
+            <param name="clipId">ClipId</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter</param>
+            <returns>Video</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetVideosAsync(VimeoDotNet.Models.UserId,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String[])">
+            <summary>
+            Get videos by UserId and query and page parameters asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="perPage">Number of items to show on each page. Max 50</param>
+            <param name="query">Search query</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter</param>
+            <param name="page">The page number to show</param>
+            <returns>Paginated videos</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAlbumVideosAsync(VimeoDotNet.Models.UserId,System.Int64,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String[])">
+            <summary>
+            Get videos by AlbumId asynchronously
+            </summary>
+            <param name="userId">User Id</param>
+            <param name="albumId">AlbumId</param>
+            <param name="page">The page number to show.</param>
+            <param name="perPage">Number of items to show on each page. Max 50.</param>
+            <param name="sort">The default sort order of an Album's videos</param>
+            <param name="direction">The direction that the results are sorted.</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter </param>
+            <returns>Paginated videos</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.AllowEmbedVideoOnDomainAsync(System.Int64,System.String)">
+            <summary>
+            Allows a video to be embedded on specified domain asynchronously.
+            </summary>
+            <param name="clipId">ClipId</param>
+            <param name="domain">Domain</param>
+            <remarks>
+            The call is valid only when video embed privacy is set to
+            <see cref="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Whitelist"/>.
+            Use <see cref="M:VimeoDotNet.IVimeoClient.UpdateVideoMetadataAsync(System.Int64,VimeoDotNet.Models.VideoUpdateMetadata)"/> and
+            <see cref="P:VimeoDotNet.Models.VideoUpdateMetadata.EmbedPrivacy"/> property to change this setting.
+            </remarks>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.DisallowEmbedVideoOnDomainAsync(System.Int64,System.String)"/>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.GetAllowedDomainsForEmbeddingVideoAsync(System.Int64)"/>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.DisallowEmbedVideoOnDomainAsync(System.Int64,System.String)">
+            <summary>
+            Disallows a video to be embedded on specified domain asynchronously.
+            </summary>
+            <param name="clipId">ClipId</param>
+            <param name="domain">Domain</param>
+            <remarks>
+            The call is valid only when video embed privacy is set to
+            <see cref="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Whitelist"/>.
+            Use <see cref="M:VimeoDotNet.IVimeoClient.UpdateVideoMetadataAsync(System.Int64,VimeoDotNet.Models.VideoUpdateMetadata)"/> and
+            <see cref="P:VimeoDotNet.Models.VideoUpdateMetadata.EmbedPrivacy"/> property to change this setting.
+            </remarks>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.AllowEmbedVideoOnDomainAsync(System.Int64,System.String)"/>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.GetAllowedDomainsForEmbeddingVideoAsync(System.Int64)"/>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAllowedDomainsForEmbeddingVideoAsync(System.Int64)">
+            <summary>
+            Get all domains on which a video can be embedded.
+            </summary>
+            <param name="clipId">ClipId</param>
+            <returns></returns>
+            <remarks>
+            The call is valid only when video embed privacy is set to
+            <see cref="F:VimeoDotNet.Enums.VideoEmbedPrivacyEnum.Whitelist"/>.
+            Use <see cref="M:VimeoDotNet.IVimeoClient.UpdateVideoMetadataAsync(System.Int64,VimeoDotNet.Models.VideoUpdateMetadata)"/> and
+            <see cref="P:VimeoDotNet.Models.VideoUpdateMetadata.EmbedPrivacy"/> property to change this setting.
+            </remarks>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.AllowEmbedVideoOnDomainAsync(System.Int64,System.String)"/>
+            <seealso cref="M:VimeoDotNet.IVimeoClient.DisallowEmbedVideoOnDomainAsync(System.Int64,System.String)"/>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UpdateVideoAllowedDomainAsync(System.Int64,System.String)">
+            <summary>
+            Update allowed domain for clip asynchronously
+            </summary>
+            <param name="clipId">ClipId</param>
+            <param name="domain">Domain</param>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetPicturesAsync(System.Int64)">
+            <summary>
+            Get all thumbnails on a video
+            </summary>
+            <param name="clipId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetPictureAsync(System.Int64,System.Int64)">
+            <summary>
+            Get a video thumbnail
+            </summary>
+            <param name="clipId">clipdId</param>
+            <param name="pictureId">pictureId</param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UpdateVideoMetadataAsync(System.Int64,VimeoDotNet.Models.VideoUpdateMetadata)">
+            <summary>
+            Update video metadata by ClipId asynchronously
+            </summary>
+            <param name="clipId">ClipId</param>
+            <param name="metaData">New video metadata</param>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.AssignEmbedPresetToVideoAsync(System.Int64,System.Int64)">
+            <summary>
+            Assign an embed preset to a video asynchronously
+            </summary>
+            <param name="clipId">Clip ID</param>
+            <param name="presetId">Preset ID</param>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UnassignEmbedPresetFromVideoAsync(System.Int64,System.Int64)">
+            <summary>
+            Unassign an embed preset from a video asynchronously
+            </summary>
+            <param name="clipId">Clip ID</param>
+            <param name="presetId">Preset ID</param>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.DeleteVideoAsync(System.Int64)">
+            <summary>
+            Delete video asynchronously
+            </summary>
+            <param name="clipId">CliepId</param>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetTextTracksAsync(System.Int64)">
+             <summary>
+             Get text tracks asynchronously
+             </summary>
+             <param name="videoId">VideoId</param>
+             <returns>Return text tracks</returns>
+            
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetTextTrackAsync(System.Int64,System.Int64)">
+            <summary>
+            Get text track asynchronously
+            </summary>
+            <param name="videoId">VideoId</param>
+            <param name="trackId">TrackId</param>
+            <returns>Return text track</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UpdateTextTrackAsync(System.Int64,System.Int64,VimeoDotNet.Models.TextTrack)">
+            <summary>
+            Update text track asynchronously
+            </summary>
+            <param name="videoId">VideoId</param>
+            <param name="trackId">TrackId</param>
+            <param name="track">TextTrack</param>
+            <returns>Updated text track</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UploadTextTrackFileAsync(VimeoDotNet.Net.IBinaryContent,System.Int64,VimeoDotNet.Models.TextTrack)">
+            <summary>
+            Upload new text track file asynchronously
+            </summary>
+            <param name="fileContent">File content</param>
+            <param name="videoId">VideoId</param>
+            <param name="track">Track</param>
+            <returns>New text track</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.DeleteTextTrackAsync(System.Int64,System.Int64)">
+            <summary>
+            Delete text track asynchronously
+            </summary>
+            <param name="videoId">VideoId</param>
+            <param name="trackId">TrackId</param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetUploadTicketAsync">
+            <summary>
+            Create new upload ticket asynchronously
+            </summary>
+            <returns>Upload ticket</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetTusResumableUploadTicketAsync(System.Int64,System.String)">
+            <summary>
+            Create new resumable upload ticket asynchronously
+            </summary>
+            <returns>Upload ticket</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetReplaceVideoUploadTicketAsync(System.Int64)">
+            <summary>
+            Create new upload ticket for replace video asynchronously
+            </summary>
+            <param name="videoId">VideoId</param>
+            <returns>Upload ticket</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UploadEntireFileAsync(VimeoDotNet.Net.IBinaryContent,System.Int32,System.Nullable{System.Int64})">
+            <summary>
+            Upload file part asynchronously
+            </summary>
+            <param name="fileContent">FileContent</param>
+            <param name="chunkSize">ChunkSize</param>
+            <param name="replaceVideoId">ReplaceVideoId</param>
+            <returns>Upload request</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UploadPullLinkAsync(System.String)">
+            <summary>
+            Create new upload ticket asynchronously
+            </summary>
+            <returns>Upload ticket</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UploadThumbnailAsync(System.Int64,VimeoDotNet.Net.IBinaryContent)">
+            <summary>
+            Upload and set thumbnail active
+            </summary>
+            <param name="clipId"></param>
+            <param name="fileContent"></param>
+            <returns></returns>
+            <exception cref="T:VimeoDotNet.Exceptions.VimeoUploadException"></exception>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAccountInformationAsync">
+            <summary>
+            Get user information asynchronously
+            </summary>
+            <returns>User information</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UpdateAccountInformationAsync(VimeoDotNet.Parameters.EditUserParameters)">
+            <summary>
+            Update user information asynchronously
+            </summary>
+            <param name="parameters">User parameters</param>
+            <returns>User information</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAlbumAsync(VimeoDotNet.Models.UserId,System.Int64)">
+            <summary>
+            Get album by AlbumId and UserId asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="albumId">AlbumId</param>
+            <returns>Album</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetAlbumsAsync(VimeoDotNet.Models.UserId,VimeoDotNet.Parameters.GetAlbumsParameters)">
+            <summary>
+            Get album by UserId and parameters asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="parameters">GetAlbumsParameters</param>
+            <returns>Paginated albums</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.CreateAlbumAsync(VimeoDotNet.Models.UserId,VimeoDotNet.Parameters.EditAlbumParameters)">
+            <summary>
+            Create new album asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="parameters">Creation parameters</param>
+            <returns>Album</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.UpdateAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,VimeoDotNet.Parameters.EditAlbumParameters)">
+            <summary>
+            Update album asynchronously
+            </summary>
+            <param name="userId">User Id</param>
+            <param name="albumId">Album Id</param>
+            <param name="parameters">Album parameters</param>
+            <returns>Album</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.DeleteAlbumAsync(VimeoDotNet.Models.UserId,System.Int64)">
+            <summary>
+            Delete album asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="albumId">AlbumId</param>
+            <returns>Deletion result</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.AddToAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,System.Int64)">
+            <summary>
+            Add video to album by UserId and AlbumId and ClipId asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="albumId">AlbumId</param>
+            <param name="clipId">ClipId</param>
+            <returns>Adding result</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.RemoveFromAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,System.Int64)">
+            <summary>
+            Remove video from album by AlbumId and ClipId and UserId asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="albumId">AlbumId</param>
+            <param name="clipId">ClipId</param>
+            <returns>Removing result</returns>
+        </member>
+        <member name="P:VimeoDotNet.IVimeoClient.RateLimit">
+            <summary>
+            Return rate limit
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.IVimeoClient.RateLimitRemaining">
+            <summary>
+            Return remaning rate limit
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.IVimeoClient.RateLimitReset">
+            <summary>
+            Return rate limit reset time
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.AddVideoTagAsync(System.Int64,System.String)">
+            <summary>
+            Add a tag to a video
+            </summary>
+            <param name="clipId">Clip Id</param>
+            <param name="tag">Tag</param>
+            <returns>Tag</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.DeleteVideoTagAsync(System.Int64,System.String)">
+            <summary>
+            Delete a tag from a video
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetVideoTags(System.Int64,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            List a videos' tags
+            </summary>
+            <param name="clipId">Clip Id</param>
+            <param name="page">Page number</param>
+            <param name="perPage">Tags per page</param>
+            <returns></returns>
+            <returns>Paginated tags</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetVideoTagAsync(System.String)">
+            <summary>
+            Get a tag
+            </summary>
+            <param name="tag">Tag word</param>
+            <returns>Tag</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetVideoByTag(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{VimeoDotNet.GetVideoByTagSort},System.Nullable{VimeoDotNet.GetVideoByTagDirection},System.String[])">
+            <summary>
+            Get all videos tagged with a specific word
+            </summary>
+            <param name="tag">Tag id</param>
+            <param name="page">Page number</param>
+            <param name="perPage">Video per page</param>
+            <param name="sort">Technique used to sort the results.</param>
+            <param name="direction">The direction that the results are sorted.</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter</param>
+            <returns>Paginated videos</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetEmbedPresetAsync(VimeoDotNet.Models.UserId,System.Int64,System.String[])">
+            <summary>
+            Get embed preset by user ID and preset ID asynchronously
+            </summary>
+            <param name="userId">User ID</param>
+            <param name="presetId">Preset ID</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter</param>
+            <returns>Embed preset</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClient.GetEmbedPresetsAsync(VimeoDotNet.Models.UserId,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String[])">
+            <summary>
+            Get embed presets by user ID and page parameters asynchronously
+            </summary>
+            <param name="userId">UserId</param>
+            <param name="page">The page number to show</param>
+            <param name="perPage">Number of items to show on each page. Max 50</param>
+            <param name="fields">JSON filter, as per https://developer.vimeo.com/api/common-formats#json-filter</param>
+            <returns>Paginated embed presets</returns>
+        </member>
+        <member name="T:VimeoDotNet.IVimeoClientFactory">
+            <summary>
+            Vimeo API client factory
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClientFactory.GetVimeoClient(System.String)">
+            <summary>
+            Return client by access token
+            </summary>
+            <param name="accessToken"></param>
+            <returns>VimeoClient</returns>
+        </member>
+        <member name="M:VimeoDotNet.IVimeoClientFactory.GetVimeoClient(System.String,System.String)">
+            <summary>
+            Return client based on ClientId and SecretId
+            </summary>
+            <param name="clientId">ClientId</param>
+            <param name="clientSecret">SecretId</param>
+            <returns>VimeoClient</returns>
+        </member>
+        <member name="T:VimeoDotNet.Models.AccessTokenResponse">
+            <summary>
+            Response on aceess token request
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AccessTokenResponse.AccessToken">
+            <summary>
+            The token you use to make an API request
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AccessTokenResponse.TokenType">
+            <summary>
+            The type of token (Vimeo only supports Bearer at the moment)
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AccessTokenResponse.Scope">
+            <summary>
+            The final scopes the token was granted. This list MAY be different from the scopes you requested. This will be the actual permissions the token has been granted.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AccessTokenResponse.User">
+            <summary>
+            This is the full user response for the authenticated user.
+            If you generated your token using the client credentials grant, this value is left out.
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Album">
+            <summary>
+            Album model
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Duration">
+            <summary>
+            Duration
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.CreatedTime">
+            <summary>
+            CreatedTime
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Pictures">
+            <summary>
+            Pictures
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Privacy">
+            <summary>
+            Privacy
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Stats">
+            <summary>
+            Stats
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Album.Metadata">
+            <summary>
+            Metadata
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Models.Album.GetAlbumId">
+            <summary>
+            Return album id if exists
+            </summary>
+            <returns>AlbumId or null</returns>
+        </member>
+        <member name="T:VimeoDotNet.Models.AlbumConnections">
+            <summary>
+            Album connections
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumConnections.Videos">
+            <summary>
+            Videos
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.AlbumConnectionsEntry">
+            <summary>
+            Album connections entry
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumConnectionsEntry.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumConnectionsEntry.Options">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumConnectionsEntry.Total">
+            <summary>
+            Total
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.AlbumMetadata">
+            <summary>
+            Album metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumMetadata.Connections">
+            <summary>
+            Connections
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.AlbumStats">
+            <summary>
+            Album statistics
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.AlbumStats.Plays">
+            <summary>
+            Videos
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Comment">
+            <summary>
+            Comment model
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.CreatedTime">
+            <summary>
+            Created time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Comment.Comments">
+            <summary>
+            Comments
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.DomainForEmbedding">
+            <summary>
+            Domain for embedding a video
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.DomainForEmbedding.Domain">
+            <summary>
+            Domain name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.DomainForEmbedding.AllowHighDefinition">
+            <summary>
+            Whether HD quality is allowed
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.DomainForEmbedding.Uri">
+            <summary>
+            URI of this resource
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Download">
+            <summary>
+            Download model
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Quality">
+            <summary>
+            Quality
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Size">
+            <summary>
+            File size
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Expires">
+            <summary>
+            Expires
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Download.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.EmbedPresets">
+            <summary>
+            Embed presets
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.EmbedPresets.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.EmbedPresets.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.EmbedPresets.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.EmbedPresets.Settings">
+            <summary>
+            Settings
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.File">
+            <summary>
+            File model
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Quality">
+            <summary>
+            Quality
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Size">
+            <summary>
+            File size
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Expires">
+            <summary>
+            Expires
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.LinkSecure">
+            <summary>
+            LinkSecure
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.File.FileQuality">
+            <summary>
+            FileQuality
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Follow">
+            <summary>
+            Follow
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Follow.Added">
+            <summary>
+            Added
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Follow.AddedTime">
+            <summary>
+            Added time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Follow.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Follower">
+            <summary>
+            Follower
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Follower.AddedTime">
+            <summary>
+            Added time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Follower.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Like">
+            <summary>
+            Like
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Like.Added">
+            <summary>
+            Added
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Like.AddedTime">
+            <summary>
+            Added time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Like.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Paginated`1">
+            <summary>
+            Paginated
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paginated`1.Data">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paginated`1.Total">
+            <summary>
+            Total
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paginated`1.Page">
+            <summary>
+            Page
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paginated`1.PerPage">
+            <summary>
+            Per page
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paginated`1.Paging">
+            <summary>
+            Paging
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Paging">
+            <summary>
+            Paging
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paging.Next">
+            <summary>
+            Next
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paging.Previous">
+            <summary>
+            Previous
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paging.First">
+            <summary>
+            First
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Paging.Last">
+            <summary>
+            Last
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Picture">
+            <summary>
+            Picture
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Picture.Active">
+            <summary>
+            Active
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Picture.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Picture.Sizes">
+            <summary>
+            Sizes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Picture.Link">
+            
+             Link
+            
+        </member>
+        <member name="P:VimeoDotNet.Models.Picture.ResourceKey">
+            
+             Resource_key
+            
+        </member>
+        <member name="T:VimeoDotNet.Models.Pictures">
+            <summary>
+            User pictures
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Pictures.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Pictures.Active">
+            <summary>
+            Active
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Pictures.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Pictures.Sizes">
+            <summary>
+            Sizes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Pictures.ResourceKey">
+            <summary>
+            Resources key
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.PresetButtons">
+            <summary>
+            Preset buttons
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.Like">
+            <summary>
+            Like
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.WatchLater">
+            <summary>
+            Watch later
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.Share">
+            <summary>
+            Share
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.Embed">
+            <summary>
+            Embed
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.Vote">
+            <summary>
+            Vote
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetButtons.Hd">
+            <summary>
+            HD
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.PresetLogos">
+            <summary>
+            Preset logos
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetLogos.Vimeo">
+            <summary>
+            Vimeo
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetLogos.Custom">
+            <summary>
+            Custom
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetLogos.StickyCustom">
+            <summary>
+            Sticky custom
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.PresetSettings">
+            <summary>
+            Preset settings
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Buttons">
+            <summary>
+            Buttons
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Logos">
+            <summary>
+            Logos
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Outro">
+            <summary>
+            Outro
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Portrait">
+            <summary>
+            Portrait
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Byline">
+            <summary>
+            Byline
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Badge">
+            <summary>
+            Badge
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.BylineBadge">
+            <summary>
+            Byline badge
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.PlayBar">
+            <summary>
+            Playbar
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Volume">
+            <summary>
+            Volume
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.FullscreenButton">
+            <summary>
+            Fullscreen button
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.ScalingButton">
+            <summary>
+            Scaling button
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.AutoPlay">
+            <summary>
+            Autoplay
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.AutoPause">
+            <summary>
+            Autopause
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Loop">
+            <summary>
+            Loop
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Color">
+            <summary>
+            Color
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.PresetSettings.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Privacy">
+            <summary>
+            Privacy
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.View">
+            <summary>
+            View
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.Embed">
+            <summary>
+            Embed
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.Download">
+            <summary>
+            Download
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.ViewPrivacy">
+            <summary>
+            View privacy
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Privacy.EmbedPrivacy">
+            <summary>
+            Embed privacy
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Size">
+            <summary>
+            Size
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Size.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Size.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Size.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Space">
+            <summary>
+            Space
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Space.Max">
+            <summary>
+            Max
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Space.Free">
+            <summary>
+            Free
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Space.Used">
+            <summary>
+            Used
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Tag.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Tag.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Tag.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Tag.Canonical">
+            <summary>
+            Canonical
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Tag.Metadata">
+            <summary>
+            Metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TagMetadata.Connections">
+            <summary>
+            Tag connections
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TagMetadataConnections.Videos">
+            <summary>
+            Video connections
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.TextTrack">
+            <summary>
+            Text track
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Active">
+            <summary>
+            Active
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Language">
+            <summary>
+            Language
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.HlsLink">
+            <summary>
+            Hls link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTrack.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.TextTracks">
+            <summary>
+            Text tracks
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTracks.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTracks.Options">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTracks.Data">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TextTracks.Total">
+            <summary>
+            Total
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Transcode">
+            <summary>
+            Transcode
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Transcode.State">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Transcode.Progress">
+            <summary>
+            Progress
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Transcode.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.TusResumableUploadTicket">
+            <summary>
+            Upload ticket
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.TusResumableUploadTicket.Upload">
+            <summary>
+            Upload status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.ResumableUploadStatus.Approach">
+            <summary>
+            Upload Approach
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.ResumableUploadStatus.Status">
+            <summary>
+            Upload Status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.ResumableUploadStatus.UploadLink">
+            <summary>
+            Upload link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.ResumableUploadStatus.Size">
+            <summary>
+            Video Size in bytes
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UploadStatus">
+            <summary>
+            Upload status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadStatus.State">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadStatus.Progress">
+            <summary>
+            Progress
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadStatus.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UploadTicket">
+            <summary>
+            Upload ticket
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.TicketId">
+            <summary>
+            Ticket id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.CompleteUri">
+            <summary>
+            Complete URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.UploadUri">
+            <summary>
+            Upload URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.UploadUriSecure">
+            <summary>
+            Upload URI secure
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.UploadLink">
+            <summary>
+            Upload link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.UploadLinkSecure">
+            <summary>
+            Upload link secure
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Video">
+            <summary>
+            Video
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Upload">
+            <summary>
+            Upload status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Transcode">
+            <summary>
+            Transcode
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicket.Quota">
+            <summary>
+            Quota
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UploadTicketQuota">
+            <summary>
+            Upload ticket quota
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.Sd">
+            <summary>
+            SD
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.Hd">
+            <summary>
+            HD
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.TotalSpace">
+            <summary>
+            Total space
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.SpaceUsed">
+            <summary>
+            Space used
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.FreeSpace">
+            <summary>
+            Free space
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.MaxFileSize">
+            <summary>
+            Max file size
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UploadTicketQuota.Resets">
+            <summary>
+            Resets
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Location">
+            <summary>
+            Location
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Bio">
+            <summary>
+            Bio
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.CreatedTime">
+            <summary>
+            Created time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Account">
+            <summary>
+            Account
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.ContentFilter">
+            <summary>
+            Content filter
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Pictures">
+            <summary>
+            Pictures
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Websites">
+            <summary>
+            Web sites
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Stats">
+            <summary>
+            Stats
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.Metadata">
+            <summary>
+            Metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.UploadQuota">
+            <summary>
+            Upload quota
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.User.AccountType">
+            <summary>
+            Account type
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserConnections">
+            <summary>
+            User connections entry
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Activities">
+            <summary>
+            Activities
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Albums">
+            <summary>
+            Albums
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Channels">
+            <summary>
+            Channels
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Feed">
+            <summary>
+            Feed
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Followers">
+            <summary>
+            Followers
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Following">
+            <summary>
+            Following
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Groups">
+            <summary>
+            Groups
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Likes">
+            <summary>
+            Likes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Portfolios">
+            <summary>
+            Portfolios
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Videos">
+            <summary>
+            Videos
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnections.Watchlater">
+            <summary>
+            Watch later
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserConnectionsEntry">
+            <summary>
+            User connection
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnectionsEntry.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnectionsEntry.Options">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserConnectionsEntry.Total">
+            <summary>
+            Total
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserInteractions">
+            <summary>
+            User interactions
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserInteractions.Follow">
+            <summary>
+            Follow
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserMetadata">
+            <summary>
+            User  metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserMetadata.Connections">
+            <summary>
+            Connections
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserMetadata.Interactions">
+            <summary>
+            Interactions
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserMetadata.Follower">
+            <summary>
+            Follower
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserQuota">
+            <summary>
+            User quota
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserQuota.Hd">
+            <summary>
+            HD
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserQuota.Sd">
+            <summary>
+            SD
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserStats">
+            <summary>
+            User stats
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Videos">
+            <summary>
+            Videos
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Contacts">
+            <summary>
+            Contacts
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Likes">
+            <summary>
+            Likes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Albums">
+            <summary>
+            Albums
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Channels">
+            <summary>
+            Channels
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Followers">
+            <summary>
+            Followers
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserStats.Following">
+            <summary>
+            Following
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.UserUploadQuota">
+            <summary>
+            User upload quota
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserUploadQuota.Space">
+            <summary>
+            Space
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserUploadQuota.Resets">
+            <summary>
+            Resets
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.UserUploadQuota.Quota">
+            <summary>
+            Quota
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VerifyUploadResponse">
+            <summary>
+            Verify upload response
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VerifyUploadResponse.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VerifyUploadResponse.BytesWritten">
+            <summary>
+            Bytes written
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Video">
+            <summary>
+            Video
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.ReviewLink">
+            <summary>
+            Review link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.EmbedPresets">
+            <summary>
+            Embed presets
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Duration">
+            <summary>
+            Duration
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.CreatedTime">
+            <summary>
+            Created time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.ModifiedTime">
+            <summary>
+            Modified time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Privacy">
+            <summary>
+            Privacy
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Pictures">
+            <summary>
+            Pictures
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Files">
+            <summary>
+            Files
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Download">
+            <summary>
+            Download
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Tags">
+            <summary>
+            Tags
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Stats">
+            <summary>
+            Stats
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.Metadata">
+            <summary>
+            Metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.VideoStatus">
+            <summary>
+            Video status
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.MobileVideoLink">
+            <summary>
+            Mobile video link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.MobileVideoSecureLink">
+            <summary>
+            Mobile video secure link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.StandardVideoLink">
+            <summary>
+            Standard video link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.StandardVideoSecureLink">
+            <summary>
+            Standard video secure link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.HighDefinitionVideoLink">
+            <summary>
+            High definition video link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.HighDefinitionVideoSecureLink">
+            <summary>
+            High definition video secure link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.StreamingVideoLink">
+            <summary>
+            Streaming video link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Video.StreamingVideoSecureLink">
+            <summary>
+            Streaming video secure link
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoConnections">
+            <summary>
+            Video connections
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnections.Comments">
+            <summary>
+            Comments
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnections.Credits">
+            <summary>
+            Credits
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnections.Likes">
+            <summary>
+            Likes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnections.Pictures">
+            <summary>
+            Pictures
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnections.Texttracks">
+            <summary>
+            Text tracks
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoConnectionsEntry">
+            <summary>
+            Video connections entry
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnectionsEntry.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnectionsEntry.Options">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoConnectionsEntry.Total">
+            <summary>
+            Total
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoInteractions">
+            <summary>
+            Video interactions
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoInteractions.WatchLater">
+            <summary>
+            Watch later
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoMetadata">
+            <summary>
+            Video metadata
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoMetadata.Connections">
+            <summary>
+            Connections
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoMetadata.Interactions">
+            <summary>
+            Interactions
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoStats">
+            <summary>
+            Video stats
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoStats.Plays">
+            <summary>
+            Plays
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoStats.Likes">
+            <summary>
+            Likes
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoStats.Comments">
+            <summary>
+            Comments
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.VideoUpdateMetadata">
+            <summary>
+            Video update metadata model
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.Name">
+            <summary>
+            The new title for the video
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.Description">
+            <summary>
+            The new description for the video
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.Privacy">
+            <summary>
+            The new privacy setting for the video.
+            Content-type application/json is the only valid type for type "users",
+            basic users can not set privacy to unlisted.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.EmbedPrivacy">
+            <summary>
+            The videos new embed settings. Whitelist allows you to define all valid embed domains.
+             Check out our docs for adding and removing domains.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.ReviewLinkEnabled">
+            <summary>
+            Enable or disable the review page
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.Password">
+            <summary>
+            When you set privacy to password, you must provide the password as an additional parameter
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.Comments">
+            <summary>
+            The privacy for who can comment on the video.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.AllowAddToAlbumChannelGroup">
+            <summary>
+            Enable or disable the ability for anyone to add the video to an album, channel, or group.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.VideoUpdateMetadata.AllowDownloadVideo">
+            <summary>
+            Enable or disable the ability for anyone to download video.
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.WatchLater">
+            <summary>
+            Watch later
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.WatchLater.Added">
+            <summary>
+            Added
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.WatchLater.Options">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.WatchLater.AddedTime">
+            <summary>
+            Added time
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.WatchLater.Uri">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Models.Website">
+            <summary>
+            Web site
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Website.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Website.Link">
+            <summary>
+            Link
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Models.Website.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Net.ApiRequest">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.ApiVersion">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.ResponseType">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Protocol">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Host">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Port">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Method">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Path">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Body">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Query">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.Fields">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.UrlSegments">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.BinaryContent">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.ExcludeAuthorizationHeader">
+            <inheritdoc />
+        </member>
+        <member name="F:VimeoDotNet.Net.ApiRequest.Client">
+            <summary>
+            Rest client
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.ClientId">
+            <summary>
+            Client Id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.ClientSecret">
+            <summary>
+            Client secret
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.ApiRequest.AccessToken">
+            <summary>
+            Access token
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.#ctor">
+            <summary>
+            Create new request
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.#ctor(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.ExecuteRequestAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.ExecuteRequestAsync``1">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.PrepareRequest">
+            <summary>
+            PrepareRequest
+            </summary>
+            <returns>Rest request</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.SetHeaders(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Set request headers
+            </summary>
+            <param name="request">Request</param>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.SetAuth(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Set authentication
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.SetDefaults">
+            <summary>
+            Set defaults
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.BuildAcceptsHeader">
+            <summary>
+            Build accepts header
+            </summary>
+            <returns>Accepts header</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.GetDefaultPort(System.String)">
+            <summary>
+            Return default port
+            </summary>
+            <param name="protocol">Protocol</param>
+            <returns>Port</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.GetBaseUrl">
+            <summary>
+            Retrun base URL
+            </summary>
+            <returns>Base URL</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequest.BuildUrl">
+            <summary>
+            Build request URL
+            </summary>
+            <returns>Request URL</returns>
+        </member>
+        <member name="T:VimeoDotNet.Net.ApiRequestFactory">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequestFactory.GetApiRequest">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequestFactory.GetApiRequest(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequestFactory.GetApiRequest(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequestFactory.AuthorizedRequest(System.String,System.Net.Http.HttpMethod,System.String,System.Collections.Generic.IDictionary{System.String,System.String},VimeoDotNet.Parameters.IParameterProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.ApiRequestFactory.VerifyParameters(VimeoDotNet.Parameters.IParameterProvider)">
+            <summary>
+            Validates an IParameterProvider and throws an exception if an error is present.
+            </summary>
+            <param name="parameters">IParameterProvider being validated.</param>
+        </member>
+        <member name="T:VimeoDotNet.Net.BinaryContent">
+            <inheritdoc cref="T:System.IDisposable" />
+            <summary>
+            Binary content
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.BinaryContent.OriginalFileName">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.BinaryContent.ContentType">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.BinaryContent.Data">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.#ctor(System.String)">
+            <summary>
+            Binary content
+            </summary>
+            <param name="filePath">FilePath</param>
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.#ctor(System.IO.Stream,System.String)">
+            <summary>
+            Binary content
+            </summary>
+            <param name="data">Content</param>
+            <param name="contentType">Content type</param>
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.#ctor(System.Byte[],System.String)">
+            <summary>
+            Binary content
+            </summary>
+            <param name="data">Content</param>
+            <param name="contentType">Content type</param>
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.ReadAllAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.ReadAsync(System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Net.BinaryContent.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Net.IApiRequest">
+            <summary>
+            IApiRequest
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Host">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Method">
+            <summary>
+            Method
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Path">
+            <summary>
+            Path
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Port">
+            <summary>
+            Port
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Protocol">
+            <summary>
+            Protocol
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.ApiVersion">
+            <summary>
+            Api version
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.BinaryContent">
+            <summary>
+            Binary content
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Body">
+            <summary>
+            Body
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.ResponseType">
+            <summary>
+            Response type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.ExcludeAuthorizationHeader">
+            <summary>
+            Exclude authorization header
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Fields">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.Query">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiRequest.UrlSegments">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequest.ExecuteRequestAsync">
+            <summary>
+            Execute request asynchronously
+            </summary>
+            <returns>Rest reponse</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequest.ExecuteRequestAsync``1">
+            <summary>
+            Execute request asynchronously
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <returns>Rest reponse</returns>
+        </member>
+        <member name="T:VimeoDotNet.Net.IApiRequestFactory">
+            <summary>
+            IApiRequestFactory
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequestFactory.GetApiRequest">
+            <summary>
+            Return api request
+            </summary>
+            <returns>Api request</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequestFactory.GetApiRequest(System.String)">
+            <summary>
+            Return api request by AccessToken
+            </summary>
+            <param name="accessToken">AccessToken</param>
+            <returns>Api request</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequestFactory.GetApiRequest(System.String,System.String)">
+            <summary>
+            Return api request by ClientId and ClientSecret
+            </summary>
+            <param name="clientId">ClientId</param>
+            <param name="clientSecret">ClientSecret</param>
+            <returns>Api request</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.IApiRequestFactory.AuthorizedRequest(System.String,System.Net.Http.HttpMethod,System.String,System.Collections.Generic.IDictionary{System.String,System.String},VimeoDotNet.Parameters.IParameterProvider)">
+            <summary>
+            Performs basic error checking on parameters and then generates an IApiRequest bound with the provided values. Will throw exception if invalid parameters provided.
+            </summary>
+            <param name="accessToken">API AccessToken. Cannot be null or empty.</param>
+            <param name="method">HttpMethod of the request.</param>
+            <param name="endpoint">Url of the API endpoint being called. Can contain substitution segments - ex: /user/{userId}/.</param>
+            <param name="urlSubstitutions">Dictionary containing url parameter keys and values. Continuing above example, key would be "userId", value would be "12345".</param>
+            <param name="additionalParameters">IParameterProvider that returns any other parameters the API method accepts. Can be null for no parameters, or use ParameterDictionary if typed provider not available.</param>
+            <returns>A ready to execute IApiRequest.</returns>
+        </member>
+        <member name="T:VimeoDotNet.Net.IApiResponse">
+            <summary>
+             Interface of REST response without payload type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiResponse.StatusCode">
+            <summary>HTTP response status code</summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiResponse.Headers">
+            <summary>
+            HTTP response headers
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiResponse.Text">
+            <summary>
+            Response text
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Net.IApiResponse`1">
+            <inheritdoc />
+            <summary>
+            Interface of REST response with payload type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IApiResponse`1.Content">
+            <summary>
+            Response payload
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Net.IBinaryContent">
+            <summary>
+            IBinaryContent
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IBinaryContent.ContentType">
+            <summary>
+            Content type
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IBinaryContent.Data">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IBinaryContent.OriginalFileName">
+            <summary>
+            Original file name
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Net.IBinaryContent.ReadAllAsync">
+            <summary>
+            Read all bytes to byte array asynchronously
+            </summary>
+            <returns>Byte array</returns>
+        </member>
+        <member name="M:VimeoDotNet.Net.IBinaryContent.ReadAsync(System.Int64,System.Int64)">
+            <summary>
+            Read bytes to byte array asynchronously
+            </summary>
+            <param name="startIndex">Start index</param>
+            <param name="endIndex">End index</param>
+            <returns>Byte array</returns>
+        </member>
+        <member name="T:VimeoDotNet.Net.IUploadRequest">
+            <summary>
+            IUploadRequest
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.BytesWritten">
+            <summary>
+            Bytes written
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.ChunkSize">
+            <summary>
+            Chunk size
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.ClipId">
+            <summary>
+            Clip id
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.ClipUri">
+            <summary>
+            Clip URI
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.File">
+            <summary>
+            File
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.FileLength">
+            <summary>
+            File length
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.IsVerifiedComplete">
+            <summary>
+            Is verified complete
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Net.IUploadRequest.Ticket">
+            <summary>
+            Ticket
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Net.UploadRequest">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.Ticket">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.ChunkSize">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.BytesWritten">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.IsVerifiedComplete">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.ClipUri">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.File">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.FileLength">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Net.UploadRequest.ClipId">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditAlbumPrivacyOption">
+            <summary>
+            Edit album privacy option
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumPrivacyOption.Anybody">
+            <summary>
+            Anybody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumPrivacyOption.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditAlbumSortOption">
+            <summary>
+            Edit album sort option
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Arranged">
+            <summary>
+            Arranged
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Newest">
+            <summary>
+            Newest
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Oldest">
+            <summary>
+            Oldest
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Plays">
+            <summary>
+            Plays
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Comments">
+            <summary>
+            Comments
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Likes">
+            <summary>
+            Likes
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.AddedFirst">
+            <summary>
+            Added first
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.AddedLast">
+            <summary>
+            Added last
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditAlbumSortOption.Alphbetical">
+            <summary>
+            Alphbetical
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditAlbumParameters">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditAlbumParameters.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditAlbumParameters.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditAlbumParameters.Privacy">
+            <summary>
+            Privacy
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditAlbumParameters.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditAlbumParameters.Sort">
+            <summary>
+            Sort
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Parameters.EditAlbumParameters.ValidationError">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Parameters.EditAlbumParameters.GetParameterValues">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditUserPrivacyCommentOption">
+            <summary>
+            Edit user privacy comment option
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyCommentOption.Anybody">
+            <summary>
+            Anybody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyCommentOption.Nobody">
+            <summary>
+            Nobody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyCommentOption.Contacts">
+            <summary>
+            Contacts
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditUserPrivacyViewOption">
+            <summary>
+            Edit user privacy view option
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Anybody">
+            <summary>
+            Anybody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Nobody">
+            <summary>
+            Nobody
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Contacts">
+            <summary>
+            Contacts
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Users">
+            <summary>
+            Users
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyViewOption.Disable">
+            <summary>
+            Disable
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditUserPrivacyEmbedOption">
+             <summary>
+            Edit user privacy embed option
+             </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyEmbedOption.Public">
+            <summary>
+            Public
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyEmbedOption.Private">
+            <summary>
+            Private
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.EditUserPrivacyEmbedOption.Whitelist">
+            <summary>
+            Whitelist
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.EditUserParameters">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.VideosPrivacyDownload">
+            <summary>
+            Sets the default download setting for all future videos uploaded by this user. If true, the video can be downloaded by any user.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.VideosPrivacyAdd">
+            <summary>
+            Sets the default add setting for all future videos uploaded by this user. If true, anyone can add the video to an album, channel, or group.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.VideosPrivacyComments">
+            <summary>
+            Sets the default comment setting for all future videos uploaded by this user. It specifies who can comment on the video.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.VideosPrivacyView">
+            <summary>
+            Sets the default view setting for all future videos uploaded by this user. It specifies who can view the video.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.VideosPrivacyEmbed">
+            <summary>
+            Sets the default embed setting for all future videos uploaded by this user. Whitelist allows you to define all valid embed domains.
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.Name">
+            <summary>
+            The user's display name
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.Location">
+            <summary>
+            The user's location
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.EditUserParameters.Bio">
+            <summary>
+            The user's bio
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Parameters.EditUserParameters.ValidationError">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Parameters.EditUserParameters.GetParameterValues">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Parameters.GetAlbumsSortOption">
+            <summary>
+            GetAlbumsSortOption
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortOption.Date">
+            <summary>
+            Date
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortOption.Alphabetical">
+            <summary>
+            Alphabetical
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortOption.Videos">
+            <summary>
+            Videos
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortOption.Duration">
+            <summary>
+            Duration
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.GetAlbumsSortDirectionOption">
+            <summary>
+            Get albums sort direction option
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortDirectionOption.Asc">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.Parameters.GetAlbumsSortDirectionOption.Desc">
+            <summary>
+            Descending
+            </summary>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.GetAlbumsParameters">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.Parameters.GetAlbumsParameters.Page">
+            <summary>
+            Page
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.GetAlbumsParameters.PerPage">
+            <summary>
+            Per page
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.GetAlbumsParameters.Query">
+            <summary>
+            Query
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.GetAlbumsParameters.Sort">
+            <summary>
+            Sort
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.Parameters.GetAlbumsParameters.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Parameters.GetAlbumsParameters.ValidationError">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Parameters.GetAlbumsParameters.GetParameterValues">
+            <inheritdoc />
+        </member>
+        <member name="T:VimeoDotNet.Parameters.IParameterProvider">
+            <summary>
+            IParameterProvider
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.Parameters.IParameterProvider.ValidationError">
+            <summary>
+            Performs validation and returns a description of the first error encountered.
+            </summary>
+            <returns>Description of first error, or null if none found.</returns>
+        </member>
+        <member name="M:VimeoDotNet.Parameters.IParameterProvider.GetParameterValues">
+            <summary>
+            Provides universal interface to retrieve parameter values.
+            </summary>
+            <returns>Returns all parameters as name/value pairs.</returns>
+        </member>
+        <member name="T:VimeoDotNet.Parameters.ParameterDictionary">
+            <inheritdoc cref="T:VimeoDotNet.Parameters.IParameterProvider" />
+        </member>
+        <member name="M:VimeoDotNet.Parameters.ParameterDictionary.ValidationError">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.Parameters.ParameterDictionary.GetParameterValues">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetAlbumAsync(VimeoDotNet.Models.UserId,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetAlbumsAsync(VimeoDotNet.Models.UserId,VimeoDotNet.Parameters.GetAlbumsParameters)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.CreateAlbumAsync(VimeoDotNet.Models.UserId,VimeoDotNet.Parameters.EditAlbumParameters)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UpdateAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,VimeoDotNet.Parameters.EditAlbumParameters)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.DeleteAlbumAsync(VimeoDotNet.Models.UserId,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.AddToAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.RemoveFromAlbumAsync(VimeoDotNet.Models.UserId,System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="F:VimeoDotNet.VimeoClient.RangeRegex">
+            <summary>
+            Range regex
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.VimeoClient._apiRequestFactory">
+            <summary>
+            Api request factory
+            </summary>
+        </member>
+        <member name="F:VimeoDotNet.VimeoClient._authClientFactory">
+            <summary>
+            Auth client factory
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.ClientId">
+            <summary>
+            ClientId
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.ClientSecret">
+            <summary>
+            ClientSecret
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.AccessToken">
+            <summary>
+            AccessToken
+            </summary>
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.OAuth2Client">
+            <summary>
+            OAuth2Client
+            </summary>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.#ctor(System.String,System.String)">
+            <summary>
+            Multi-user application constructor, using user-level OAuth2
+            </summary>
+            <param name="clientId">ClientId</param>
+            <param name="clientSecret">ClientSecret</param>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.#ctor(System.String)">
+            <summary>
+            Single-user application constructor, using account OAuth2 access token
+            </summary>
+            <param name="accessToken">Your Vimeo API Access Token</param>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.#ctor(VimeoDotNet.Authorization.IAuthorizationClientFactory,VimeoDotNet.Net.IApiRequestFactory,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.#ctor(VimeoDotNet.Authorization.IAuthorizationClientFactory,VimeoDotNet.Net.IApiRequestFactory,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetOauthUrl(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetAccessTokenAsync(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetAccountInformationAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UpdateAccountInformationAsync(VimeoDotNet.Parameters.EditUserParameters)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetUserInformationAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.ExecuteApiRequest``1(VimeoDotNet.Net.IApiRequest)">
+            <summary>
+            Utility method for calling ExecuteApiRequest with the most common use case (returning
+            null for NotFound responses).
+            </summary>
+            <typeparam name="T">Type of the expected response data.</typeparam>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.ExecuteApiRequest``1(VimeoDotNet.Net.IApiRequest,System.Func{System.Net.HttpStatusCode,``0},System.Net.HttpStatusCode[])">
+             <summary>
+             Utility method for performing API requests that retrieve data in a consistent manner.
+            
+             The given request will be performed, and if the response is an outright success then
+             the response data will be unwrapped and returned.
+            
+             If the call is not an outright success, but the status code is among the other acceptable
+             results (provided via validStatusCodes), the getValueForStatusCode method will be called
+             to generate a return value. This allows the caller to return null or an empty list as
+             desired.
+            
+             If neither of the above is possible, an exception will be thrown.
+             </summary>
+             <typeparam name="T">Type of the expected response data.</typeparam>
+             <param name="request"></param>
+             <param name="getValueForStatusCode"></param>
+             <param name="validStatusCodes"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetEmbedPresetAsync(VimeoDotNet.Models.UserId,System.Int64,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetEmbedPresetsAsync(VimeoDotNet.Models.UserId,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.RateLimit">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.RateLimitRemaining">
+            <inheritdoc />
+        </member>
+        <member name="P:VimeoDotNet.VimeoClient.RateLimitReset">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.AddVideoTagAsync(System.Int64,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.DeleteVideoTagAsync(System.Int64,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetVideoTags(System.Int64,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetVideoTagAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetVideoByTag(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{VimeoDotNet.GetVideoByTagSort},System.Nullable{VimeoDotNet.GetVideoByTagDirection},System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetTextTracksAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetTextTrackAsync(System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UploadTextTrackFileAsync(VimeoDotNet.Net.IBinaryContent,System.Int64,VimeoDotNet.Models.TextTrack)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UpdateTextTrackAsync(System.Int64,System.Int64,VimeoDotNet.Models.TextTrack)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.DeleteTextTrackAsync(System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetUploadTicketAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetReplaceVideoUploadTicketAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UploadEntireFileAsync(VimeoDotNet.Net.IBinaryContent,System.Int32,System.Nullable{System.Int64})">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UploadPullLinkAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UploadThumbnailAsync(System.Int64,VimeoDotNet.Net.IBinaryContent)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.StartUploadFileAsync(VimeoDotNet.Net.IBinaryContent,System.Int32,System.Nullable{System.Int64})">
+            <summary>
+            Start upload file asynchronously
+            </summary>
+            <param name="fileContent">FileContent</param>
+            <param name="chunkSize">ChunkSize</param>
+            <param name="replaceVideoId">ReplaceVideoId</param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.ContinueUploadFileAsync(VimeoDotNet.Net.IUploadRequest)">
+            <summary>
+            Continue upload file asynchronously
+            </summary>
+            <param name="uploadRequest">UploadRequest</param>
+            <returns>Verification upload response</returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.VerifyUploadFileAsync(VimeoDotNet.Net.IUploadRequest)">
+            <summary>
+            Verify upload file part asynchronously
+            </summary>
+            <param name="uploadRequest">UploadRequest</param>
+            <returns>Verification reponse</returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.CompleteFileUploadAsync(VimeoDotNet.Net.IUploadRequest)">
+            <summary>
+            Complete upload file asynchronously
+            </summary>
+            <param name="uploadRequest">UploadRequest</param>
+            <returns></returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetVideoAsync(System.Int64,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetVideosAsync(VimeoDotNet.Models.UserId,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.DeleteVideoAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetAlbumVideosAsync(VimeoDotNet.Models.UserId,System.Int64,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UpdateVideoMetadataAsync(System.Int64,VimeoDotNet.Models.VideoUpdateMetadata)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UpdateVideoAllowedDomainAsync(System.Int64,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetPictureAsync(System.Int64,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.GetPicturesAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.UploadPictureAsync(VimeoDotNet.Net.IBinaryContent,System.Int64)">
+            <summary>
+            upload picture asynchronously
+            </summary>
+            <param name="fileContent">fileContent</param>
+            <param name="clipId">Clip Id</param>
+            <returns>upload pic </returns>
+        </member>
+        <member name="M:VimeoDotNet.VimeoClient.SetThumbnailActiveAsync(System.String)">
+            <summary>
+            set thumbnail picture asynchronously
+            </summary>
+            <param name="link">link</param>
+            <returns>Set thumbnail pic </returns>
+        </member>
+    </members>
+</doc>

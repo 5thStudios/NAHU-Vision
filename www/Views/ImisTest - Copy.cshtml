@@ -1,0 +1,736 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<html>
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@CurrentPage.siteDescription">
+
+    <title>IMIS TEST PAGE</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,300,900" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Foundation/foundation.min.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Foundation/responsive-tables.css?v=1" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/Images/Foundation_Icons/foundation-icons.min.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Jquery/prettyPhoto.min.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Site.css?v=5" />
+    <link rel="stylesheet" type="text/css" href="/Styles/simplePagination.css?v=1" />
+
+    <style type="text/css">
+        /**
+         * The CSS shown here will not be introduced in the Quickstart guide, but shows
+         * how you can use CSS to style your Element's container.
+         */
+        .StripeElement {
+            background-color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+    </style>
+    <style type="text/css">
+        .navbar {display:none;}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="columns">
+
+            <div class="container body-content">
+                <div class="jumbotron  panel callout">
+                    <h1>IMAS Tests</h1>
+                    <p class="lead">The following are proof-of-concept tests.</p>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="small-8 columns">
+                        <h2>Login User</h2>
+                        <p>&nbsp;</p>
+                        <p>
+                            <button id="btnLogIn" type="button" class="btn btn-primary btn-lg">Log In</button>
+                        </p>
+                        <div class="jumbotron panel" id="divLogIn"></div>
+                    </div>
+
+                    <div class="small-8 columns end">
+                        <h2>Login User | CORS</h2>
+                        <p>Attempt to log in using the CORS specifications.</p>
+                        <p>
+                            <button id="btnLogIn_CORS" type="button" class="btn btn-primary btn-lg">Log In</button>
+                        </p>
+                        <div class="jumbotron panel" id="divLogIn_CORS"></div>
+
+                    </div>
+                </div>
+
+
+                <hr />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="jscripts">
+
+
+    <!-- FINAL SCRIPTS -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Vendor/what-input.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Jquery/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/foundation.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/foundation.equalizer.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/foundation.accordion.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/foundation.topbar.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/foundation.offcanvas.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Foundation/responsive-tables.js"></script>
+    @*<script type="text/javascript" src="/Scripts/custom/blogFilters.js"></script>
+        <script type="text/javascript" src="/Scripts/jquery.simplePagination.js"></script>
+        <script type="text/javascript" src="/Scripts/custom/listPagination.js"></script>*@
+
+
+    @*https://our.umbraco.org/documentation/products/umbracoforms/developer/extending/Adding-a-Type
+        https://our.umbraco.org/documentation/products/umbracoforms/developer/extending/adding-a-fieldtype*@
+
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //=======================================
+            // Set equalizer parameters
+            //=======================================
+            $(document).foundation({
+                equalizer: {
+                    equalize_on_stack: true, // Specify if Equalizer should make elements equal height once they become stacked.
+                    act_on_hidden_el: false // Allow equalizer to resize hidden elements
+                }
+            });
+
+
+            //=======================================
+            // Re-adjust equalizers if accordion is toggled.
+            //=======================================
+            $('.accordion').on('toggled', function (event, accordion) {
+                $(document).foundation('equalizer', 'reflow');
+            });
+
+
+            //=======================================
+            // Add equalizers
+            //=======================================
+            addEqualizers();
+            function addEqualizers() {
+                //Instantiate variables
+                var $dataEqualizers = $('.dataEqualizer');
+                var $equalizers = $('.equalize');
+
+                //Add equalizer parts
+                $dataEqualizers.each(function () {
+                    $(this).attr('data-equalizer', '');
+                });
+                $equalizers.each(function () {
+                    $(this).attr('data-equalizer-watch', '');
+                });
+
+                //Reflow equalizers
+                $(document).foundation('equalizer', 'reflow');
+            }
+
+
+
+
+
+
+
+
+
+
+            //=======================================
+            // STRIPE CONTROLS
+            //=======================================
+            //// Create a Stripe client
+            //var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+            //// Create an instance of Elements
+            //var elements = stripe.elements();
+
+            //// Custom styling can be passed to options when creating an Element.
+            //// (Note that this demo uses a wider set of styles than the guide below.)
+            //var style = {
+            //    base: {
+            //        color: '#32325d',
+            //        lineHeight: '24px',
+            //        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            //        fontSmoothing: 'antialiased',
+            //        fontSize: '16px',
+            //        '::placeholder': {
+            //            color: '#aab7c4'
+            //        }
+            //    },
+            //    invalid: {
+            //        color: '#fa755a',
+            //        iconColor: '#fa755a'
+            //    }
+            //};
+
+            //// Create an instance of the card Element
+            //var card = elements.create('card', { style: style });
+
+            //// Add an instance of the card Element into the `card-element` <div>
+            //card.mount('#card-element');
+
+            //// Handle real-time validation errors from the card Element.
+            //card.addEventListener('change', function (event) {
+            //    var displayError = document.getElementById('card-errors');
+            //    if (event.error) {
+            //        displayError.textContent = event.error.message;
+            //    } else {
+            //        displayError.textContent = '';
+            //    }
+            //});
+
+            //// Handle form submission
+            //var form = document.getElementById('payment-form');
+            //form.addEventListener('submit', function (event) {
+            //    event.preventDefault();
+
+            //    stripe.createToken(card).then(function (result) {
+            //        if (result.error) {
+            //            // Inform the user if there was an error
+            //            var errorElement = document.getElementById('card-errors');
+            //            errorElement.textContent = result.error.message;
+            //        } else {
+            //            // Send the token to your server
+            //            stripeTokenHandler(result.token);
+            //        }
+            //    });
+            //});
+
+
+
+
+
+
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        //Manage monthly/annual enrollment type for "MonthlyMembershipAndRenewal.ascx"
+        $(document).ready(function () {
+            //Instantiate variables
+            var enrollmentType = $('input[type="radio"][name="enrollmentType"]');
+            var $monthly = $('.monthly');
+            var $oneTime = $('.oneTime');
+            var $typeAmount = $('input[type="radio"][name="type_amount"]');
+
+            //Set default to monthly
+            $('input[type="radio"][name="enrollmentType"][value="monthly"]').prop("checked", true);
+            switchEnrollmentType('monthly');
+
+            //Call function when radiobutton is changed
+            enrollmentType.change(function () {
+                switchEnrollmentType(this.value);
+            });
+
+            //Switch enrollment type
+            function switchEnrollmentType(type) {
+                //Determine which column to show/hide
+                if (type == 'monthly') {
+                    $monthly.show();
+                    $oneTime.hide();
+                }
+                else {
+                    $monthly.hide();
+                    $oneTime.show();
+                }
+
+                //Clear all
+                $typeAmount.each(function () {
+                    $(this).prop("checked", false);
+                });
+            };
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            try {
+                //document.domain = 'nahu.org';
+
+                //Instantiate variables
+                var btnLogIn = $('#btnLogIn');
+                var divLogIn = $('#divLogIn');
+                var btnLogIn_CORS = $('#btnLogIn_CORS');
+                var divLogIn_CORS = $('#divLogIn_CORS');
+
+
+                btnLogIn.click(function () {
+                    test();
+                });
+
+                btnLogIn_CORS.click(function () {
+                    test_CORS();
+                });
+
+
+                function test() {
+                    //Instantiate an array of parameters to pass to handler
+                    var myData = {};
+                    myData.username = 'membership@nahu.org';
+                    myData.password = '1nahu2!';
+                    myData.staffUser = 'false';
+
+                    //Set array as json for use in ajax call
+                    var Data = JSON.stringify(myData);
+
+                    //Make ajax call
+                    $.ajax({
+                        //url: "https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/LoginUser",
+                        url: "http://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/LoginUserAndProvideCookies",
+                        type: "POST",
+                        data: Data,
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (json) {
+                            divLogIn.text('Login successful: ' + json.d);
+                        },
+                        error: function (result) {
+                            divLogIn.text('Login failed --- Status [' + result.status + '] --- statusText [' + result.statusText + '] --- responseText [' + result.responseText + ']');
+                        }
+                    });
+
+                    ////Make ajax call
+                    //$.ajax({
+                    //    url: "https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/LoginUserAndProvideCookies",
+                    //    type: "POST",
+                    //    data: Data, //cache: false,
+                    //    dataType: "json",
+                    //    contentType: "application/json; charset=utf-8",
+                    //    success: function (json) {
+                    //        divLogIn.text('Login successful: ' + json.d);
+                    //    },
+                    //    error: function (result) {
+                    //        divLogIn.text('Login failed --- Status [' + result.status + '] --- statusText [' + result.statusText + '] --- responseText [' + result.responseText + ']');
+                    //    }
+                    //});
+
+                    ////Make ajax call
+                    //$.ajax({
+                    //    url: "https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/ValidateUser",
+                    //    type: "POST",
+                    //    data: Data, //cache: false,
+                    //    dataType: "json",
+                    //    contentType: "application/json; charset=utf-8",
+                    //    success: function (json) {
+                    //        divLogIn.text('Login successful: ' + json.d);
+                    //    },
+                    //    error: function (result) {
+                    //        divLogIn.text('Login failed --- Status [' + result.status + '] --- statusText [' + result.statusText + '] --- responseText [' + result.responseText + ']');
+                    //    }
+                    //});
+
+
+                }
+
+
+                function test_CORS() {
+
+                    //Instantiate variables
+                    var url = 'https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/LoginUser';
+                    var type = 'POST';
+                    var dataType = 'json';
+                    var contentType = 'application/json; charset=utf-8'
+
+
+                    //============================================================================================
+                    //
+                    makeCorsRequest()
+
+                    // Make the actual CORS request.
+                    function makeCorsRequest() {
+                        // This is a sample server that supports CORS.
+                        //var url = 'https://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+
+                        var xhr = createCORSRequest('GET', url);
+                        if (!xhr) {
+                            console.log('CORS not supported');
+                            return;
+                        }
+
+                        // Response handlers.
+                        xhr.onload = function () {
+                            var text = xhr.responseText;
+                            var title = getTitle(text);
+                            console.log('Response from CORS request to ' + url + ': ' + title);
+                        };
+
+                        xhr.onerror = function () {
+                            console.log('Woops, there was an error making the request.');
+                        };
+
+                        xhr.send();
+                    }
+
+                    // Helper method to parse the title tag from the response.
+                    function getTitle(text) {
+                        return text.match('<title>(.*)?</title>')[1];
+                    }
+                    //============================================================================================
+
+
+
+
+                    ////Instantiate an array of parameters to pass to handler
+                    //var myData = {};
+                    //myData.username = 'membership@nahu.org';
+                    //myData.password = '1nahu2!';
+                    //myData.staffUser = 'false';
+
+                    ////Set array as json for use in ajax call
+                    //var Data = JSON.stringify(myData);
+
+                    ////Make ajax call
+                    //$.ajax({
+                    //    url: url,
+                    //    type: type,
+                    //    data: Data,
+                    //    dataType: dataType,
+                    //    contentType: contentType,
+                    //    success: function (json) {
+                    //        divLogIn.text('Login successful: ' + json.d);
+                    //    },
+                    //    error: function (result) {
+                    //        divLogIn.text('Login failed --- Status [' + result.status + '] --- statusText [' + result.statusText + '] --- responseText [' + result.responseText + ']');
+                    //    }
+                    //});
+
+                }
+
+
+
+            }
+            catch (err) {
+                //console.log('ERROR: ' + err.message);
+                divLogIn.text('ERROR: ' + err.message);
+            }
+        });
+
+
+
+
+        // Create the XHR object.
+        function createCORSRequest(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+                // XHR for Chrome/Firefox/Opera/Safari.
+                // Check if the XMLHttpRequest object has a "withCredentials" property.
+                // "withCredentials" only exists on XMLHTTPRequest2 objects.
+                xhr.open(method, url, true);
+            } else if (typeof XDomainRequest != "undefined") {
+                // XDomainRequest for IE.
+                // Otherwise, check if XDomainRequest.
+                // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+                xhr = new XDomainRequest();
+                xhr.open(method, url);
+            } else {
+                // CORS not supported.
+                xhr = null;
+            }
+            return xhr;
+        }
+
+
+                //btnLogIn.click(function () {
+                //    //Instantiate variables
+                //    var Type = "POST";
+                //    var Url = "https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx/LoginUser";
+                //    var Data;
+                //    var ContentType = "application/json; charset=utf-8";
+                //    var DataType = "json";
+                //    var ProcessData = true;
+
+                //    //Call service
+                //    CreateParameters();
+                //    CallService();
+
+                //    function CreateParameters() {
+                //        //Instantiate an array of parameters to pass to handler
+                //        var myData = {};
+                //        myData.username = 'membership@nahu.org';
+                //        myData.password = '1nahu2!';
+                //        myData.staffUser = 'false';
+
+                //        //Set array as json for use in ajax call
+                //        Data = JSON.stringify(myData);
+                //    }
+                //    function CallService() {
+                //        $.ajax({
+                //            type: Type, //GET or POST or PUT or DELETE verb
+                //            url: Url, // Location of the service
+                //            data: Data, //Data sent to server
+                //            contentType: ContentType, // content type sent to server
+                //            dataType: DataType, //Expected data format from server
+                //            processdata: ProcessData, //True or False
+                //            success: function (msg) { ServiceSucceeded(msg); },
+                //            error: function (msg) { ServiceFailed(msg); }
+                //        });
+                //    }
+                //    function ServiceFailed(result) {
+                //        console.log('Login failed: ' + result.status + ' ' + result.statusText + ' ' + result.responseText);
+                //        Type = null;
+                //        varUrl = null;
+                //        Data = null;
+                //        ContentType = null;
+                //        DataType = null;
+                //        ProcessData = null;
+                //    }
+                //    function ServiceSucceeded(result) {
+                //        console.log('Login Succeed:');
+                //        console.log(result);
+                //        divLogIn.text(result.d);
+                //    }
+                //});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                ////=======================================================================================
+                ////Instantiate variables
+                //var btnWebServiceTest = $('#btnWebServiceTest');
+                //var btnAPITest = $('#btnAPITest');
+                //var divWebServiceTest = $('#divWebServiceTest');
+                //var divAPITest = $('#divAPITest');
+
+                //var btnWebServiceClassTest = $('#btnWebServiceClassTest');
+                //var btnAPIClassTest = $('#btnAPIClassTest');
+                //var divWebServiceClassTest = $('#divWebServiceClassTest');
+                //var divAPIClassTest = $('#divAPIClassTest');
+
+                //var btnAPIClassTestWithParam = $('#btnAPIClassTestWithParam');
+                //var divAPIClassTestWithParam = $('#divAPIClassTestWithParam');
+
+                ////Web Service Test
+                //btnWebServiceTest.click(function () {
+                //    //Instantiate variables
+                //    var Type = "POST";
+                //    var Url = "../Handlers/wsTest.asmx/testString";
+                //    var Data;
+                //    var ContentType = "application/json; charset=utf-8";
+                //    var DataType = "json";
+                //    var ProcessData = true;
+
+                //    //Call service
+                //    CallService();
+
+                //    //function CreateParameters() {
+                //    //    //Instantiate an array of parameters to pass to handler
+                //    //    var myData = { userId: $('#hfldCurrentUserId').val() }; //"{Id": "' + userid + '"}";
+                //    //    //Set array as json for use in ajax call
+                //    //    Data = JSON.stringify(myData);
+                //    //}
+                //    function CallService() {
+                //        $.ajax({
+                //            type: Type, //GET or POST or PUT or DELETE verb
+                //            url: Url, // Location of the service
+                //            data: Data, //Data sent to server
+                //            contentType: ContentType, // content type sent to server
+                //            dataType: DataType, //Expected data format from server
+                //            processdata: ProcessData, //True or False
+                //            success: function (msg) { ServiceSucceeded(msg); },
+                //            error: function (msg) { ServiceFailed(msg); }
+                //        });
+                //    }
+                //    function ServiceFailed(result) {
+                //        console.log('Service call 1 failed: ' + result.status + ' ' + result.statusText + ' ' + result.responseText);
+                //        Type = null;
+                //        varUrl = null;
+                //        Data = null;
+                //        ContentType = null;
+                //        DataType = null;
+                //        ProcessData = null;
+                //    }
+                //    function ServiceSucceeded(result) {
+                //        console.log('Succeed 1:');
+                //        console.log(result);
+                //        divWebServiceTest.text(result.d);
+                //    }
+                //});
+
+                //btnWebServiceClassTest.click(function () {
+                //    //Instantiate variables
+                //    var Type = "POST";
+                //    var Url = "../Handlers/wsTest.asmx/testClass";
+                //    var Data;
+                //    var ContentType = "application/json; charset=utf-8";
+                //    var DataType = "json";
+                //    var ProcessData = true;
+
+                //    //Call service
+                //    CreateParameters();
+                //    CallService();
+
+                //    function CreateParameters() {
+                //        //Instantiate an array of parameters to pass to handler
+                //        var myData = { temp: 'Parameter from browser' };
+                //        Data = JSON.stringify(myData);
+                //    }
+                //    function CallService() {
+                //        $.ajax({
+                //            type: Type, //GET or POST or PUT or DELETE verb
+                //            url: Url, // Location of the service
+                //            data: Data, //Data sent to server
+                //            contentType: ContentType, // content type sent to server
+                //            dataType: DataType, //Expected data format from server
+                //            processdata: ProcessData, //True or False
+                //            success: function (msg) { ServiceSucceeded(msg); },
+                //            error: function (msg) { ServiceFailed(msg); }
+                //        });
+                //    }
+                //    function ServiceFailed(result) {
+                //        console.log('Service call 2 failed: ' + result.status + ' ' + result.statusText + ' ' + result.responseText);
+                //        Type = null;
+                //        varUrl = null;
+                //        Data = null;
+                //        ContentType = null;
+                //        DataType = null;
+                //        ProcessData = null;
+                //    }
+                //    function ServiceSucceeded(result) {
+                //        console.log('Succeed 2:');
+                //        console.log(result.d);
+                //        divWebServiceClassTest.text(result.d.str1 + ' | ' + result.d.param);
+                //    }
+                //});
+
+
+
+
+                ////API Test
+                //btnAPITest.click(function () {
+                //    //var uri = 'https://webapi.theandersongrp.com/api/apiTest/testString';
+                //    //var uri = window.location.pathname + 'api/apiTest/testString';
+                //    var uri = '/api/apiTest/testString';
+
+                //    //Scenario 1
+                //    // Send an AJAX request
+                //    $.getJSON(uri)
+                //        .done(function (result) {
+                //            console.log('Succeed 3:');
+                //            console.log(result);
+                //            divAPITest.text(result);
+                //        })
+                //        .fail(function (jqXHR, textStatus, err) {
+                //            console.log('Error 3: ' + err);
+                //        });
+
+
+
+                //    ////Scenario 2
+                //    //$.ajax({
+                //    //    url: uri,
+                //    //    type: "Get",
+                //    //    success: function (result) {
+                //    //        console.log('Succeed 2: ' + result);
+                //    //    },
+                //    //    error: function (jqXHR, textStatus, err) {
+                //    //        console.log('Error 2: ' + err);
+                //    //    }
+                //    //});
+
+                //});
+
+                //btnAPIClassTest.click(function () {
+                //    //var uri = 'https://webapi.theandersongrp.com/api/apiTest/testString';
+                //    //var uri = window.location.pathname + 'api/apiTest/testString';
+                //    var uri = '/api/apiTest/testClass';
+
+                //    //Instantiate an array of parameters to pass to handler
+                //    var myData = { temp: 'Parameter from client' };
+                //    var data = JSON.stringify(myData);
+
+                //    // Send an AJAX request
+                //    $.getJSON(uri) //, myData)
+                //        .done(function (result) {
+                //            console.log('Succeed 4:');
+                //            console.log(result);
+                //            divAPIClassTest.text(result.str1);
+                //        })
+                //        .fail(function (jqXHR, textStatus, err) {
+                //            console.log('Error 4: ' + err);
+                //        });
+                //});
+
+                //btnAPIClassTestWithParam.click(function () {
+                //    var uri = '/api/apiTest/testClassWithParameter';
+
+                //    //Instantiate an array of parameters to pass to handler
+                //    var myData = { temp: 'Parameter from browser' };
+                //    var data = JSON.stringify(myData);
+
+                //    // Send an AJAX request
+                //    $.getJSON(uri, myData)
+                //        .done(function (result) {
+                //            console.log('Succeed 5:');
+                //            console.log(result);
+                //            divAPIClassTestWithParam.text(result.str1 + ' | ' + result.param);
+                //        })
+                //        .fail(function (jqXHR, textStatus, err) {
+                //            console.log('Error 5: ' + err);
+                //        });
+                //});
+
+    </script>
+
+
+
+    </div>
+</body>
+</html>

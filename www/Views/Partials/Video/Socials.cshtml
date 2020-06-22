@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+@{
+    List<NAHUvision.Models.SocialLink> LstSocialLinks = NAHUvision.Controller.NavigationController.ObtainSocialLinks();
+}
+
+<div class="grid-x grid-padding-x grid-padding-y upper">
+    <div class="large-20 cell text-center large-text-right">FOLLOW US</div>
+
+    <div class="medium-12 medium-offset-6 large-4 large-offset-0 cell text-right">
+        <div class="grid-x small-up-5 text-center socialLinks">
+            @{
+                foreach (NAHUvision.Models.SocialLink socialLink in LstSocialLinks)
+                {
+                    <div class="cell">
+                        <a title="@socialLink.Title" href="@socialLink.Url" target="_blank">
+                            <img title="@socialLink.Title" src="@socialLink.ImgUrl" alt="@socialLink.Title">
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nahu-02" Class="dbImisDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.239.18;Initial Catalog=NAHU-HUPAC-EF-org-Prod;User ID=NAHUadmSQL;MultipleActiveResultSets=True;Connect Timeout=9600" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="umbracoDbDSN" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.fixBrokenLinks" Method="fixBrokenLinks">
+    <Parameter Name="result" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <ElementType Name="fixBrokenLinksResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

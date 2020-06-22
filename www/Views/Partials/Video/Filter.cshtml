@@ -1,0 +1,54 @@
+﻿@using NAHUvision.Models;
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NAHUvision.Models.Filter>>
+
+
+
+<div id="VideoFilter" class="BlogFilter">
+    <aside class="hidePrint blogFilters videoFilters">
+
+        <div class="grid-x blogSearch" id="blogSearch">
+            <div class="small-17 medium-19 cell searchFld" id="searchFld">
+                <input type="text" placeholder="Search Videos">
+            </div>
+            <div class="small-7 medium-5 cell searchBtn" id="searchBtn">
+                <img alt="Search" src="/Images/Common/icons/SearchIcon_Medium.png">
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+        <h4>Filter By <strong><span id="lblFilterBy" class="camelCase"></span></strong></h4>
+
+
+        @{
+            foreach (NAHUvision.Models.Filter filter in Model)
+            {
+                <section class="accordion" data-filterid="@filter.Id">
+                    <h3>@filter.Name</h3>
+                    <ul>
+                        @foreach (NAHUvision.Models.Link link in filter.LstLinks)
+                        {
+                            <li><a class="filter" data-filterby=".@link.Abr" data-filterid="@link.Id">@link.Name</a></li>
+                        }
+                        @if (filter.LstLinks.Count > 1)
+                        {
+                            <li><a class="filter" data-filterby="@filter.AbrList">Show All in this Group</a></li>
+                        }
+                        <li><a class="filter" data-filterby="*">Show All</a></li>
+                    </ul>
+                </section>
+            }
+        }
+
+
+
+        <div>
+            <a id="hlnkViewAll" class="filter viewAllBlog" data-filterby="*">
+                <h3>View All</h3>
+            </a>
+        </div>
+        <br class="show-for-large" />
+
+    </aside>
+</div>

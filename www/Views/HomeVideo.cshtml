@@ -1,0 +1,40 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{ Layout = "TopLevelVideo.cshtml"; }
+
+@{
+    //Instantiate variables
+    Boolean isLoggedIn = false;
+    string FullLoginResponse = "";
+    HttpCookie cookie;
+
+    //Determine if user is logged in and obtain full login info from cookie
+    if (Request.Cookies["SessionGuid"] != null) { isLoggedIn = true; }
+    cookie = HttpContext.Current.Request.Cookies["FullLoginResponse"];
+    if (cookie != null) { FullLoginResponse = Uri.UnescapeDataString(cookie.Value); }
+}
+
+<div id="VideoHomePage" class="grid-x grid-padding-x grid-padding-y">
+    <div class="cell large-16 small-order-2 large-order-1">
+        <br class="show-for-large" />
+        @{ Html.RenderPartial("~/Views/Partials/Video/SearchPanel.cshtml"); }
+        <div class="grid-x grid-padding-x grid-padding-y">
+            <div class="cell large-24 text-right">
+                @{ Html.RenderPartial("~/Views/Partials/Video/Pagination.cshtml"); }
+            </div>
+
+            <div class="cell">
+                @{Html.RenderAction("RenderVideoList", "Video", new { ipModel = Model, isLoggedIn = isLoggedIn, searchParam = Request.QueryString["search"], loginResponse = FullLoginResponse });}
+            </div>
+
+            <div class="cell text-right">
+                @{ Html.RenderPartial("~/Views/Partials/Video/Pagination.cshtml"); }
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+    <div class="cell large-8 small-order-1 large-order-2">
+        <br />
+        @{Html.RenderAction("RenderFilter", "Filter");}
+    </div>
+</div>

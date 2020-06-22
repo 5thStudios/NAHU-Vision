@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{ 
+    List<NAHUvision.Models.Link> LstLinks = NAHUvision.Controller.NavigationController.ObtainMinorNavLinks();
+}
+
+<footer>
+    @{ Html.RenderPartial("~/Views/Partials/Video/Socials.cshtml"); }
+
+    <nav class="grid-x grid-padding-x grid-padding-y lower">
+        <div class="large-14 text-center large-text-left cell minorNav show-for-medium">
+            @{
+                foreach (NAHUvision.Models.Link link in LstLinks)
+                {
+                    <a href="@link.Url" data-nodeid="@link.Id">
+                        <div>@link.Name</div>
+                    </a>
+                }
+            }
+        </div>
+
+        <div class="large-10 cell text-center large-text-right copyright">
+            <br class="show-for-medium-only">
+            Copyright © @DateTime.Today.Year.ToString(). All rights reserved <br>
+            <a class="copyright" href="http://5thstudios.com" target="_blank">Designed and developed by 5thStudios.com</a>
+        </div>
+        <br>
+    </nav>
+</footer>

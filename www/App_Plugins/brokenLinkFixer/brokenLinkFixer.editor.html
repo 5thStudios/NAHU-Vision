@@ -1,0 +1,29 @@
+﻿<style>
+.brokenLinkFixerController {margin-left: 42px;}
+.brokenLinkFixerController p {}
+.brokenLinkFixerController h4 {color: #666;}
+.brokenLinkFixerController input[type=text] {font-weight: bold;color: #8d869c;border-width: 0; background-color: transparent;width: 100%;cursor: text;}
+.brokenLinkFixerController a {color: #549dd8; text-decoration: underline;}
+.brokenLinkFixerController a:hover {color: #2573B1;}
+.brokenLinkFixerController button {color: #fff;background-color: #41365a;border: 1px solid #2e2247;padding: 9px 33px; font-size: 18px;}
+.brokenLinkFixerController button:hover {background-color: #8d869c;}
+.brokenLinkFixerController .alertMsg {color: #B91800;font-size: 18px;}
+.brokenLinkFixerController .msg {color: green;font-size: 18px;}
+</style>
+
+
+
+<div class="brokenLinkFixerController" ng-controller="brokenLinkFixerController">
+    <button class="btnbrokenLinkFixer">Fix Links</button>
+    <br /><br />
+          <div>
+              <label class="msg hide">
+                  All broken links have been updated within SEO Checker.
+                  <br /><br />
+                  <strong><span id="lblMediaCount"></span></strong> media links have been corrected.<br>
+                  <strong><span id="lblContentCount"></span></strong> content links have been corrected.
+              </label>
+
+              <label class="alertMsg hide">An error occured.  Please reach out to your development department to correct the issue.</label>
+          </div>
+</div>

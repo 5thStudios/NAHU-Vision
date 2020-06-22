@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+<div>
+    @{ Html.RenderPartial("/UserControls/QuoteBannerWithNav.ascx"); }
+    @{ Html.RenderPartial("/UserControls/TextBlock.ascx"); }
+    @{ Html.RenderPartial("/UserControls/Quicklinks.ascx"); }
+</div>
+
+
+@section finalScripts {}

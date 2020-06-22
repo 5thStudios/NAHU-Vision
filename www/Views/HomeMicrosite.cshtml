@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    //Parent Masterpage
+    Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+<div>
+    @*@CurrentPage.GetGridHtml("bodyText", "Foundation5")*@
+
+    @{ Html.RenderPartial("/UserControls/RotatingBanner.ascx"); }
+    @{ Html.RenderPartial("/UserControls/QuoteBanner.ascx"); }
+    @{ Html.RenderPartial("/UserControls/CustomPanels.ascx"); }
+</div>
+
+
+@section finalScripts {
+    <script type="text/javascript" src="/Scripts/Custom/rotatingBanner.js"></script>
+}

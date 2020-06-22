@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <link>https://nahu.org</link>
+    <language>en-us</language>
+    <copyright>Copyright © 2018 NAHU</copyright>
+    <webMaster>NAHU</webMaster>
+    <managingEditor>NAHU</managingEditor>
+    <atom:link href="https://nahu.org/feeds/podcasts.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://nahu.org/media/3169/nahu_podcast_final.jpg?anchor=center&amp;mode=crop&amp;width=1400&amp;height=1400&amp;rnd=132060681310000000&amp;quality=60&amp;cacheBuster=false</url>
+      <title>Healthcare Happy Hour</title>
+      <link>https://nahu.org/media/3169/nahu_podcast_final.jpg?anchor=center&amp;mode=crop&amp;width=1400&amp;height=1400&amp;rnd=132060681310000000&amp;quality=60&amp;cacheBuster=false</link>
+    </image>
+    <itunes:image href="https://nahu.org/media/3169/nahu_podcast_final.jpg?anchor=center&amp;mode=crop&amp;width=1400&amp;height=1400&amp;rnd=132060681310000000&amp;quality=60&amp;cacheBuster=false" />
+    <itunes:category text="News &amp;amp; Politics" />
+    <pubDate>Fri, 19 Jun 2020 16:06:53 GMT</pubDate>
+    <title>Healthcare Happy Hour</title>
+    <description>The NAHU Healthcare Happy Hour podcast is released weekly on Friday afternoons by the National Association of Health Underwriters, and includes a recap of the week’s top issues in healthcare and health insurance politics and policy.</description>
+    <lastBuildDate>Fri, 19 Jun 2020 16:06:53 GMT</lastBuildDate>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:author>info@nahu.org</itunes:author>
+    <item>
+      <title>It’s Bills, Bills, Bills – And Hearings</title>
+      <author>info@nahu.org</author>
+      <description>A flurry of legislation of interest to NAHU was introduced this week, from changing the definition of full-time from 30 hours to 40 hours, to the newest attempt at repealing and replacing the ACA, to legislation for single-payer healthcare. You may be wondering why the sudden rush of bills all at once, or will any of these actually pass, and if so, what should I know for my clients?</description>
+      <enclosure url="https://nahu.org/media/2056/wu_091517_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2056/wu_091517_final.mp3</guid>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How Could Graham-Cassidy Lead to Single Payer?</title>
+      <author>info@nahu.org</author>
+      <description>The bipartisan push for health reform came to a crashing halt this week after attention shifted toward the Graham-Cassidy proposal to repeal and replace the ACA. NAHU has many significant concerns about this proposal and what it could mean for the future of employer-sponsored insurance and the role of agents and brokers.</description>
+      <enclosure url="https://nahu.org/media/2145/wu_092217_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2145/wu_092217_final.mp3</guid>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>McConnell Announces No Vote on Graham-Cassidy Proposal</title>
+      <author>info@nahu.org</author>
+      <description>On this week's podcast, NAHU Vice President of Government Affairs Marcy M. Buckner, Vice Presidents of Congressional Affairs John Greene and Chris Hartmann, and host Director of Policy Engagement Dan Samson help answer the many questions raised by the defeat of the Graham-Cassidy proposal, including: Where do we go from here? Is there any hope for bipartisan market stability? Will healthcare make its way into tax reform? And, what happens with future reconciliation vehicles?</description>
+      <enclosure url="https://nahu.org/media/2162/wu_092717_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2162/wu_092717_final.mp3</guid>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Whirlwind Two Weeks in Healthcare Policy</title>
+      <author>info@nahu.org</author>
+      <description>Last week was a whirlwind for healthcare policy, with the abrupt resignation of HHS Secretary Tom Price, the demise of the Graham-Cassidy plan and the missed deadline for the Children’s Health Insurance Program. This week’s intensity was only slightly reduced, as Congress and the Trump Administration work out what’s to come for the remainder of the year. On this week’s podcast, NAHU Vice President of Congressional Affairs Chris Hartmann and Vice President of Government Affairs Marcy M. Buckner review.</description>
+      <enclosure url="https://nahu.org/media/2200/wu_100617_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2200/wu_100617_final.mp3</guid>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What You Should Tell Your Clients about President Trump’s Executive Order</title>
+      <author>info@nahu.org</author>
+      <description>NAHU Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs Chris Hartmann and John Greene walk us through President Trump’s executive order addressing association health plans, short-term policies, and HRAs. This 25-minute installment helps to answer many of the questions you may have...</description>
+      <enclosure url="https://nahu.org/media/2232/wu_101317_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2232/wu_101317_final.mp3</guid>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How NAHU Sees the Market Stability Bill</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s podcast, NAHU’s Vice President of Congressional Affairs and Vice President of Government Affairs Marcy M. Buckner break down the major components of the bill that was introduced this week, including the provisions that NAHU has been specifically calling for, and what its chances are to be passed before the end of the year to have a meaningful impact for your clients.</description>
+      <enclosure url="https://nahu.org/media/2342/wu_102017_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2342/wu_102017_final.mp3</guid>
+      <pubDate>Fri, 20 Oct 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Courts Weigh In as Congress Offers another CSR Proposal</title>
+      <author>info@nahu.org</author>
+      <description>The market stability proposal offered by Senators Lamar Alexander (R-TN) and Patty Murray (D-WA) suffered another setback this week with a counter proposal offered by Senator Orrin Hatch (R-UT) and Representative Kevin Brady (R-TX). Both would temporarily fund the ACA’s cost-sharing reduction (CSR) program, but with very different tradeoffs. The Alexander-Murray plan seeks Republicans support by offering additional state flexibility, while the Hatch-Brady plan would temporarily eliminate the ACA’ mandate penalties. The CSRs also got attention this week with the legal ruling that denied the request by Democratic attorneys general to force the Trump administration to resume the CSR payments.</description>
+      <enclosure url="https://nahu.org/media/2353/wu_102717_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2353/wu_102717_final.mp3</guid>
+      <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Scores Early Victory in Tax Reform as Agencies Post Rulemaking</title>
+      <author>info@nahu.org</author>
+      <description>The past several years NAHU has launched an aggressive push for the preservation of employer-sponsored insurance (ESI) and has called on members to reach out to your legislators to urge them not to make changes to the tax treatment of ESI. Our efforts have paid off so far after House Republicans released their tax reform proposal that does not make any changes to the employer exclusion of health insurance, ensuring that your clients will continue to be able to receive the same high quality health insurance.</description>
+      <enclosure url="https://nahu.org/media/2458/wu_110317_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2458/wu_110317_final.mp3</guid>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kicking off December with a Flurry of Legislation</title>
+      <author>info@nahu.org</author>
+      <description>Congress is seeking to wrap up the year with a flurry of major legislation, including tax reform, extending the delays for the Cadillac/excise and health insurance taxes, reauthorization of the Children’s Health Insurance Program, and potentially market stabilization.</description>
+      <enclosure url="https://nahu.org/media/2650/wu_120117_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2650/wu_120117_final.mp3</guid>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Mending Differences on the Road to Tax Reform</title>
+      <author>info@nahu.org</author>
+      <description>NAHU Vice Presidents of Congressional Affairs John Greene and Chris Hartmann join the podcast this week to discuss the latest developments in the tax reform bill moving through Congress. Shortly after the Senate passed their version in the early hours this past Saturday, House and Senate members began the conference process to work out the details, including how to handle the elimination of the ACA’s individual mandate penalties and the medical expense deduction.</description>
+      <enclosure url="https://nahu.org/media/2710/wu_120817_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2710/wu_120817_final.mp3</guid>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Taxes Is the Word of the Week</title>
+      <author>info@nahu.org</author>
+      <description>Taxes is the word of the week, after the White House and congressional Republican leaders announced a tentative agreement on the sweeping tax-reform package, as well as the introduction of five new pieces of legislation to delay several ACA taxes, including the Cadillac tax and health insurance tax.</description>
+      <enclosure url="https://nahu.org/media/2768/wu_121517_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2768/wu_121517_final.mp3</guid>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>New Year, New Guidance</title>
+      <author>info@nahu.org</author>
+      <description>The Trump Administration kicked off the New Year by releasing new guidance on the expansion of association health plans. NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs John Greene and Chris Hartmann join the podcast this week to help digest this guidance and what it could mean for your clients if adopted as proposed.</description>
+      <enclosure url="https://nahu.org/media/2837/wu_010518_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2837/wu_010518_final.mp3</guid>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Deal or No Deal in the Budget Talks</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs John Greene sat down this week ahead of the budget talks to discuss the overall process and what NAHU has been doing to include our legislative priorities.</description>
+      <enclosure url="https://nahu.org/media/2900/wu_011918_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2900/wu_011918_final.mp3</guid>
+      <pubDate>Fri, 19 Jan 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Wins another Battle in the War for Cadillac Tax and HIT Repeal</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann walk us through the legislation enacted this week to delay several ACA taxes.</description>
+      <enclosure url="https://nahu.org/media/2951/wu_012618_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2951/wu_012618_final.mp3</guid>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The State of the Union and Employer-Based Health Benefits</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s installment of the Washington Update Podcast, NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann examine the progress that has been made since President Trump’s last joint session address to Congress, when he called for radically reforming the ACA.</description>
+      <enclosure url="https://nahu.org/media/2978/wu_020218_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/2978/wu_020218_final.mp3</guid>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Six More Weeks of Budget Negotiations</title>
+      <author>info@nahu.org</author>
+      <description>A week after Groundhog Day, Congress passed its latest continuing resolution (CR) in the overnight hours. We can only surmise that the legislators saw their shadows in the early morning twilight, because they declared “six more weeks of budget negotiations.” The latest CR lasts until March 23 and provides hope for a final chance at passing much needed market stability legislation.</description>
+      <enclosure url="https://nahu.org/media/3011/wu_020918_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3011/wu_020918_final.mp3</guid>
+      <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Capitol Conference 2018 Know Before You Go</title>
+      <author>info@nahu.org</author>
+      <description>Calling all Capitol Conference attendees and those curious about NAHU’s premier legislative event! This week’s podcast provides all of the essential details of what to expect at this year’s conference. NAHU’s Vice President of Government Affairs Marcy M. Buckner and Director of Policy Engagement Dan Samson break down the agenda, the can’t-miss speakers, a preview of the breakout sessions, the primary policy priorities that we will be advocating for on the Hill, and tips for making the most of your visit.</description>
+      <enclosure url="https://nahu.org/media/3039/wu_021618_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3039/wu_021618_final.mp3</guid>
+      <pubDate>Fri, 16 Feb 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Inaugural Episode, Catching Up on Legs and Regs</title>
+      <author>info@nahu.org</author>
+      <description>This week’s podcast recaps recent developments in legislation and regulations, or as we call them, “legs and regs.” NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs John Greene and Chris Hartmann sit down with Director of Policy Engagement Dan Samson to review the latest efforts on market stability, the Congressional calendar ahead, an overview of the 2019 market rule and “grandmothering” bulletin, a recap of the status on regulations on association health plans, short-term plans, and HRAs, and the recent Medicare Advantage guidance.</description>
+      <enclosure url="https://nahu.org/media/3221/nahu_hhh_041318_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3221/nahu_hhh_041318_final.mp3</guid>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Democrats Introduce Public Option Opt-In for Employers and Individuals</title>
+      <author>info@nahu.org</author>
+      <description>This week’s podcast includes a discussion with NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann on NAHU’s latest regulatory and legislative efforts on reforming the ACA’s medical loss ratio as well as a prognosis of the latest single-payer legislation introduced that would create a public option for individuals and employers to opt into. Marcy and Chris also discuss the impact of House Speaker Paul Ryan’s retirement announcement and what it means for issues like the employer exclusion of health insurance, as well as what could happen with a potential Speaker McCarthy or Pelosi. Marcy and Chris also provide a preview of NAHU’s forthcoming comments on the short-term plan proposed regulation that will be submitted next week.</description>
+      <enclosure url="https://nahu.org/media/3235/nahu_hhh_042018_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3235/nahu_hhh_042018_final.mp3</guid>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Congress Advances Mental Health Parity and Opioid Legislation</title>
+      <author>info@nahu.org</author>
+      <description>This week’s episode of NAHU’s Healthcare Happy Hour podcast includes a discussion with NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs John Greene and Chris Hartmann. The major healthcare headlines this week dealt with mental health parity and the opioid epidemic, and the podcast reviews major actions taken this week and how they relate to NAHU’s policy priorities. The podcast also discusses the current status of other NAHU priorities, such as treating COBRA as creditable coverage for Medicare and restoring the 40-hour workweek. Additionally, Marcy, John and Chris review NAHU’s short-term plan comments that were submitted this week and what to expect as the Trump Administration writes the final rule.</description>
+      <enclosure url="https://nahu.org/media/3265/nahu_hhh_042718_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3265/nahu_hhh_042718_final.mp3</guid>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Value-Based Design, IRS Notices and Another Repeal Attempt</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s lobbyists, John Greene and Chris Hartmann, join this week’s podcast to review the IRS notices that were released last week on the maximum HSA contribution and the small business tax credit. They discuss Health and Human Services Secretary Alex Azar’s latest push for value-based healthcare, an effort NAHU strongly supports, and what agents and brokers should tell their clients about it. John and Chris also give their prognosis on the revived attempt at passing a repeal and replace of the ACA, both before the midterm elections and in the “Lame Duck” session of Congress. Finally, the podcast addresses two NAHU legislative items: the Medicare broker bill and the proposed HSA reforms.</description>
+      <enclosure url="https://nahu.org/media/3319/nahu_hhh_050418_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3319/nahu_hhh_050418_final.mp3</guid>
+      <pubDate>Fri, 04 May 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Market Stability Negotiations Stall Once More</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s vice president of government affairs Marcy M. Buckner and vice president of congressional affairs Chris Hartmann join the Healthcare Happy Hour to preview what’s on tap for the coming weeks, including when to expect the final association health plan (AHP) final regulation. Marcy and Chris also discuss the Trump Administration’s “America First” prescription drug plan, the recent developments in bipartisan market stability, changes underway for Medicare Advantage, and the proposed rescissions in federal spending currently being considered by Congress and what they could mean for federal healthcare funds.</description>
+      <enclosure url="https://nahu.org/media/3342/nahu_hhh_051118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3342/nahu_hhh_051118_final.mp3</guid>
+      <pubDate>Fri, 11 May 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A First Look at the "America First" Prescription Drug Plan</title>
+      <author>info@nahu.org</author>
+      <description>Last Friday, President Donald Trump and Health and Human Services (HHS) Secretary Alex Azar released their blueprint for an “America First” prescription drug plan aimed at curbing high prices through increased competition, better negotiation, lower list prices, and lower out-of-pocket costs. NAHU’s vice president of government affairs Marcy M. Buckner and vice president of congressional affairs Chris Hartmann join the Healthcare Happy Hour for this week’s episode to break down what this proposal will mean for pharmaceutical prices, and ultimately the cost of healthcare and health insurance.</description>
+      <enclosure url="https://nahu.org/media/3392/nahu_hhh_051818_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3392/nahu_hhh_051818_final.mp3</guid>
+      <pubDate>Fri, 18 May 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Policy and Political Prognosticating on the Healthcare Happy Hour</title>
+      <author>info@nahu.org</author>
+      <description>Congress has renewed interest in healthcare legislation with the passage of the “Right to Try” bill and has tentatively set the schedule to consider the dozens of opioid response bills intended to address the epidemic. In addition, this week conservative activists released their principles ahead of what they hope will be yet another attempt by Congress to repeal and replace the ACA before the November elections. NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann join the Healthcare Happy Hour podcast this week to share their insights on the potential for another repeal/replace attempt and for other healthcare legislation to be advanced through the remainder of the year, as well as their prognosis on the November elections.</description>
+      <enclosure url="https://nahu.org/media/3405/nahu_hhh_052518_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3405/nahu_hhh_052518_final.mp3</guid>
+      <pubDate>Fri, 25 May 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Conversation on the Future of Employer Reporting with P4ESC</title>
+      <author>info@nahu.org</author>
+      <description>NAHU is leading a coalition effort to advance bipartisan legislation through Congress that would provide for prospective employer reporting, greatly easing the compliance burden of the ACA for employers complying with the law’s mandate. On this week’s podcast episode, Executive Director of the Partnership for Employer-Sponsored Coverage Chris Pollack joins NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann to discuss the outlook for passing this legislation, either before the November elections or in the lame duck session. They also discuss the impact that local chapters and employers can have on the legislative process, as well as the coalition’s other legislative priorities, including the Bipartisan HSA Improvement Act, which NAHU strongly supports, and efforts to reduce the costs of prescription drugs.</description>
+      <enclosure url="https://nahu.org/media/3410/nahu_hhh_060118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3410/nahu_hhh_060118_final.mp3</guid>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Unpacking a Week of Hearings, Announcements, and Tuesday’s Primary Elections</title>
+      <author>info@nahu.org</author>
+      <description>Lawmakers came back from their Memorial Day recess with Senate Majority Leader Mitch McConnell emphatically cancelling the customary month-long August recess so that legislators can focus on their growing workload ahead of the November elections. On the House side, HHS Secretary Alex Azar testified on the Trump Administration’s priorities heading into the ACA’s sixth open enrollment period and another hearing was held on legislative efforts to promote consumer directed healthcare, including NAHU’s push to pass the Bipartisan HSA Improvement Act. NAHU’s Vice Presidents of Congressional Affairs Chris Hartmann and John Greene join the podcast this week to help make sense of it all, in addition to breaking down the results of this week’s “Super Tuesday” where eight states held primary elections, including California’s much anticipated top-two primary.</description>
+      <enclosure url="https://nahu.org/media/3415/nahu_hhh_060818_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3415/nahu_hhh_060818_final.mp3</guid>
+      <pubDate>Fri, 08 Jun 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Trump Administration to No Longer Defend the ACA’s Individual Mandate</title>
+      <author>info@nahu.org</author>
+      <description>The announcement late last week by the Justice Department that they would no longer defend the ACA’s individual mandate or consumer protection provisions sent shock-waves throughout the healthcare industry and may have major implications for the law’s future. While Democratic-led states have stepped up to defend the law in the Trump Administration’s absence, the future of the ACA is once again uncertain. A ruling by the courts to strike down the mandate, on the basis that with the penalties zeroed-out that it no longer functions as a tax, could threaten the very foundation that the law is built upon. NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs John Greene join the podcast this week to break down the details of this announcement and what the legalese means for you and your clients.</description>
+      <enclosure url="https://nahu.org/media/3429/nahu_hhh_061518_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3429/nahu_hhh_061518_final.mp3</guid>
+      <pubDate>Fri, 15 Jun 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU CEO Reviews Association Health Plan Final Rule</title>
+      <author>info@nahu.org</author>
+      <description>The Labor Department released the Association Health Plan (AHP) final rule yesterday in an effort to provide more affordable coverage options for small-business owners, their employees and families. This week’s special edition NAHU Healthcare Happy Hour features a special discussion with NAHU CEO Janet Trautwein to review the 198-page rule and what it will mean for your clients and prospective clients who may be considering AHPs. Janet walks through the rule, describing how these plans will work, what employers need to qualify under the rule, the rule’s staggered implementation and how it will work for those consumers who are enrolled in AHPs under the old rules, state regulation of these plans as they cross state-lines, and how NAHU helped to influence the rule-making process.</description>
+      <enclosure url="https://nahu.org/media/3454/nahu_hhh_062018_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3454/nahu_hhh_062018_final.mp3</guid>
+      <pubDate>Wed, 20 Jun 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AHP Follow-up and Primary Politics of Single Payer</title>
+      <author>info@nahu.org</author>
+      <description>This week’s NAHU Healthcare Happy Hour podcast takes an inside look at Tuesday’s primary election results, which saw generational changes in Democratic politics with the unexpected ouster of a key Congressional leader by a socialist Democrat campaigning on single-payer. NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs John Greene and Chris Hartmann join this week’s episode to discuss the implications of this election and what it could mean for the prospects of single-payer moving through Congress as a new generation of Democrats takes office. They also review a gubernatorial primary that saw a single-payer supporting Democrat advance, the Utah Senate primary and a heated Republicans primary in New York that was previewed in last week’s HUPAC Roundup. The podcast also includes an update on last week’s association health plan final rule and when to expect the forthcoming short-term plan rule.</description>
+      <enclosure url="https://nahu.org/media/3464/nahu_hhh_062918_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3464/nahu_hhh_062918_final.mp3</guid>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Shaping HSA Legislation, Navigator Roles, the Marketplaces and a New Supreme Court</title>
+      <author>info@nahu.org</author>
+      <description>This week’s NAHU Healthcare Happy Hour podcast features an extended edition with Marcy M. Buckner, John Greene and Chris Hartmann as they examine several key developments by Congress and the Trump Administration on healthcare policy. On Capitol Hill, the House Ways and Means committee advanced a series of NAHU-supported HSA related bills that would modify the spousal rules, allow consumers to use funds on onsite clinics, and for seniors on Medicare to contribute to HSAs, in addition to passing legislation that would delay the ACA’s employer mandate and further delay the Cadillac/excise tax. Meanwhile, the Trump Administration announced it would be freezing funds for the ACA’s risk adjustment program, likely leading to further instability in the individual markets, and would further cut navigator funding while expanding the scope of their role to inform consumers on the availability of association health plans and short-term plans. President Trump also announced the nomination of Brett Kavanaugh to the Supreme Court, where if confirmed by the Senate, he may play a critical role in deciding the fate of the ACA.</description>
+      <enclosure url="https://nahu.org/media/3501/nahu_hhh_071318_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3501/nahu_hhh_071318_final.mp3</guid>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Responds to Potentially Expanding Role of Navigators</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann join this week’s podcast to review our response to the Trump Administration’s funding opportunity announcement providing that navigators inform consumers about non-marketplace options, including association health plans and short-term plans. We discuss the statutory limitations placed on navigators in discussing non-marketplace plans, and our overall consumer protection concerns with navigators providing adequate education on these complex policies. The podcast also includes a discussion of our latest call to action on the health insurance tax and why we are continuing to push for another delay while we seek a full repeal, the prospects for value-based care, and a look ahead to what’s on tap with the short-term plan final rule and an interim final rule on risk adjustment, both in their last stages before being released.</description>
+      <enclosure url="https://nahu.org/media/3518/nahu_hhh_072018_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3518/nahu_hhh_072018_final.mp3</guid>
+      <pubDate>Fri, 20 Jul 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Risk Adjustment Payments Resumed, and An Overview of 2018 August Recess Talking Points</title>
+      <author>info@nahu.org</author>
+      <description>NAHU’s Marcy M. Buckner and Chris Hartmann join this week’s podcast to discuss the recently released final rule from CMS resuming the risk-adjustment program. CMS’s prior decision to halt the risk-adjustment program earlier this month (citing a federal judge’s decision in a New Mexico lawsuit) caught everyone off guard, so we discuss the impact that this final rule and resuming the program will have on stabilizing the individual and small-group markets. The podcast also discusses NAHU’s 2018 August recess talking points, as well as specific topics to keep in mind when you are meeting with your legislator’s in-district this summer.</description>
+      <enclosure url="https://nahu.org/media/3542/wu_podcast-7-27-18-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3542/wu_podcast-7-27-18-final.mp3</guid>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Reviews Short Term Plan Final Rule</title>
+      <author>info@nahu.org</author>
+      <description>The Trump Administration released their final rule today on short-term limited duration insurance (STLDI), often referred to as short-term plans (STPs), in an effort to provide additional coverage options for individuals outside of the marketplaces. This week’s special edition NAHU Healthcare Happy Hour features a discussion with NAHU Vice President of Government Affairs Marcy M. Buckner to review the 121-page rule and what it will mean for your clients and prospective clients who may be considering STPs. Marcy details the technical requirements of these plans, what consumers should know who enroll in these plans this year while the mandate penalties remain in full effect, how state regulators might take action to modify the plan’s requirements or maximum duration, the impact these plans may have on the individual marketplace and employer-sponsored insurance coverage, and how NAHU helped to influence the rule-making process.</description>
+      <enclosure url="https://nahu.org/media/3550/nahu_hhh_080118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3550/nahu_hhh_080118_final.mp3</guid>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Alliance to Fight the 40 Discusses Preserving Employer-Sponsored Coverage</title>
+      <author>info@nahu.org</author>
+      <description>NAHU is leading a coalition effort to advance bipartisan legislation through Congress to repeal the Cadillac/excise tax and preserve the employer exclusion of health insurance. On this week’s podcast episode, Heather Meade from the Alliance to Fight the 40 joins NAHU’s Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann to discuss the outlook for passing this legislation, after the House version reached a major milestone with over 300 bipartisan cosponsors. They also discuss the importance of preserving employer-sponsored coverage, how NAHU and the coalition work together to educate Congress on the benefits of the employer-based system, and how NAHU members can get involved during the August recess to help drive our message and get the Cadillac Tax repealed before the end of the year.</description>
+      <enclosure url="https://nahu.org/media/3578/nahu_hhh_081018_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3578/nahu_hhh_081018_final.mp3</guid>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Catalyst for Payment Reform on the Employer Driven Shift to Value Based Care</title>
+      <author>info@nahu.org</author>
+      <description>NAHU CEO Janet Trautwein joins the Healthcare Happy Hour to interview Suzanne Delbanco from the Catalyst for Payment Reform (CPR). Their conversation focuses on CPR’s mission of catalyzing employers, public purchasers and others to implement strategies that produce higher-value health care and improve the functioning of the health care marketplace. Suzanne and Janet discuss the changing healthcare marketplace, the need for employers to shift towards value-based strategies, and what every employer (and their broker) should be doing to shift toward higher-value thinking.</description>
+      <enclosure url="https://nahu.org/media/3606/nahu_hhh_081718_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3606/nahu_hhh_081718_final.mp3</guid>
+      <pubDate>Thu, 16 Aug 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>State Reactions to AHP and STP Rules and Texas v. Azar</title>
+      <author>info@nahu.org</author>
+      <description>The Trump Administration released their association health plan (AHP) and short-term plan (STP) final rules this summer in the promise of providing lower cost healthcare options. But many states have provided a lukewarm response, at best, while others have suggested outright banning these policies. On this week’s episode, NAHU’s Vice President of Government Affairs Marcy M. Buckner provides an update on where states are landing on the new federal rules and the resources that are available exclusively to NAHU members to keep track of them. Marcy also provides an update on the Trump Administration’s statements that implied an expanded role for navigators to enroll consumers in AHPs and STPs and how NAHU worked with the administration on clarifying their role. The podcast also looks at what’s at stake over the coming oral arguments challenging the constitutionality of the ACA’s individual mandate and consumer protections, as well as a look at what’s on tap for Congress when it returns from its August Recess after the Labor Day holiday.</description>
+      <enclosure url="https://nahu.org/media/3640/nahu_hhh_082418_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3640/nahu_hhh_082418_final.mp3</guid>
+      <pubDate>Fri, 24 Aug 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reflecting on John McCain’s Healthcare Legacy</title>
+      <author>info@nahu.org</author>
+      <description>Senator John McCain (R-AZ) passed away last Saturday, leaving behind a storied legacy including three decades as a federal policymaker. On this week's episode of the NAHU Healthcare Happy Hour, NAHU’s vice president of government affairs Marcy M. Buckner and vice presidents of congressional affairs John Greene and Chris Hartmann reflect on the life of Senator John McCain and the impact that he had on the nation's healthcare politics and policy. They break down some of his most consequential positions and actions, both as a candidate for office in his runs for the presidency, as well as in his 35-year career in Congress. They also reflect on how he has shaped the debate on employer-sponsored health insurance and the ACA, and how Arizona’s new senators may shape healthcare policy in the coming years.</description>
+      <enclosure url="https://nahu.org/media/3651/nahu_hhh_083118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3651/nahu_hhh_083118_final.mp3</guid>
+      <pubDate>Fri, 31 Aug 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ACA on the Docket &amp; Political Prospects of Single Payer</title>
+      <author>info@nahu.org</author>
+      <description>The calm of the August recess receded as Washington, D.C. came back to a roar this week. The Senate began the confirmation hearings for Supreme Court nominee Brett Kavanaugh, while cases over the ACA’s constitutionality and cost-sharing reduction payments shared in the healthcare headlines. On this week’s episode, NAHU’s Marcy M. Buckner and Chris Hartmann join the Healthcare Happy Hour to unpack the week’s legal and political news, look ahead to a big week for NAHU’s issues in Congress, and delve into the politics of single-payer and Medicare for All on the heels of yet another primary election upset and growing support for legislation according to recent polling. The episode also previews the forthcoming “employer week” in Congress and the outlook for passage of many of NAHU’s priority legislative issues.</description>
+      <enclosure url="https://nahu.org/media/3658/nahu_hhh_090718_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3658/nahu_hhh_090718_final.mp3</guid>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest David Mordo on Improvements to the Marketplace Broker Experience</title>
+      <author>info@nahu.org</author>
+      <description>Earlier today, several NAHU members and staff participated in an agent and broker roundtable with CMS Deputy Administrator and CCIIO Director Randy Pate. On this week’s episode of the NAHU Healthcare Happy Hour, former NAHU Legislative Council chairman David Mordo joins NAHU’s vice president of government affairs Marcy M. Buckner to discuss the major takeaways from the roundtable and the Trump Administration latest efforts to improve the marketplace experience for agents and brokers.</description>
+      <enclosure url="https://nahu.org/media/3709/nahu_hhh_091418_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3709/nahu_hhh_091418_final.mp3</guid>
+      <pubDate>Fri, 14 Sep 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How the Opioids Bill Could Impact Employer Healthcare Costs</title>
+      <author>info@nahu.org</author>
+      <description>The Senate voted nearly unanimously this week to advance their Opioids response legislation, which will now need to be merged with the House-passed version. NAHU has closely followed this as the House-version would increasingly shift costs for several more months of coverage for end stage renal disease onto employers before Medicare becomes the primary payer. On this week’s episode, NAHU’s Chris Hartmann and John Greene explain how employer plans could be impacted as Congress seeks to send the legislative package to President Trump in the coming weeks. John and Chris also review the current status of the House’s employer-related ACA reforms after the House recessed early last week, delaying indefinitely a vote on H.R. 3798 that would have restored the 40-hour workweek and further delayed the Cadillac/excise Tax. They also look at the growing interest in advancing surprise medical billing legislation at the federal level, and the Trump Administration’s efforts to bring transparency to prescription drug prices on the 15th anniversary of Medicare Part D.</description>
+      <enclosure url="https://nahu.org/media/3718/nahu_hhh_092118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3718/nahu_hhh_092118_final.mp3</guid>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU CEO Janet Trautwein meets with White House and the House Energy and Commerce Committee</title>
+      <author>info@nahu.org</author>
+      <description>Over the past week both the White House and the House Energy and Commerce Committee hosted roundtable events to discuss the current state of the health insurance market and what can be done to lower costs, increase choice and availability of plans, and introduce transparency in to the healthcare market. NAHU’s CEO Janet Trautwein was invited to both of these exclusive meetings. On this week’s episode Janet sits down with NAHU’s Vice President of Government Affairs, Marcy M. Buckner, to discuss the content of these meetings and what actions we can expect from the Administration and Congress as a result of the conversations that took place with the leading policymakers at these meetings. Janet and Marcy will review the Administration’s intentions for implementing transparency, not just in cost, but in other areas of healthcare and health insurance as well as what could possibly be included in the long awaited proposed rule on Health Reimbursement Accounts that is expected to be released soon from the Department of Labor, Treasury, and the Department of Health and Human Services. They will also focus on the possible foreshadowing these meetings may have had on the plans Republicans are putting in place for actions following the mid-term elections and what we may see introduced in the 116th Congress.</description>
+      <enclosure url="https://nahu.org/media/3738/nahu_hhh_092818_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3738/nahu_hhh_092818_final.mp3</guid>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Federal Efforts to Address Balance Billing</title>
+      <author>info@nahu.org</author>
+      <description>With the final passage of the FAA reauthorization, Congress has taken a major step forward in addressing surprise and balance billing issues by providing more regulatory authority over air ambulances. At the same time, NAHU has been working closely with several senators on forthcoming balance billing legislation that is expected to be considered in the next Congress. On this week’s episode, NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann join the Healthcare Happy Hour to review the ongoing steps at the federal and state levels to address this growing concern as patients are left with exorbitant medical bills for services billed out-of-network. The episode also looks into how NAHU is working to prepare the incoming group of lawmakers expected to join the 116th Congress in January and how you can join us in our efforts to advocate on behalf of your clients and protect our industry.</description>
+      <enclosure url="https://nahu.org/media/3740/nahu_hhh_100518_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3740/nahu_hhh_100518_final.mp3</guid>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Jeff Smedsrud Joins the Healthcare Happy Hour to Review Nuances of Short-Term Plans</title>
+      <author>info@nahu.org</author>
+      <description>HealthCare.com co-founder Jeff Smedsrud joins the Healthcare Happy Hour for a special discussion with NAHU Vice President of Government Affairs Marcy M. Buckner on the impact of the short-term plan final rule as plans begin to be sold this month under the new regulation. Their conversation focuses on the regulatory nuances of these plans, particularly as states have taken very different positions as to how they are permitted, if they are allowed at all. Jeff and Marcy delve into how these plans may impact marketplace plans and the potential changes to the individual market risk pool, which consumers may be eligible to enroll and who may benefit the most, and what agents and brokers should know before consulting with their clients about these plans.</description>
+      <enclosure url="https://nahu.org/media/3766/nahu_hhh_101218_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3766/nahu_hhh_101218_final.mp3</guid>
+      <pubDate>Fri, 12 Oct 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU's Coalition Efforts to Oppose Single-Payer and Medicare-for-All</title>
+      <author>info@nahu.org</author>
+      <description>Lauren Crawford Shaver from the Partnership for America's Health Care Future joins the Healthcare Happy Hour for a special discussion with NAHU's lobbyists Marcy M. Buckner, John Greene, and Chris Hartmann on the coalition's efforts to educate the public and policymakers on the detrimental impact of single-payer legislation. The conversation delves on what has led to the coalition's formation, how the ACA and Medicare Advantage have contributed to the debate, the nuances of single-payer, Medicare-for-All, and a public option, and the steps that the coalition is taking now and in the future to educate policymakers and the public about these plans, both heading into the 2018 midterms and as the 2020 presidential campaign gets underway.</description>
+      <enclosure url="https://nahu.org/media/3784/nahu_hhh_101918_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3784/nahu_hhh_101918_final.mp3</guid>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>BAN’s Perry Braun Joins NAHU CEO Janet Trautwein for 2019 Industry Predictions</title>
+      <author>info@nahu.org</author>
+      <description>Perry Braun from the Benefit Advisors Network joins the Healthcare Happy Hour podcast for a special discussion with NAHU CEO Janet Trautwein on 2019 healthcare industry predictions. Perry and Janet discuss the impact of the Association Health Plan final rule for employers and the individual marketplace in the coming year. They also discuss the changing role of the broker in the midst of mergers and acquisitions as well as what the ongoing consolidation in the healthcare industry could mean for the costs of healthcare for consumers. They also give their predictions for the next Congress and whether we can expect to see another wave of major reforms or incremental changes to the healthcare system.</description>
+      <enclosure url="https://nahu.org/media/3791/nahu_hhh_102618_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3791/nahu_hhh_102618_final.mp3</guid>
+      <pubDate>Fri, 26 Oct 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Unpacking the HRA Proposed Rule &amp; Election Predictions</title>
+      <author>info@nahu.org</author>
+      <description>It’s the calm before the storm as politicos and policy wonks in Washington, D.C. and throughout the country await the results of Tuesday’s midterm elections. More than 6,000 legislative seats and 36 governorships are at stake, but most of the attention has been focused on control of Congress and whether a “Blue Wave” of Democratic voters will materialize to flip control of the House or Senate. On this week’s episode, NAHU’s John Greene and Chris Hartmann take a deep dive at the key contests to watch on election night, both in terms of early indicators for how the night might go, and the races that could have the most impact on NAHU’s legislative agenda in the new Congress. Additionally, NAHU’s Vice President of Government Affairs Marcy M. Buckner helps to unpack the Trump Administration’s latest regulatory efforts—the proposed rule to expand Health Reimbursement Arrangements, and the guidance to provide greater state flexibility of the ACA’s State Relief and Empowerment Waivers.</description>
+      <enclosure url="https://nahu.org/media/3793/nahu_hhh_110218_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3793/nahu_hhh_110218_final.mp3</guid>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Can Divided Government Achieve Compromise in Healthcare ahead of 2020?</title>
+      <author>info@nahu.org</author>
+      <description>One of the most-hyped Midterm elections in memory came to a close on Tuesday, and NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann analyze the results and what they could mean for healthcare and NAHU’s issues. Marcy, John and Chris look at the outsized role that healthcare played this year, far outpacing the perennial top issue of the economy in voters’ preferences for candidates, and how it could have major consequences for the legislative agenda over the next two years. They look at how single-payer candidates fared and the prospects for that issue going forward, the key issues in the Lame Duck session, how NAHU’s legislative priorities could fare in the new Congress as we seek new champions on our issues, and how you can join us in our efforts through HUPAC and meeting with your legislators to help spread the message on the value of agents and brokers and the private health insurance market.</description>
+      <enclosure url="https://nahu.org/media/3799/nahu_hhh_110918_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3799/nahu_hhh_110918_final.mp3</guid>
+      <pubDate>Fri, 09 Nov 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU and Stop the HIT's Efforts to Combat the Premium Tax</title>
+      <author>info@nahu.org</author>
+      <description>NAHU and the Stop the HIT coalition have been working to advance bipartisan legislation through Congress to repeal the ACA’s health insurance premium tax, or for further delay. On this week’s podcast, Elena Tompkins from the Stop the HIT joins NAHU’s John Greene and Chris Hartmann to discuss the outlook for passing this legislation in the Lame Duck session and in the new Congress that will be seated in January. They discuss their ongoing efforts to inform legislators and the work that is underway to educate the nearly 100 new members of Congress on the importance of repealing this onerous tax, as well as how they are identifying new legislative champions as several of our key supports leave Congress. They also relate why it may be more difficult to advance a full repeal in the new Congress and why they are working diligently to advance legislation in the coming weeks before the current session is gavelled to a close.</description>
+      <enclosure url="https://nahu.org/media/3840/nahu_hhh_111618_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3840/nahu_hhh_111618_final.mp3</guid>
+      <pubDate>Fri, 16 Nov 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Conceptualizing How States Can Take Advantage of ACA Waivers</title>
+      <author>info@nahu.org</author>
+      <description>The Trump Administration released follow-up guidance on their state relief and empowerment waivers this week, providing four examples of how states can take advantage of the newly announced changes. On this week’s episode of the Healthcare Happy Hour, NAHU’s Marcy M. Buckner and Chris Hartmann unpack these “concept waivers” and how your state could be affected by these waivers if approved. Marcy and Chris also discuss their meeting this week with key treasury department officials on the HRA regulations and other employer issues, as well as the latest happenings on Capitol Hill—both in the Lame Duck session as NAHU seeks to pass a further delay of the health insurance tax, and for next year as the parties establish their leadership roles.</description>
+      <enclosure url="https://nahu.org/media/3857/nahu_hhh_113018_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3857/nahu_hhh_113018_final.mp3</guid>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Remembering President George H.W. Bush’s Healthcare Legacy</title>
+      <author>info@nahu.org</author>
+      <description>Former president George H.W. Bush was laid to rest this week, leaving an indelible mark on the nation’s domestic and international policy after decades of service spanning the military and government. On this week's episode of the NAHU Healthcare Happy Hour, NAHU Vice President of Government Affairs Marcy M. Buckner and Vice Presidents of Congressional Affairs John Greene and Chris Hartmann reflect on the life of the nation’s 41st president and the impact that he had on the nation's healthcare politics and policy. The podcast also looks at the Trump Administration’s efforts to improve choice and competition and the lame duck session of Congress and the potential for healthcare policies to be passed.</description>
+      <enclosure url="https://nahu.org/media/3859/nahu_hhh_120718_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3859/nahu_hhh_120718_final.mp3</guid>
+      <pubDate>Fri, 07 Dec 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Sneak Peak at the 2019 Congressional Healthcare Agenda</title>
+      <author>info@nahu.org</author>
+      <description>Congress is a week away from closing out its 115th Session as policymakers negotiate the details on the budget bill to avoid a partial government shutdown next Friday. While they work out these issues, House Republicans are engaged in a final effort to advance their Tax Reform 2.0 legislation, which includes delays of the health insurance tax and Cadillac Tax. On this week's episode of the NAHU Healthcare Happy Hour, NAHU Vice President of Government Affairs Marcy M. Buckner and Vice President of Congressional Affairs Chris Hartmann review the prospects of advancing these delays before the end of the year in the midst of the budget shutdown. They also discuss the key issues expected to make up next year’s healthcare agenda, being set by Senate Republicans and Congressional Democrats, who will control the House for the first time since the ACA was passed.</description>
+      <enclosure url="https://nahu.org/media/3890/nahu_hhh_121418_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3890/nahu_hhh_121418_final.mp3</guid>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Edition on Federal Ruling Declaring ACA Unconstitutional</title>
+      <author>info@nahu.org</author>
+      <description>Late last Friday, a federal district court judge ruled that the ACA’s individual mandate, with no accompanying tax penalty, is unconstitutional and without which, the law cannot function and therefore the full law is invalid. This ruling could have dramatic effects not only for the key provisions of the landmark healthcare law, such as the marketplaces, mandates and tax credits, but for countless other provisions, from elimination of lifetime limits, guaranteed-issue coverage and consumer protections to Medicaid expansion and Medicare Advantage reforms. On this week’s special edition episode, NAHU’s Marcy M. Buckner and Chris Hartmann break down this ruling, what it means for you and your clients, the expected next steps, a timeline for the appeals process and when to expect a final ruling. They also provide an update on the ongoing negotiations for an end-of-year budget agreement to avert a partial government shutdown at the end of the week and the potential for healthcare provisions to be included.</description>
+      <enclosure url="https://nahu.org/media/3891/nahu_hhh_122118_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3891/nahu_hhh_122118_final.mp3</guid>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Shutdown Takes Attention Away from Nation’s Healthcare Issues</title>
+      <author>info@nahu.org</author>
+      <description>The ongoing partial federal government shutdown will be entering its fourth week, making it the longest lapse in federal appropriations in American history. As the Trump Administration and Congress negotiate a possible resolution to reopen the government, attention has been drawn away from other legislative issues. On this week’s episode, NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann unpack how the shutdown is impacting NAHU’s legislative agenda, and when to expect our legislative priorities to be re-introduced in the new session of Congress. They also review the latest round of comments that NAHU has submitted to the Trump Administration, including our detailed response to the proposed expansion of health reimbursement arrangements, and our concerns with the proposal that would require insurers to send two premium statements each month to marketplace enrollees.</description>
+      <enclosure url="https://nahu.org/media/3903/nahu_hhh_011119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3903/nahu_hhh_011119_final.mp3</guid>
+      <pubDate>Fri, 11 Jan 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Healthcare Legs and Regs Continue to Face Delays Amid Shutdown</title>
+      <author>info@nahu.org</author>
+      <description>The ongoing partial government shutdown is officially the longest in American history. While the negotiations are not directly related to healthcare or NAHU’s policy priorities, they have significantly impacted NAHU’s legislative and regulatory efforts. On this week’s episode, NAHU’s Marcy M. Buckner, and Chris Hartmann detail the impact that the shutdown is having on federal rulemaking, including the release of the HRA final rule, the annual payment parameters rule and The Trump Administration’s ability to draft the Cadillac Tax regulations as thousands of federal workers throughout the departments remain furloughed. They also discuss how the shutdown could impact this year’s employer reporting deadlines, our ability to communicate with agency officials on compliance concerns, and Congress’s shortened calendar to focus on our legislative priorities as each passing day is taken up by negotiations to reopen the federal government instead of bipartisan solutions to healthcare challenges.</description>
+      <enclosure url="https://nahu.org/media/3928/nahu_hhh_011819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3928/nahu_hhh_011819_final.mp3</guid>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>New Legislation for the New Congress</title>
+      <author>info@nahu.org</author>
+      <description>Lawmakers will be returning to the drawing board the next three weeks to avoid another government shutdown, after a temporary deal was tentatively reached today. As lawmakers negotiate a path forward, NAHU has been actively working with Congress to advance our federal legislative priorities once lawmakers move onto considering other issues. This week, bipartisan legislation was introduced to fully repeal the Cadillac Tax, joining bipartisan legislation introduced to delay or fully repeal the health insurance premium tax. On this week’s episode, NAHU’s Chris Hartmann and John Greene review these new legislative efforts and their chances for passage in the newly divided Congress while both of the taxes remain suspended this year. John and Chris also discuss the progress of forthcoming legislation addressing two of our issues in Medicare—treating COBRA as creditable coverage and the three-day hospital stay requirement. And as the debate continues over single-payer, we look at our efforts to combat proposals with the Partnership for America’s Health Care Future.</description>
+      <enclosure url="https://nahu.org/media/3952/nahu_hhh_012519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3952/nahu_hhh_012519_final.mp3</guid>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hearing More on Healthcare</title>
+      <author>info@nahu.org</author>
+      <description>With the government shutdown temporarily over, Congress turned the page to other issues, including pre-existing conditions, prescription drugs, and lowering healthcare costs. On this week’s episode, NAHU’s Marcy M. Buckner, Chris Hartmann and John Greene unpack this week’s healthcare hearings and what they could mean for bipartisan cooperation on our legislative priorities. They also look at the latest headlines on single-payer and Medicare-for-All, as the 2020 presidential contest gets underway with some Democratic candidates suggesting eliminating private insurance for a government-run option. And they review the latest Medicare guidance on the 2020 proposed rates and plan changes, as well as our comments to the “America First” prescription drug proposed changes to Medicare plans.</description>
+      <enclosure url="https://nahu.org/media/3972/nahu_hhh_020119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/3972/nahu_hhh_020119_final.mp3</guid>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Discussion on Balance Billing</title>
+      <author>info@nahu.org</author>
+      <description>NAHU is committed to working with policymakers at both the federal and state levels to address the issue of surprise and balance medical bills. As part of these efforts, the NAHU legislative council’s special balance billing workgroup convened to identify potential solutions and propose them to policymakers. On this week’s episode, Gary Cupo from NAHU’s Balance Billing workgroup and attorney John Fanburg discuss the ongoing efforts to address balance and surprise medical billing issues. They look at the current practices and policies for consumers who face surprise bills, the process of arbitration, proposals that call for requiring all providers within a practice to be in-network, tying maximum out-of-network rates to a percentage of Medicare reimbursement, and forthcoming federal legislation and state efforts to regulate the practice.</description>
+      <enclosure url="https://nahu.org/media/4005/nahu_hhh_020819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4005/nahu_hhh_020819_final.mp3</guid>
+      <pubDate>Fri, 08 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Capitol Conference 2019: Know Before You Go</title>
+      <author>info@nahu.org</author>
+      <description>Calling all Capitol Conference attendees and those curious about NAHU’s premier legislative event! In just over a week, NAHU members from across the country will descend on Capitol Hill to make our voices heard on the importance of private health insurance coverage and how to improve the healthcare system. On this week’s episode, NAHU’s Vice President of Government Affairs Marcy M. Buckner and Director of Policy Engagement Dan Samson preview what to expect at this year’s conference. They break down the agenda and the can’t-miss speakers, provide a preview of the breakout sessions, the primary policy priorities that we will be advocating for on the Hill, and tips for making the most of your visit. Whether this is your first or 29th Capitol Conference (we know who you are!), you won’t want to miss this for the essential intel ahead of your trip to the nation’s capital. And if you have never participated in Capitol Conference, we encourage you to check out the podcast to hear what you’re missing!</description>
+      <enclosure url="https://nahu.org/media/4056/nahu_hhh_021519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4056/nahu_hhh_021519_final.mp3</guid>
+      <pubDate>Fri, 15 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Recapping CapCon with Jessica Watts</title>
+      <author>info@nahu.org</author>
+      <description>NAHU held its 29th annual Capitol Conference this week with remarks by HHS Secretary Alex Azar, senior Trump Administration health policy officials, numerous members of Congress, and other key stakeholders. To recap the week's events, NAHU Legislative Council Vice Chair, and host of this year's conference, Jessica Watts joins NAHU's Vice President of Government Affairs Marcy M. Buckner. They share their thoughts on the remarks of Secretary Azar, as well as the sessions on how NAHU is working to oppose Medicare-for-All, the role of association health plans and the forthcoming final rule on health reimbursement arrangements. They also discuss the action items for members of Congress as part of our federal priorities, and the other ways NAHU members can interact with policymakers and fellow agents and brokers throughout the conference, as well as why those who haven't yet come to a "CapCon" should begin making plans for next year.</description>
+      <enclosure url="https://nahu.org/media/4097/nahu_hhh_030119_cc_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4097/nahu_hhh_030119_cc_final.mp3</guid>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Catching Up on our Legislative Priorities</title>
+      <author>info@nahu.org</author>
+      <description>The past several weeks have been full of activity for NAHU’s priority legislative issues. During our annual Capitol Conference, the House Medicare-for-All bill was introduced, giving a prime opportunity for NAHU members to counter the message in person. We also saw the introduction of new legislation to delay the Health Insurance Tax and to fully repeal the Cadillac/excise Tax. And this week legislation was introduced to fix Medicare’s two-midnight rule for patients placed on observation status. On this week’s episode, NAHU’s Marcy M. Buckner and John Greene recap these legislative issues that have sprung up over the past several weeks since the last regular edition of the Healthcare Happy Hour. They also look at recent Trump Administration announcements, including the proposed rule to expand the sale of health insurance across state lines and the president’s 2020 budget request, which included several of NAHU’s priorities we’ve been seeking through Congress.</description>
+      <enclosure url="https://nahu.org/media/4149/nahu_hhh_031519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4149/nahu_hhh_031519_final.mp3</guid>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Debriefing the First-Ever Medicare-for-All Hearing</title>
+      <author>info@nahu.org</author>
+      <description>Congress held a first-ever hearing on Medicare-for-All in the House rules committee this week. NAHU strongly opposes single-payer proposals at all levels and submitted comments to the record to underscore our concerns. On this week’s episode, NAHU’s Marcy M. Buckner debriefs the hearing and how the main issues of cost, choice, coverage, quality, and access to care were addressed by witnesses and members of Congress, and how we helped to shape those discussions at the hearing. Marcy also explains what to expect as the debate moves forward, with possibly more hearings in Congress and beyond. And we take a deep dive at state level efforts to implement single-payer programs, including Washington State as it mulls implementing a public option.</description>
+      <enclosure url="https://nahu.org/media/4283/nahu_hhh_050319_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4283/nahu_hhh_050319_final.mp3</guid>
+      <pubDate>Fri, 03 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>When It Rains, It Pours: A Rundown of a Busy NAHU Week</title>
+      <author>info@nahu.org</author>
+      <description>This week has been one of the busiest in recent memory for NAHU’s priorities, with a flurry of activity at both the legislative and regulatory levels. On this week’s episode, NAHU’s Marcy M. Buckner and John Greene help to breakdown all of this activity and what to make of it in the weeks to come. This includes the introduction of several pieces of NAHU’s priority legislative issues, such as treating COBRA as creditable coverage for Medicare, the permanent repeal of the HIT tax and improvements to Medicare notices with input from agents, as well as key developments on drug pricing and surprise medical bills. And we help to make sense of President Trump’s surprise press conference addressing surprise medical billing.</description>
+      <enclosure url="https://nahu.org/media/4337/nahu_hhh_051019_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4337/nahu_hhh_051019_final.mp3</guid>
+      <pubDate>Fri, 10 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Legislative Council Member Gary Cox Joins Us to Review Agent Meeting with Head of Healthcare.gov</title>
+      <author>info@nahu.org</author>
+      <description>Earlier today, several NAHU members and staff participated in an agent and broker roundtable with CMS Deputy Administrator and CCIIO Director Randy Pate. On this week’s episode of the NAHU Healthcare Happy Hour, NAHU Legislative Council member Gary Cox joins NAHU’s Vice President of Government Affairs Marcy M. Buckner to discuss the major takeaways from the roundtable and the Trump Administration’s latest efforts to improve the marketplace experience for agents and brokers.</description>
+      <enclosure url="https://nahu.org/media/4203/nahu_hhh_040519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4203/nahu_hhh_040519_final.mp3</guid>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ICYMI, Special Guest Discussion on Balance Billing</title>
+      <author>info@nahu.org</author>
+      <description>This week’s episode opens with a brief recap of the top health policy issues from NAHU’s vice president of Congressional affairs John Greene, followed by our special edition episode on balance billing.</description>
+      <enclosure url="https://nahu.org/media/4237/nahu_hhh_041219_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4237/nahu_hhh_041219_final.mp3</guid>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Recess Respite Ahead of A Busy Spring</title>
+      <author>info@nahu.org</author>
+      <description>Congress is in the midst of its two-week Easter Recess, making it a perfect time for NAHU members to meet with lawmakers while they are back in district to discuss our federal priorities. While the recess heads into its second week, NAHU’s vice presidents of congressional affairs John Greene and Chris Hartmann recap the past several weeks, including the ongoing legal challenges over the ACA and regulatory workarounds prompted by the Trump Administration. John and Chris review the status of the Texas v. U.S. case and the ruling that overturned the association health plan rules. They also discuss our recent comments on the administration’s drug rebate proposal, as well as legislation on Medicare, Medicare-for-All, and surprise billing.</description>
+      <enclosure url="https://nahu.org/media/4251/nahu_hhh_041919_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4251/nahu_hhh_041919_final.mp3</guid>
+      <pubDate>Fri, 19 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Feds Set Parameters for Brokers and Navigators</title>
+      <author>info@nahu.org</author>
+      <description>The 2020 Notice of Benefit and Payment Parameters and Letter to Issuers were finalized late last week and include several provisions establishing the roles and requirements of navigators and brokers. On this week’s episode, NAHU’s Marcy M. Buckner debriefs the new rules and what agents and brokers should know going into the next open enrollment and new plan year. The podcast also includes a discussion on the week’s activity on Capitol Hill and our efforts to shape the debate on Medicare for All ahead of the first-ever hearing in Congress on the proposal.</description>
+      <enclosure url="https://nahu.org/media/4271/nahu_hhh_042619_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4271/nahu_hhh_042619_final.mp3</guid>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Surprise! Balance Billing &amp; Medicare’s “Two-Midnight” Rule</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s episode, NAHU’s Marcy M. Buckner and Chris Hartmann discuss the happenings during this week’s Congressional recess, including the submission of a stakeholder letter urging Congress to take action on balance-billing and to pass legislation that will protect patients from surprise medical bills and rein in out-of-control healthcare costs. Marcy and Chris will also discuss NAHU’s Operation Shout that was released this week requesting members of Congress to sign on to a bill to fix Medicare’s two-midnight rule and what this means for consumers.</description>
+      <enclosure url="https://nahu.org/media/4182/wu-podcast-final-32219.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4182/wu-podcast-final-32219.mp3</guid>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>House Democratic Leaders Unveil Extensive Healthcare Package</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s episode, NAHU’s Chris Hartmann and John Greene discuss the recently released Protecting Pre-existing Conditions and Making Healthcare More Affordable Act of 2019, as well as the House Energy and Commerce Health Subcommittee’s markup on bills to address drug pricing and stabilize ACA markets.</description>
+      <enclosure url="https://nahu.org/media/4197/wu_podcast_final_32919.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4197/wu_podcast_final_32919.mp3</guid>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Adding More Bills to the Hopper</title>
+      <author>info@nahu.org</author>
+      <description>The long-anticipated surprise medical billing legislation was introduced this week by members of the Senate Bipartisan Working Group, proposing a federal baseball-style arbitration model for insurers and providers to settle disputes, while taking the patient entirely out of the negotiation. On this week’s episode, NAHU’s John Greene and Chris Hartmann review the latest iteration of this legislation and how NAHU has been involved in helping to craft the language over the past several months. They also review the re-introduction of NAHU-supported legislation to restore the 40-hour workweek, the senate companion legislation to treat COBRA as creditable coverage for Medicare, and the House’s vote to rescind another piece of Trump Administration guidance.</description>
+      <enclosure url="https://nahu.org/media/4371/nahu_hhh_051719_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4371/nahu_hhh_051719_final.mp3</guid>
+      <pubDate>Fri, 17 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Don’t be Surprised by this Week’s Topic</title>
+      <author>info@nahu.org</author>
+      <description>Surprise billing is continuing to receive a significant amount of attention from lawmakers, with last week’s house and senate versions, and this week with the introduction of a comprehensive healthcare reform discussion draft that includes provisions to tackle the topic. On this week’s episode, NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann review how the conflicting recently introduced proposals may find consensus among Democrats and Republicans who are pushing to pass legislation by this summer. They also review NAHU’s meeting with HHS Secretary Alex Azar on prescription drugs, the latest hearing on single-payer healthcare, guidance on association health plans in the wake of a court ruling overturning the rule, and what to expect after the Memorial Day recess.</description>
+      <enclosure url="https://nahu.org/media/4377/nahu_hhh_052419_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4377/nahu_hhh_052419_final.mp3</guid>
+      <pubDate>Fri, 24 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Helpful Discussion to Understand the HELP Committee’s Discussion Draft</title>
+      <author>info@nahu.org</author>
+      <description>The Senate HELP Committee released a discussion draft for their Lower Health Care Cost Act last week that included several provisions NAHU is closely following. These include proposals to require the disclosure of broker compensation, potential options for addressing surprise medical billing, reducing the cost of pharmaceuticals, and several other healthcare cost provisions. On this week’s episode, On this week’s episode, NAHU’s Marcy M. Buckner, Chris Hartmann and John Greene review this legislation, our concerns, and the next steps as these ideas are debated in Congress.</description>
+      <enclosure url="https://nahu.org/media/4388/nahu_hhh_053119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4388/nahu_hhh_053119_final.mp3</guid>
+      <pubDate>Fri, 31 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Responds to Broker Compensation Disclosure Proposal</title>
+      <author>info@nahu.org</author>
+      <description>The Senate HELP Committee’s discussion draft legislation remains a top priority for NAHU as we formally submitted feedback to their proposal to require broker compensation disclosure and options for addressing surprise billing disputes. That legislation comes as lawmakers from both parties put forth competing ideas on how to fix balance billing, with Congress aiming to pass a consensus bill before their August Recess. On this week’s episode, NAHU’s Marcy M. Buckner and Chris Hartmann discuss these legislative efforts and the comments that we submitted to the committee for incorporation into the updated version that is expected to be released ahead of the Independence Day holiday. They also give an update on the status of several other issues that continue to move through Congress, including an update on Medicare-for-All and where state efforts stand to implement single-payer or similar programs.</description>
+      <enclosure url="https://nahu.org/media/4419/nahu_hhh_060719_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4419/nahu_hhh_060719_final.mp3</guid>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU’s Coalition Efforts to Combat Surprise Billing</title>
+      <author>info@nahu.org</author>
+      <description>Congress continued its round of hearings on surprise billing and single-payer healthcare this week, adding to the outsized attention that these two issues have generated already in this legislative session. On this week’s episode, NAHU’s Chris Hartmann and John Greene unpack this week’s hearings and the key takeaways as lawmakers seek to advance surprise billing legislation in the coming weeks and Democrats looks for common ground in a health reform strategy. The episode also includes a discussion of the newest coalition effort that was formed this week by NAHU and other key stakeholders to tackle the topic of surprise billing, as well as an update on the timeline for considering legislation to repeal the ACA’s Cadillac Tax and the Senate HELP Committee’s discussion draft that would require broker compensation disclosure.
+
+Editorial Note: This week’s podcast was recorded prior to the release of the health reimbursement arrangement final rule. NAHU will provide an in-depth discussion of the final rule on next week’s podcast episode.</description>
+      <enclosure url="https://nahu.org/media/4436/nahu_hhh_061419_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4436/nahu_hhh_061419_final.mp3</guid>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How to Comply with the HRA Final Rule</title>
+      <author>info@nahu.org</author>
+      <description>The Trump Administration released its final rule on the expansion of health reimbursement arrangements last week that established new individual-coverage HRAs and excepted-benefit HRAs. This week, NAHU’s Marcy Buckner and Chris Hartmann join us to review the nearly-500 page final regulation and key compliance considerations for employers and brokers to keep in mind, along with the remaining concerns NAHU has with the final regulation that we raised in formal comments submitted to the proposed rule. The episode also looks into the possibility of the rule facing legal hurdles that could undermine its full implementation, as well as a recap of the ongoing legal challenges to the association health plan and short-term plan final rules.</description>
+      <enclosure url="https://nahu.org/media/4448/nahu_hhh_062119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4448/nahu_hhh_062119_final.mp3</guid>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Transparency is the Word of the Week</title>
+      <author>info@nahu.org</author>
+      <description>President Trump signed an executive order this week to increase healthcare price and quality transparency. The order will begin the regulatory process for federal agencies to help consumers better understand healthcare charges and their overall cost of care. Meanwhile, the Senate HELP Committee advanced their comprehensive lower healthcare costs bill with key provisions on surprise billing and broker compensation disclosure. On this week’s episode, NAHU’s Marcy M. Buckner and John Greene break down the executive order and NAHU’s views on the initiative. They also provide a recap of the Senate hearing and how NAHU worked with lawmakers and their staff to ensure that the surprise billing and broker disclosure measures were written in the best interest of consumers and our members.</description>
+      <enclosure url="https://nahu.org/media/4483/nahu_hhh_062819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4483/nahu_hhh_062819_final.mp3</guid>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>More Surprises Ahead &amp; Understanding the Texas Appeal</title>
+      <author>info@nahu.org</author>
+      <description>The House took a big first step in advancing its Surprise Billing legislation, joining the Senate which passed its bill out of committee last month. But both bills still have a lot of work ahead of them before they can be considered, adopted and merged into a final consensus package. On this week’s episode, NAHU’s Marcy M. Buckner, Chris Hartmann and John Greene recap the ongoing efforts and the work underway behind the scenes to quickly advance the NAHU-favored benchmarking method of addressing surprise bills. The episode also includes an extensive review of the oral arguments in the fifth circuit appeals case of Texas v. U.S., challenging the constitutionality of the ACA’s individual mandate and the law itself. And we look ahead to the upcoming vote to fully repeal the ACA’s Cadillac Tax, how it differs from the previous votes and what it means for the tax moving forward.</description>
+      <enclosure url="https://nahu.org/media/4495/nahu_hhh_071219_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4495/nahu_hhh_071219_final.mp3</guid>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Toasting to the Cadillac Tax Repeal Vote</title>
+      <author>info@nahu.org</author>
+      <description>NAHU secured a major legislative victory this week with the House’s passage of the Cadillac Tax repeal bill. On this week’s episode, NAHU’s Marcy M. Buckner, Chris Hartmann and John Greene recap the significance of this vote, they key role that NAHU, our coalition partners, our members and their clients played in the passage of this legislation, and what to expect moving forward. We also review the status of the surprise billing legislation and its arbitration amendment, and ongoing NAHU-supported reforms to HSAs, both legislatively and through regulation.</description>
+      <enclosure url="https://nahu.org/media/4505/nahu_hhh_071919_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4505/nahu_hhh_071919_final.mp3</guid>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Time to Meet Your Member</title>
+      <author>info@nahu.org</author>
+      <description>The House just embarked on its six-week in-district work period, better known as the annual August Congressional Recess, with the Senate set to join them next week. This break from legislating allows lawmakers time to meet with constituents before returning after the Labor Day holiday for what is expected to be a busy September. On this week’s episode, NAHU’s Chris Hartmann and John Greene review our federal priorities to help prepare for these recess meetings. They also discuss key points that NAHU members should make to their lawmakers and how you can uniquely help frame these issues from your personal perspectives to help bolster our arguments here in Washington, D.C.</description>
+      <enclosure url="https://nahu.org/media/4540/nahu_hhh_072619_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4540/nahu_hhh_072619_final.mp3</guid>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Employer Reporting Bills Introduced and Summer Update on Federal Priorities</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s episode, NAHU’s Chris Hartmann and John Greene discuss the recently introduced Employer Reporting Bill in the House and Senate, H.R. 4070 and S. 2366.  In addition, they will provide an update on our other federal priorities as Congress heads out on their 6-week August recess.</description>
+      <enclosure url="https://nahu.org/media/4577/nahu_hhh_podcast_080219_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4577/nahu_hhh_podcast_080219_final.mp3</guid>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ICYMI, Time to Meet Your Member</title>
+      <author>info@nahu.org</author>
+      <description>Congress is now on its annual six-week August recess. This break from legislating allows lawmakers time to meet with constituents before returning after the Labor Day holiday for what is expected to be a busy September. On this week’s episode, NAHU’s Chris Hartmann and John Greene review our federal priorities to help prepare for these recess meetings. They also discuss key points that NAHU members should make to their lawmakers and how you can uniquely help frame these issues from your personal perspectives to help bolster our arguments here in Washington, DC.</description>
+      <enclosure url="https://nahu.org/media/4582/nahu_hhh_080819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4582/nahu_hhh_080819_final.mp3</guid>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Katy Spangler on NAHU's Coalition Efforts to Combat Surprise Billing</title>
+      <author>info@nahu.org</author>
+      <description>NAHU is leading a coalition effort to advance bipartisan legislation through Congress to end the practice of surprise medical billing and to implement a payment benchmark standard. On this week’s podcast, Katy Spangler from the Coalition Against Surprise Medical Billing joins NAHU’s Marcy M. Buckner and Chris Hartmann to discuss the ongoing legislative efforts to address surprise billing and how NAHU and the coalition are working to influence the process. They break down the nuances between arbitration and benchmarking, and what the outlook is for reaching a consensus among the several competing factions – both among stakeholders and policymakers.</description>
+      <enclosure url="https://nahu.org/media/4611/nahu_hhh_081619_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4611/nahu_hhh_081619_final.mp3</guid>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Chris Pollack on NAHU’s Coalition Efforts to Streamline ACA Reporting</title>
+      <author>info@nahu.org</author>
+      <description>NAHU and the Partnership for Employer-Sponsored Coverage are leading the charge to advance bipartisan legislation to allow prospective employer reporting, greatly easing the compliance burden of the ACA for employers complying with the law’s mandate. On this week’s podcast episode, Chris Pollack, executive director of the partnership, joins NAHU’s Chris Hartmann to discuss the outlook for passing the recently re-introduced legislation. They also discuss the impact that local NAHU chapters and employers can have on the legislative process, as well as the coalition’s other legislative priorities, including the permanent repeal of the Cadillac/excise Tax.</description>
+      <enclosure url="https://nahu.org/media/4619/nahu_hhh_083019_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4619/nahu_hhh_083019_final.mp3</guid>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How NAHU is Working with CMS on the Medicare Plan Finder</title>
+      <author>info@nahu.org</author>
+      <description>CMS launched an updated Medicare Plan Finder last week that will allow users to shop and compare plans with a personalized experience. On this week’s episode, NAHU’s Vice President of Congressional Affairs John Greene joins us to review these updates, including the key functions of this tool and how NAHU is working with CMS officials to improve it as we head into the upcoming annual election period. John also discusses how NAHU members can join us in this process by sending their feedback to MedicarePlanFinder@nahu.org on how the changes will impact them and their clients, and how to best prepare for the upcoming plan year. And we also get an update on several of our priority Medicare legislation.</description>
+      <enclosure url="https://nahu.org/media/4673/nahu_hhh_090619_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4673/nahu_hhh_090619_final.mp3</guid>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Returning to Iron Out the Differences</title>
+      <author>info@nahu.org</author>
+      <description>Surprise billing and prescription drug reform are the hot topics as lawmakers returned this week from their August recess. Congress is currently considering legislation to address both of these issues with packages expected to be voted on this fall. On this week’s episode, NAHU’s Chris Hartmann and Marcy M. Buckner join us to discuss some of the biggest challenges facing these issues and what NAHU is doing to influence this process with lawmakers. They preview the upcoming hearings on these issues and the expected legislation to be introduced in the coming weeks and how policymakers plan to work out their differences in order to get legislation enacted to be able to campaign on victories for the 2020 elections. Marcy and Chris also look at how NAHU’s coalition partnerships are such critical tools for advancing our message, on these and other issues.</description>
+      <enclosure url="https://nahu.org/media/4680/nahu_hhh_091319_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4680/nahu_hhh_091319_final.mp3</guid>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hurdles Remains on a Healthcare Consensus Package</title>
+      <author>info@nahu.org</author>
+      <description>The legislative calendar is narrowing as Summer draws to a close and Fall begins, meaning that Congress is running out of time to pass major legislation before the end of the year to campaign on in 2020. This includes two of their biggest priorities—prescription drug reform and surprise billing. On this week’s episode, NAHU’s Chris Hartmann and John Greene join us to look at the major hurdles for advancing both of these issues in the coming months as lawmakers and their staff must prioritize the issues while also dealing with a major budget battle to avert another government shutdown. John and Chris also provide an update on the Medicare Plan Finder and recent actions taken by NAHU to ease that transition, as well as how NAHU can help members stay informed on the healthcare proposals of the 2020 election cycle.</description>
+      <enclosure url="https://nahu.org/media/4708/nahu_hhh_092019_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4708/nahu_hhh_092019_final.mp3</guid>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How Impeachment Could Imperil Healthcare Progress</title>
+      <author>info@nahu.org</author>
+      <description>The announcement by House Speaker Nancy Pelosi to instruct several committees to begin an impeachment inquiry into President Trump sent shockwaves through Washington. The process is expected to take months and consume a significant amount of energy and attention from lawmakers, who were otherwise focused on several healthcare cost measures, including prescription drug reform and surprise billing. On this week’s episode, NAHU’s Chris Hartmann and John Greene discuss how the impeachment process could stall progress on these efforts and how other parts of NAHU’s legislative agenda could be impacted. John and Chris also discuss the future implications of the latest survey on employer-based coverage, and provide an update on the Medicare Plan Finder rollout.</description>
+      <enclosure url="https://nahu.org/media/4716/nahu_hhh_092719_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4716/nahu_hhh_092719_final.mp3</guid>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Finding Solutions on the Plan Finder, Transparency and HRAs</title>
+      <author>info@nahu.org</author>
+      <description>Medicare’s annual election period marketing season is now underway as NAHU continues to work closely with CMS officials to resolve the significant challenges of the revised Medicare Plan Finder. On this week’s episode, NAHU’s Marcy M. Buckner and John Greene discuss the role that NAHU is playing in this process and how NAHU members can join us in working towards a solution. This episode also includes a regulatory roundup of President Trump’s latest healthcare executive order, new guidance on the individual coverage and excepted benefit HRAs, and our comments to the hospital transparency proposed rule.</description>
+      <enclosure url="https://nahu.org/media/4728/nahu_hhh_100419_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4728/nahu_hhh_100419_final.mp3</guid>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>BAN’s Perry Braun joins NAHU CEO Janet Trautwein to Review Industry Trends</title>
+      <author>info@nahu.org</author>
+      <description>Perry Braun from the Benefit Advisors Network joins the Healthcare Happy Hour podcast for a special discussion with NAHU CEO Janet Trautwein on healthcare industry trends and the future of employer-sponsored health coverage. Perry and Janet also review the ongoing proposals in Congress and by the Trump Administration to reduce the cost of prescription drugs, and how these proposals would affect consumers and employers. They also look at the increasing role that states are taking in healthcare reform, after largely deferring to the federal government in the wake of the ACA.</description>
+      <enclosure url="https://nahu.org/media/4758/nahu_hhh_101119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4758/nahu_hhh_101119_final.mp3</guid>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on NAHU’s Efforts on the Medicare Plan Finder Changes</title>
+      <author>info@nahu.org</author>
+      <description>NAHU is continuing to work closely with CMS on working through the changes to the Medicare Plan Finder. Last week, they announced an initial set of updates to the new Medicare Plan Finder to be in effect ahead of this week’s start of the annual enrollment period, with more updates expected in the coming weeks. On this week’s episode, NAHU Medicare Advisory Group member Justin Lubenow joins NAHU’s John Greene to review these improvements, including updates to backend technical details to display 2020 plans, and features that allow users to sort plans by the total cost of estimated annual drug costs plus premiums, and numerous updates to drug information to include providing clear distinctions between preferred in-network versus in-network pharmacy.</description>
+      <enclosure url="https://nahu.org/media/4781/nahu_hhh_101819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4781/nahu_hhh_101819_final.mp3</guid>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on NAHU’s Role in Shaping Prescription Drug Package</title>
+      <author>info@nahu.org</author>
+      <description>After passing out of each of the three committees of jurisdiction, including this week in the Ways and Means committee, the House Democrats prescription drug plan is nearing its final stages. A floor vote is expected by mid-November, and this week the Healthcare Happy Hour takes a deep dive at how the bill has changed in recent weeks and how it could affect your client’s coverage and costs. NAHU prescription drug task force chair Greg Stancil joins NAHU’s Marcy M. Buckner to review these key provisions, along with its Senate counterpart, and how they could be combined into a single bipartisan, bicameral package later this year to dramatically reform the nation’s prescription drug market. Greg and Marcy specifically look at how these plans could affect employer-based coverage and self-insured plans, and what agents and brokers should be telling their clients as these bills move through the legislative process.</description>
+      <enclosure url="https://nahu.org/media/4800/nahu_hhh_102519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4800/nahu_hhh_102519_final.mp3</guid>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Impeachment Inquiry to Compete with Healthcare Agenda</title>
+      <author>info@nahu.org</author>
+      <description>The House of Representatives formally voted this week to authorize several committees to investigate if there are grounds for impeaching President Trump. While this process does not directly affect NAHU’s legislative priorities, it could significantly affect the legislative calendar for the remainder of the year. This week, NAHU’s Chris Hartmann and John Greene join us to review this process and how it alters the outlook for repealing the Cadillac and premium taxes, prescription drug reform, surprise billing, and much more. They also look at several bipartisan prescription drug bills that have not generated nearly as much attention as the broader packages, and discuss a new report on how to finance single-payer and when to expect the appellate decision in Texas v. U.S. challenging the constitutionality of the ACA.</description>
+      <enclosure url="https://nahu.org/media/4807/nahu_hhh_110119_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4807/nahu_hhh_110119_final.mp3</guid>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Democrats Delay Drug Reform</title>
+      <author>info@nahu.org</author>
+      <description>House Democrats indicated this week that they plan on delaying a vote on their comprehensive prescription drug plan until at least December. Meanwhile, President Trump has tentatively offered support for the Senate Republican’s plan to implement Part D inflation caps, which have historically been opposed by Republicans for the potential to lead to government price controls on healthcare. This week, NAHU’s Marcy M. Buckner, Chris Hartmann and John Greene join us to look at these dynamics as the administration and leadership in Congress work to bring a bipartisan, bicameral prescription drug package to the floor. The episode also reviews how NAHU and the Trump administration have been working on the ongoing implementation of the individual coverage health reimbursement arrangements, and how the latest waiver proposal in Georgia could push all individual coverage enrollments directly to insurers and brokers, bypassing any official marketplace.</description>
+      <enclosure url="https://nahu.org/media/4820/nahu_hhh_110819_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4820/nahu_hhh_110819_final.mp3</guid>
+      <pubDate>Fri, 08 Nov 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Shedding Some Light on the New Transparency Rules</title>
+      <author>info@nahu.org</author>
+      <description>Earlier today, the Trump Administration released its final rule on hospital outpatient pricing transparency and announced a new proposed rule that calls for transparency mandates for insurers and group health plans. This week, NAHU’s Marcy M. Buckner joins the Healthcare Happy Hour to discuss how NAHU was able to influence the changes to the final hospital transparency rule through our comments, and identifies some of our initial concerns of the proposed insurer transparency rule and what NAHU members and clients should know as the rule undergoes the comment process.</description>
+      <enclosure url="https://nahu.org/media/4845/nahu_hhh_111519_final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4845/nahu_hhh_111519_final.mp3</guid>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guests on Colorado’s Public Option Proposal</title>
+      <author>info@nahu.org</author>
+      <description>The Colorado Division of Insurance has released its final report of Colorado’s public option, detailing a plan for the implementation of a state coverage option that would be administered by private insurance companies and sold on the state exchange and the off-exchange individual market starting in 2022. On this week’s episode of the Healthcare Happy Hour, NAHU Legislative Council member Brad Niederman and CSAHU lobbyist Jenn Penn join NAHU’s Marcy Buckner to discuss the state public option proposal and its implications.</description>
+      <enclosure url="https://nahu.org/media/4864/healthcare-hh-12-6-19-actual-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4864/healthcare-hh-12-6-19-actual-final.mp3</guid>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Comprehensive Bipartisan Healthcare Package Includes a Surprise Billing Fix</title>
+      <author>info@nahu.org</author>
+      <description>There is no shortage of legislative news this week as the window to pass legislation before the new year dwindles. This week, NAHU’s Chris Hartmann and John Greene discuss what’s happening on the legislative front as we conclude the year, including: the contents of a comprehensive, bipartisan healthcare package several months in the making, which contains a section on surprise billing. In addition, this episode reviews House Democrats’ prescription drug reform bill, the status of the Cadillac and HIT taxes, as well as reflecting on this year’s AEP. (This episode was recorded on Thursday, December 12, 2019.)</description>
+      <enclosure url="https://nahu.org/media/4882/12-13-19-hhh-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4882/12-13-19-hhh-final.mp3</guid>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Breaking News: Congress Votes to Repeal Cadillac Tax and HIT in Year-End Spending Deal!</title>
+      <author>info@nahu.org</author>
+      <description>The House and Senate have both passed the fiscal year 2020 spending bill which includes a permanent repeal of three ACA taxes: the Cadillac/excise tax, medical device tax, and Health Insurance Tax (HIT). The legislation fully repeals the Cadillac tax, and repeals the HIT effective January 1, 2021 which means the HIT will still be in place for 2020. Passage of this legislation represents a major milestone in our advocacy efforts to finally end the Cadillac tax and HIT and we thank all of you who have taken action to support these repeals!</description>
+      <enclosure url="https://nahu.org/media/4890/hhh_breakingnews_121919.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4890/hhh_breakingnews_121919.mp3</guid>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Congresswoman and current president &amp; CEO of the Better Medicare Alliance, Allyson Schwartz, Joins to Discuss a Variety of Medicare Topics</title>
+      <author>info@nahu.org</author>
+      <description>This week, former congresswoman and current president &amp; CEO of the Better Medicare Alliance, Allyson Schwartz, joins NAHU’s John Greene to discuss a wide range of Medicare topics, including this year’s AEP, President Trump’s executive order on Medicare, the Cadillac and HIT taxes, and more. Congresswoman Schwartz represented Pennsylvania’s 13th district for ten years, and now leads Better Medicare Alliance as the foremost advocate for Medicare Part C, more commonly known as Medicare Advantage. (This episode was recorded on Monday, December 9, 2019.)</description>
+      <enclosure url="https://nahu.org/media/4891/12-20-19-bma-podcast-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4891/12-20-19-bma-podcast-final.mp3</guid>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Heather Meade from the Alliance To Fight The 40 Joins to Discuss the Cadillac Tax Repeal</title>
+      <author>info@nahu.org</author>
+      <description>As you all probably know by now, Congress passed the fiscal year 2020 spending bill and companion tax extenders measure which included a permanent repeal of three ACA taxes: the medical device tax, Health Insurance Tax, and the 40% excise tax that became known as the “Cadillac Tax.” The repeal of the Cadillac Tax is a monumental victory for brokers and consumers alike.  This week, NAHU’s Chris Hartmann and Marcy M. Buckner sit down with Heather Meade from the Alliance to Fight the 40, the coalition that fought for the full repeal of the Cadillac Tax for several years, to discuss what led to this victory!</description>
+      <enclosure url="https://nahu.org/media/4906/1-10-20-hhh-dp2.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4906/1-10-20-hhh-dp2.mp3</guid>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Elena Tompkins from the Stop The HIT Coalition Discusses the HIT Tax Repeal</title>
+      <author>info@nahu.org</author>
+      <description>As you all probably know by now, Congress passed the fiscal year 2020 spending bill and companion tax extenders measure which included a permanent repeal of three ACA taxes: the medical device tax, Cadillac Tax, and the Health Insurance Tax (more commonly referred to as the HIT tax). The repeal of the HIT tax is an overwhelming victory for brokers and consumers alike. This week, NAHU’s Chris Hartmann and John Greene sit down with Elena Tompkins from Stop The HIT, the coalition that fought for the full repeal of the HIT for several years, to discuss what led to this victory!</description>
+      <enclosure url="https://nahu.org/media/4942/1-17-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4942/1-17-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU CEO Janet Trautwein Discusses the Danger of a Public Option</title>
+      <author>info@nahu.org</author>
+      <description>This week, NAHU CEO Janet Trautwein joins us to discuss the looming threat of Medicare-for-All and similar proposals, such as the public option. Specifically, we review the differences between single-payer and public option, the dangers of a public option to the insurance market and consumers, as well as what agents and brokers can do to fight these ideas before it’s too late.</description>
+      <enclosure url="https://nahu.org/media/4953/1-24-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/4953/1-24-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Submits Comments on Transparency in Coverage Proposed Rule</title>
+      <author>info@nahu.org</author>
+      <description>NAHU recently submitted our comments in response to the Transparency in Coverage proposed rule, which would allow consumers to shop and compare costs between specific providers before receiving care, including receiving accurate estimates of any out-of-pocket costs they must pay to meet their plan’s deductible, co-pay, or co-insurance requirements. On this week’s podcast, NAHU’s Marcy M. Buckner reviews our comment letter in detail, including what we supported and what Improvements we suggested.</description>
+      <enclosure url="https://nahu.org/media/5002/1-31-20-hhh-dp-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5002/1-31-20-hhh-dp-final.mp3</guid>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Chris Pollack Discusses Employer Reporting</title>
+      <author>info@nahu.org</author>
+      <description>NAHU and the Partnership for Employer-Sponsored Coverage are leading the charge to advance bipartisan legislation to allow prospective employer reporting, greatly easing the compliance burden of the ACA for employers complying with the law’s mandate. On this week’s podcast episode, Chris Pollack, executive director of the partnership, joins NAHU’s Chris Hartmann to discuss our recent advocacy work and what you need to know about employer reporting before coming to NAHU’s 30th annual Capitol Conference!</description>
+      <enclosure url="https://nahu.org/media/5016/2-06-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5016/2-06-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest Katy Spangler Discusses Surprise Billing</title>
+      <author>info@nahu.org</author>
+      <description>Leading up to Capitol Conference, we are reviewing each of our legislative priorities in detail. NAHU is leading a coalition effort to advance bipartisan legislation through Congress to end the practice of surprise medical billing and to implement a payment benchmark standard. On this week’s podcast, Katy Spangler from the Coalition Against Surprise Medical Billing joins NAHU’s John Greene and Chris Hartmann to discuss the ongoing legislative efforts to address surprise billing and how NAHU and the Coalition are working to influence the process. They break down the nuances between arbitration and benchmarking, and what the outlook is for reaching a consensus among the several competing solutions to this problem.</description>
+      <enclosure url="https://nahu.org/media/5138/2-14-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5138/2-14-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Capitol Conference 2020: Know Before You Go!</title>
+      <author>info@nahu.org</author>
+      <description>Calling all Capitol Conference attendees and those curious about NAHU’s premier legislative event! Next week NAHU members from across the country will descend on Capitol Hill to make our voices heard! On this week’s episode, NAHU’s Marcy M. Buckner and Dan Parker preview what to expect at this year’s conference. They break down the agenda and the can’t-miss speakers, provide a preview of the breakout sessions, the primary policy priorities that we will be advocating for on the Hill, and tips for making the most of your visit. You won’t want to miss this for the essential info ahead of your trip to the nation’s capital. Never participated in Capitol Conference? We encourage you to check out the podcast to hear what you’re missing!</description>
+      <enclosure url="https://nahu.org/media/5140/2-18-20-kbyg-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5140/2-18-20-kbyg-hhh-dp.mp3</guid>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reviewing our Medicare Priorities before Capitol Conference</title>
+      <author>info@nahu.org</author>
+      <description>Leading up to Capitol Conference, we are reviewing each of our legislative priorities in detail. NAHU is the only trade organization representing professional agents and brokers who work with Medicare beneficiaries and Medicare products. In our final podcast before Cap Con, John Greene reviews the Medicare-specific issues we are advocating for, including observation status, COBRA as credible coverage, and allowing those over age 65 that are still working to contribute to their HSAs. We also go into detail about what Medicare-related speakers and breakout sessions await Capitol Conference attendees.</description>
+      <enclosure url="https://nahu.org/media/5165/2-21-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5165/2-21-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Capitol Conference 2020 Recap with Scott Wham</title>
+      <author>info@nahu.org</author>
+      <description>NAHU hosted our 30th annual Capitol Conference here in Washington DC, where agents and brokers from every part of the country came together to make a difference in the health reform debate. We hope all those who attended had an incredible time, and we hope to see you again at the 31st Cap Con! On today’s episode of the Healthcare Happy Hour, NAHU's Marcy M. Buckner and Legislative Council Vice Chair Scott Wham review the conference, from the engaging keynote speakers to our vital legislative priorities.</description>
+      <enclosure url="https://nahu.org/media/5170/2-28-hhh-dp-cap-con.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5170/2-28-hhh-dp-cap-con.mp3</guid>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Rules, Rules, Rules!</title>
+      <author>info@nahu.org</author>
+      <description>NAHU submitted three comment letters to the Trump Administration last week in regard to several proposed rules: the 2021 Notice of Benefit and Payment Parameters, the Draft Letter to Issuers and the proposed rule that would allow importation of certain prescription drugs from Canada. In addition, HHS and CMS released finalized rules aimed at giving patients greater access to their health data. On this week’s episode, NAHU’s Marcy M. Buckner explains these proposals and our comments, as well as what the finalized ONC rule means for consumers and carriers.</description>
+      <enclosure url="https://nahu.org/media/5200/3-13-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5200/3-13-hhh-dp.mp3</guid>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on COVID-19 Compliance</title>
+      <author>info@nahu.org</author>
+      <description>Over the last few weeks, COVID-19 has taken over our everyday lives and has undoubtedly caused, and will continue to cause, substantial problems for health insurance brokers and their clients. NAHU is following all federal developments related to COVID-19 closely, and we are keeping all of our members up-to-date on everything happening here in Washington and around the country. This week, Marcy M. Buckner is joined by Compliance Corner member and CEO of MZQ Consulting Jennifer Berman, to discuss the compliance issues arising from this situation and what agents and brokers need to know to assist their clients during this time.</description>
+      <enclosure url="https://nahu.org/media/5204/3-20-20-hhh-dp-ii.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5204/3-20-20-hhh-dp-ii.mp3</guid>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Inside the Trillion-Dollar CARES Act</title>
+      <author>info@nahu.org</author>
+      <description>Last week, Congress passed the Families First Coronavirus Response Act, phase two in the federal government’s response to COVID-19. After a week of intense negotiations, Democrats and Republicans finally reached a deal on the next phase, a $2 trillion stimulus package aimed at resuscitating the economy: the Coronavirus Aid Relief and Economic Security Act, also referred to as the CARES Act. On this week’s episode, NAHU’s John Greene and Chris Hartmann discuss what’s in this bill and the politics behind putting it all together.</description>
+      <enclosure url="https://nahu.org/media/5222/3-27-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5222/3-27-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on the Paycheck Protection Program</title>
+      <author>info@nahu.org</author>
+      <description>Late last week, Congress passed the CARES Act, a $2 trillion stimulus package aimed at resuscitating the economy. One major portion of the CARES Act made $350 billion in paycheck protection loans available to small businesses, establishing the paycheck protection program, or PPP. On this week’s episode of the Healthcare Happy Hour, NAHU’s Marcy M. Buckner is joined by Compliance Corner Committee member Annette Bechtold, who serves as senior vice president of regulatory affairs and reform initiatives at OneDigital, to dive into how the PPP works and how you and your clients can utilize it.</description>
+      <enclosure url="https://nahu.org/media/5238/4-3-20-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5238/4-3-20-hhh-dp.mp3</guid>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Submits COVID-19 Recommendations to the Administration</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s episode, NAHU’s Marcy M. Buckner reviews the list of recommendations to the Administration that NAHU submitted on Tuesday with the assistance of NAHU’s Compliance Corner Committee. In our suggestions to DOL, IRS, HHS and CMS, we emphasized the importance of clarifying definitions used in regulation and legislation, extensions on form filings and open enrollment periods, flexibility for premium payments by employers and employees, and more.</description>
+      <enclosure url="https://nahu.org/media/5256/41020-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5256/41020-hhh-dp.mp3</guid>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on NAHU’s Medicare Advantage and Part D Comment Letter</title>
+      <author>info@nahu.org</author>
+      <description>On this week’s episode, we are taking a break from COVID-19 discussion to focus on a comment letter NAHU submitted to CMS in regard to the Contract Year 2021 and 2022 Medicare Advantage and Part D Proposed Rule. The proposed rule deals with a host of Medicare Advantage and Part D issues, including the addition of ESRD beneficiaries, changes to maximum out-of-pocket costs, transparency tools and more. NAHU's John Greene is joined by special guest Craig Ritter, owner of Ritter Insurance Marketing and member of our Medicare FMO Council, to discuss our comments in detail.</description>
+      <enclosure url="https://nahu.org/media/5291/41720-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5291/41720-hhh-dp.mp3</guid>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Congress Passes Another Billion-Dollar COVID-19 Bill</title>
+      <author>info@nahu.org</author>
+      <description>Just yesterday, Congress passed a $484 billion bill to provide additional funding for the Paycheck Protection Program, among other things. The Paycheck Protection Program and Healthcare Enhancement Act includes $380 billion for small businesses, $75 billion for hospitals and $25 billion for COVID-19 testing. On this week’s episode of the Healthcare Happy Hour, NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann review the new law and what we may expect next.</description>
+      <enclosure url="https://nahu.org/media/5304/42420-hhh.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5304/42420-hhh.mp3</guid>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Supreme Court Rules Congress Owes Insurers $12 Billion in Risk-Corridor Payments</title>
+      <author>info@nahu.org</author>
+      <description>The Supreme Court issued a ruling Monday demanding Congress keep its promise to pay insurers $12 billion in unpaid ACA funds. The 8-1 decision means that Congress must provide the funds it had promised through the risk-corridor program in order to insure consumers on the exchanges who hadn’t been previously insured or had been “uninsurable.” On this week’s episode NAHU’s Marcy M. Buckner reviews the ruling and its implications.</description>
+      <enclosure url="https://nahu.org/media/5327/50120-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5327/50120-hhh-dp.mp3</guid>
+      <pubDate>Fri, 01 May 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>CMS Announces COVID-19 Enrollment Flexibility; NAHU Previews the 2021 Medicare &amp; You Handbook</title>
+      <author>info@nahu.org</author>
+      <description>Last week, NAHU had the opportunity to preview and comment on the upcoming edition of the Medicare and You Handbook. The handbook includes a summary of Medicare benefits, rights and protections, lists of available health and drug plans, and more. In addition, CMS announced this week that the Special Enrollment Period in the case of major disasters also applies to COVID-19. Mike Smith, chair of both the NAHU FMO Council and Medicare Advisory Group, joins John Greene on this week’s episode to discuss our comments on the Medicare and You handbook as well as the new SEP development.</description>
+      <enclosure url="https://nahu.org/media/5333/5720-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5333/5720-hhh-dp.mp3</guid>
+      <pubDate>Fri, 08 May 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Inside the HEROES Act and the New IRS Guidance</title>
+      <author>info@nahu.org</author>
+      <description>Earlier this week, House Democrats unveiled their proposed next phase in the federal coronavirus response: the Health and Economic Recovery Omnibus Emergency Solutions Act, or HEROES Act. At the same time, the IRS released new guidance that addresses some of the Section-125, FSA and HSA requests that NAHU made in our list of suggestions to the Administration last month. On this week’s episode, NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann discuss this latest legislation and regulation.</description>
+      <enclosure url="https://nahu.org/media/5371/515-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5371/515-hhh-dp.mp3</guid>
+      <pubDate>Fri, 15 May 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>House Democrats Pass HEROES Act</title>
+      <author>info@nahu.org</author>
+      <description>House Democrats passed the HEROES Act on May 15, and now negotiations begin on bipartisan legislation in the Senate. The Healthcare Happy Hour is taking this week off in light of the long Memorial Day weekend, but make sure you understand what was included in the $3 trillion package that passed the House last week. Listen to NAHU’s Marcy M. Buckner, John Greene and Chris Hartmann discuss this latest legislation and regulation.</description>
+      <enclosure url="https://nahu.org/media/5383/52220-hhh-dp-ii.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5383/52220-hhh-dp-ii.mp3</guid>
+      <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NAHU Submits Letter to IRS on Recent Regulation</title>
+      <author>info@nahu.org</author>
+      <description>The IRS and DOL have been releasing guidance throughout the coronavirus pandemic, including recent emergency regulation regarding the COBRA-election period during the dates of the COVID-19 national emergency. NAHU submitted a letter to the IRS requesting further clarification on this recent regulation along with several other provisions where we felt additional information was needed. On this week’s episode of the Healthcare Happy Hour, COO &amp; Compliance Officer at Kirby Employee Benefits and NAHU Compliance Corner member Carol Taylor joins NAHU’s Marcy M. Buckner to discuss our letter in detail.</description>
+      <enclosure url="https://nahu.org/media/5394/529-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5394/529-hhh-dp.mp3</guid>
+      <pubDate>Fri, 29 May 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Congress Passes Paycheck Protection Program Flexibility</title>
+      <author>info@nahu.org</author>
+      <description>As Congress continues deliberation on what should be included in the next large bipartisan coronavirus response package, we’re looking at smaller bills, including one that deals with Flexible Spending Accounts, extension and changes to the Paycheck Protection Program, and a renewed fight from the White House to ban surprise billing. On this week’s episode of the Healthcare Happy Hour, NAHU’s Marcy M. Buckner John Greene and Chris Hartmann discuss these developments.</description>
+      <enclosure url="https://nahu.org/media/5403/60520-hhh-dp-ii.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5403/60520-hhh-dp-ii.mp3</guid>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on the NAHU Employer Working Group Think Tank</title>
+      <author>info@nahu.org</author>
+      <description>While we await further regulatory guidance from the Administration as well as another bipartisan coronavirus package from Congress, this week’s Healthcare Happy Hour is spotlighting the NAHU Employer-Based Plan Working Group’s Think Tank, which first debuted at a breakout session during this year’s Capitol Conference. Gary Cupo, chair of the Employer Working Group’s Balance Billing Subcommittee and winner of the Think Tank contest at Cap Con, joins us to discuss the Think Tank and his winning pitch.
+ 
+If you would like to offer any ideas, thoughts or suggestions to bring the Think Tank to the next level, please email legislative@nahu.org.</description>
+      <enclosure url="https://nahu.org/media/5422/61220-hhh-dp.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5422/61220-hhh-dp.mp3</guid>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Special Guest on NAHU's New Mental Health Task Force</title>
+      <author>info@nahu.org</author>
+      <description>Did you know that NAHU has created a Mental Health Task Force? Along with other legislative working groups such as the Medicare Advisory Group and the Prescription Drugs Task Force, the Mental Health Task Force will explore legislative and regulatory developments as they relate to mental health parity in the market. On this week’s episode of the Healthcare Happy Hour, DeDe Kennedy, the chair of this new task force, joins us to discuss the goals and purpose of this group.
+ 
+If you are interested in joining the Mental Health Task Force please send a statement of interest to legislative@nahu.org.</description>
+      <enclosure url="https://nahu.org/media/5437/61920-hhh-final.mp3" type="audio/mpeg" length="" />
+      <guid>https://nahu.org/media/5437/61920-hhh-final.mp3</guid>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

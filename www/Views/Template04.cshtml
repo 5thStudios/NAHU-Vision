@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+<div>
+    @{ Html.RenderPartial("/UserControls/SimpleBanner.ascx"); }
+    <div class="row layoutContent" data-equalizer data-equalizer-mq="medium-up">
+        <br /><br />
+
+        <div class="large-7 columns">
+            @{ Html.RenderPartial("/UserControls/SideNav.ascx"); }
+            <br />
+            <br />
+        </div>
+        <div class="large-17 columns">
+            @CurrentPage.GetGridHtml("bodyText", "Foundation5")
+        </div>
+
+        <br /><br />
+    </div>
+    @{ Html.RenderPartial("/UserControls/Quicklinks.ascx"); }
+</div>
+
+
+@section finalScripts {}

@@ -1,0 +1,21 @@
+﻿{
+    //you can define multiple editors
+    propertyEditors: [
+        {
+
+            alias: "My.ImagePosition",					/*this must be a unique alias*/
+            name: "Image Position",						/*the name*/
+            group: "positions",								/*grouping for "Select editor" dialog*/
+			isParameterEditor: true,
+            editor: {
+				view: "~/App_Plugins/ImagePosition/ImagePosition.html",
+				"valueType": "STRING"
+			}											/*the HTML file we will load for the editor*/
+        }
+    ]
+    ,
+
+    javascript: [
+        '~/App_Plugins/ImagePosition/ImagePosition.controller.js'
+    ]													//array of files we want to inject into the application on app_start
+}

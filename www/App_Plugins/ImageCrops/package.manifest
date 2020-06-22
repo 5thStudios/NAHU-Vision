@@ -1,0 +1,26 @@
+﻿{
+    //you can define multiple editors
+    propertyEditors: [
+        {
+
+            alias: "My.ImageCrops",						/*this must be a unique alias*/
+            name: "Image Crops",						/*the name*/
+            group: "crops",								/*grouping for "Select editor" dialog*/
+			isParameterEditor: true,
+            editor: {
+				view: "~/App_Plugins/ImageCrops/ImageCrops.html",
+				"valueType": "STRING"
+			}											/*the HTML file we will load for the editor*/
+        }
+    ]
+    ,
+														//array of files we want to inject into the application on app_start
+    javascript: [
+        '~/App_Plugins/ImageCrops/ImageCrops.controller.js'
+    ]
+}
+
+
+
+
+

@@ -1,0 +1,399 @@
+﻿/* Color Palette
+----------------------------------------------------------
+#1a214d;
+#4fb047;
+#30343d;
+#3c3c3e;
+#24408e;
+#666;
+#8590a1;
+#a7a9ac;
+#dcddde;
+#ddd;
+#e7e9ed;
+#4fb047;
+#efefef;
+#f1913e;
+#f1b025;
+#f4f4f4;
+#76e96d;
+#fff;
+26, 33, 77
+0,0,0
+231, 233, 237
+241, 176, 37
+255, 255, 255
+
+----------------------------------------------------------
+*/
+
+
+
+/* General
+----------------------------------------------------------*/
+body.eFoundation {background-color:#fff;}
+
+.eFoundation p, .eFoundation div, .eFoundation a, .eFoundation li {color:#30343d;}
+.eFoundation h1{color:#fff;}
+.eFoundation a {color:#4fb047;}
+
+
+
+/* Miscellaneous
+----------------------------------------------------------*/
+.eFoundation select {color: #ccc;border: 1px solid #efefef;}
+.eFoundation .shadedBg {background-color: rgba(0, 0, 0, 0.05);}
+.eFoundation .box {background-color: rgba(0, 0, 0, 0.05);}
+.eFoundation .darkDropShadow { text-shadow: 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);}
+.eFoundation .readMore a {color: #1a214d;border-bottom:1px solid #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .readMore a:hover {color: #4fb047;}
+
+/* Locked Panels
+----------------------------------------------------------*/
+.eFoundation .panel.locked {background-color: #f4f4f4;}
+.eFoundation .panel.locked .readMore a {color: #1a214d;border-bottom: 1px solid #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .panel.locked .readMore a:hover {color: #4fb047;}
+
+
+
+
+/* Floating Banners
+----------------------------------------------------------*/
+
+
+
+/* Buttons
+----------------------------------------------------------*/
+.eFoundation a.button, .eFoundation span.button a { background-color: #4fb047; color:#fff; transition: background-color 300ms ease-out, color 300ms ease-out;}
+.eFoundation a.button:hover, .eFoundation span.button a:hover {background-color: #f1b025;}
+.eFoundation a.button.tertiary, .eFoundation span.button.tertiary a {background-color: #8590a1;}
+.eFoundation a.button.tertiary:hover, .eFoundation span.button.tertiary a:hover {background-color: #f1b025;}
+.eFoundation a.button.quaternary, .eFoundation span.button.quaternary a {background-color: #1a214d;}
+.eFoundation a.button.quaternary:hover, .eFoundation span.button.quaternary a:hover {background-color: #f1b025;}
+.eFoundation a.button.secondary, .eFoundation span.button a.secondary {background-color: #8590a1; color:#fff;}
+.eFoundation a.button.secondary:hover, .eFoundation span.button a.secondary:hover {background-color: #30343d; color:#fff; }
+
+
+/* Minor Navigation
+----------------------------------------------------------*/
+.eFoundation .NavigationMinor {background-color:#f4f4f4;}
+.eFoundation .NavigationMinor a, .eFoundation .NavigationMinor div {color:#30343d;}
+.eFoundation .NavigationMinor .searchPnl {border-left:1px solid #8590a1;}
+
+
+
+/* Main Navigation
+----------------------------------------------------------*/
+.eFoundation .NavigationMain button {color:#1a214d;}
+.eFoundation .NavigationMain button:hover {border-color:#dcddde; border-top-color:#4fb047; }
+
+.eFoundation .NavigationMain{border-bottom: 1px solid #dcddde;}
+
+.eFoundation .NavigationMain a:not(.button){color:#1a214d;}
+.eFoundation .NavigationMain ul > li:hover{border-color:#dcddde;border-top-color:#4fb047}
+.eFoundation .NavigationMain ul ul{border:1px solid #dcddde;background-color:#fff}
+.eFoundation .NavigationMain ul ul li:hover a{color:#4fb047}
+
+
+
+
+/* Mega Navigation
+----------------------------------------------------------*/
+.eFoundation .NavigationMain .navMegaMenu {border-left:1px solid #dcddde;}
+.eFoundation .NavigationMain .navMegaMenu:hover, .NavigationMain .navMegaMenu.hover { border-top-color: #4fb047; border-right-color: #dcddde; }
+.eFoundation .megaMenu .row > .columns {background-color: white; border-top:1px solid #dcddde;}
+.eFoundation .megaMenu ul li div a {color:#30343d;}
+.eFoundation .megaMenu ul li div:first-of-type a {color:#1a214d;}
+.eFoundation .megaMenu ul li div a:hover {color:#4fb047;}
+
+
+
+/* Footer
+----------------------------------------------------------*/
+.eFoundation footer .upper {background-color:#f4f4f4; }
+.eFoundation footer .upper div {color:#8590a1;}
+.eFoundation footer .lower .minorNav a > div {color:#8590a1;}
+.eFoundation footer .lower .copyright {color:#8590a1;}
+
+
+
+/* Rotating Banners
+----------------------------------------------------------*/
+.eFoundation .RotatingBanners h3 {color:#fff;}
+.eFoundation .RotatingBanners ul.sideNav {background-color: rgba(0, 0, 0, 0.2);}
+.eFoundation .RotatingBanners ul.sideNav > li { border: 1px solid rgba(231, 233, 237, 0.2);}
+.eFoundation .RotatingBanners ul.sideNav li:hover {background-color: rgba(0, 0, 0, 0.2);}
+.eFoundation .RotatingBanners ul.sideNav li div {color:#fff;}
+.eFoundation .RotatingBanners ul.sideNav li .title {color:#fff;}
+.eFoundation .RotatingBanners ul.sideNav li .subtitle {color:#fff;}
+
+.eFoundation .RotatingBanners ul.sideNav li.active {background-color: rgba(0, 0, 0, 0.4);}
+
+
+/* Quote Banner
+----------------------------------------------------------*/
+.eFoundation .quoteBanner h2 {color:#1a214d;}
+.eFoundation .quoteBanner h3 {color:#30343d;}
+
+
+
+/* News Panel
+----------------------------------------------------------*/
+.eFoundation .newsPanel .pnlTitle {border-top:1px solid #dcddde;}
+.eFoundation .newsPanel .pnlTitle h2 {color:#fff;background-color:#1a214d;}
+.eFoundation .newsPanel h3 {color:#30343d;}
+.eFoundation .newsPanel h4 {color:#30343d;}
+.eFoundation .newsPanel h5 {color:#8590a1;}
+.eFoundation .newsPanel h6 {border-bottom: 1px solid #4fb047;}
+.eFoundation .newsPanel h6:hover {border-bottom: 1px solid #1a214d; }
+.eFoundation .newsPanel h6 a {color:#1a214d;}
+
+
+/* Custom Panel
+----------------------------------------------------------*/
+.eFoundation .customPanels h2 {color:#fff;}
+.eFoundation .customPanels p {color:#fff;}
+.eFoundation .customPanels h6 {border-bottom: 1px solid rgba(241, 176, 37, 0.5);}
+.eFoundation .customPanels h6:hover {border-bottom: 1px solid #f1b025; }
+.eFoundation .customPanels h6 a {color:#fff;}
+
+
+
+/* Top Upcoming Events
+----------------------------------------------------------*/
+.eFoundation .topUpcomingEvents h2 {color:#1a214d;}
+.eFoundation .topUpcomingEvents h4 {color:#30343d;}
+.eFoundation .topUpcomingEvents h5 {color:#8590a1;}
+
+
+
+/* Call to Action Panel
+----------------------------------------------------------*/
+.eFoundation .callToAction h2 {color:#30343d;}
+.eFoundation .callToAction p {color:#30343d;}
+
+
+
+/* Quick Links
+----------------------------------------------------------*/
+.eFoundation .quicklinks h2 {color:#fff; }
+.eFoundation .quicklinks h3 {color:#fff; }
+/*.eFoundation .quicklinks a .pnlWithBgImg { background-color:#f1b025; }*/
+.eFoundation .quicklinks a .pnlWithBgImg { background-color:#000; }
+.eFoundation .quicklinks a img { opacity:.65;transition:none; }
+.eFoundation .quicklinks a:hover img { opacity:.65; }
+
+
+
+ /* Quote Banner with Navigation
+----------------------------------------------------------*/
+.eFoundation .QuoteBannerWithNav h1{color:#fff;}
+.eFoundation .QuoteBannerWithNav h3{color:#fff;}
+.eFoundation .QuoteBannerWithNav ul.sideNav{background-color:rgba(0,0,0,0.2);}
+.eFoundation .QuoteBannerWithNav ul.sideNav > li{border:1px solid rgba(231,233,237,0.2);}
+.eFoundation .QuoteBannerWithNav ul.sideNav li:hover{background-color:rgba(0,0,0,0.2);}
+.eFoundation .QuoteBannerWithNav ul.sideNav li div{color:#fff}
+.eFoundation .QuoteBannerWithNav ul.sideNav li .title{color:#fff;}
+.eFoundation .QuoteBannerWithNav ul.sideNav li .subtitle{color:#fff;}
+.eFoundation .QuoteBannerWithNav ul.sideNav li.active{background-color:rgba(0,0,0,0.4)}
+
+
+
+/* Simple Banner
+----------------------------------------------------------*/
+.eFoundation .simpleBanner h2 {color:#fff;}
+
+
+
+/* Textblock
+----------------------------------------------------------*/
+.eFoundation .textBlock .sidePnl ul li {background-color:#f4f4f4; border-bottom:1px solid #dcddde; }
+.eFoundation .textBlock .sidePnl ul li:last-of-type {border-bottom-color: #f4f4f4;}
+.eFoundation .textBlock .sidePnl ul li:hover {background-color:#f1b025; }
+.eFoundation .textBlock .sidePnl ul li.active {background-color:#f1b025;border-bottom-color: #f1b025; }
+.eFoundation .textBlock .sidePnl ul li.active a {color:#fff;}
+.eFoundation .textBlock .sidePnl ul li a {color:#1a214d; transition: background-color 300ms ease-in-out, color 300ms ease-in-out;}
+
+
+
+/* Certification Page
+----------------------------------------------------------*/
+.eFoundation .CertificationPg h1 {color:#30343d;}
+.eFoundation .CertificationPg h2 {color:#1a214d; }
+.eFoundation .CertificationPg h5 {color:#30343d;}
+.eFoundation .CertificationPg h6 {color:#8590a1;}
+.eFoundation .CertificationPg .toggle input[type="radio"] + label {background-color: #8590a1;color: #fff;}
+.eFoundation .CertificationPg .toggle input[type="radio"]:checked + label {background-color: #1a214d;}
+
+
+/* Event Page
+----------------------------------------------------------*/
+.eFoundation .EventPg h1 {color:#30343d;}
+.eFoundation .EventPg h2 {color:#1a214d; }
+.eFoundation .EventPg h5 {color:#30343d;}
+.eFoundation .EventPg h6 {color:#8590a1;}
+
+
+
+/* Blog Page
+----------------------------------------------------------*/
+.eFoundation .BlogPg {}
+.eFoundation .BlogPg h1 {color:#30343d;}
+.eFoundation .BlogPg h2 {color:#1a214d;}
+.eFoundation .BlogPg h3 {color:#1a214d;}
+.eFoundation .BlogPg h4 {color:#8590a1;}
+.eFoundation .BlogPg h5 {color:#30343d;}
+.eFoundation .BlogPg h6 {color:#8590a1;}
+.eFoundation .BlogPg h6 a {color:#4fb047;}
+
+
+/* Blog Filters
+----------------------------------------------------------*/
+.eFoundation .BlogFilter h4 {color: #8590a1;}
+.eFoundation .BlogFilter h6 {color: #8590a1;}
+.eFoundation .BlogFilter a div {color: #1a214d;}
+.eFoundation .blogFilters .viewAllBlog h3 {color: #1a214d;}
+.eFoundation .blogFilters .viewAllBlog:hover h3{background-color: #f1b025;border-bottom-color: #f1b025;color: #fff;}
+.eFoundation .blogFilters section.accordion ul li:hover {background-color: rgba(241, 176, 37, 0.2);}
+.eFoundation .blogFilters section.accordion ul li.blog_year a:hover {background-color: #f4f4f4;color: #1a214d;border-bottom-color: #dcddde;}
+.eFoundation .blogFilters section.accordion ul li.blog_year ul li.blog_month ul.blog_post_items li.blog_post_item:hover a {color: #4fb047;}
+
+.eFoundation .blogFilters #blogSearch {background-color: #f4f4f4;}
+.eFoundation .blogFilters #blogSearch #searchFld {padding: 24px;}
+.eFoundation .blogFilters #blogSearch #searchFld input[type='text'] {color: #8590a1;}
+.eFoundation .blogFilters #blogSearch #searchBtn {border-left:1px solid #dcddde; transition: background-color 300ms ease-in-out;}
+.eFoundation .blogFilters #blogSearch #searchBtn:hover {background-color: #f1b025; }
+
+
+/* List View Options
+----------------------------------------------------------*/
+.eFoundation .listViews input[type=radio] + label {color: #8590a1;}
+
+
+/* Blog List Item
+----------------------------------------------------------*/
+.eFoundation .blogListItem .listViewItem .articleDate {border-left:2px solid #f1b025;}
+.eFoundation .blogListItem .listViewItem .articleDate .month {color:#8590a1;}
+.eFoundation .blogListItem .listViewItem .articleDate .day {color:#30343d;}
+.eFoundation .blogListItem .listViewItem .articleDesc h2.title {color:#30343d; }
+.eFoundation .blogListItem .listViewItem .articleDesc .date {color:#8590a1;}
+.eFoundation .blogListItem .listViewItem .articleDesc .categories a {color: #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .blogListItem .listViewItem .articleDesc .categories a:hover {color: #1a214d;}
+.eFoundation .blogListItem .listViewItem .articleDesc .readMore a {color: #1a214d;border-bottom:1px solid #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .blogListItem .listViewItem .articleDesc .readMore a:hover {color: #4fb047;}
+
+.eFoundation .blogListItem .gridViewItem.articleDesc h2.title {color:#30343d;}
+.eFoundation .blogListItem .gridViewItem.articleDesc .date {color:#8590a1;}
+.eFoundation .blogListItem .gridViewItem.articleDesc .categories a {color: #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .blogListItem .gridViewItem.articleDesc .categories a:hover {color: #1a214d;}
+
+
+/* Trustee List
+----------------------------------------------------------*/
+.eFoundation .trusteeList {}
+.eFoundation .trusteeList h1 {color:#1a214d; }
+.eFoundation .trusteeList h2 {color:#30343d;}
+.eFoundation .trusteeList h6 {color:#8590a1;}
+
+
+
+/* Event List
+----------------------------------------------------------*/
+.eFoundation .eventList .articleDate {text-align:center;border-left:3px solid #a7a9ac;}
+.eFoundation .eventList .articleDate .month {color: #3c3c3e;}
+.eFoundation .eventList .articleDate .day {color: #3c3c3e;}
+
+.eFoundation .eventList .list ul li .articleDate {border-color: #f1b025;}
+.eFoundation .eventList .list ul li > .row {border-bottom:1px solid #ddd;}
+
+.eFoundation .eventList .timeframe {border-left:1px solid #efefef;}
+.eFoundation .eventList .timeframe div div:nth-child(odd) {color: #a7a9ac;}
+
+
+
+/* Certification List
+----------------------------------------------------------*/
+.eFoundation .certificationItem h2 {color:#30343d;}
+.eFoundation .certificationItem h3 {color:#8590a1;}
+.eFoundation .certificationItem .readMore a {color: #1a214d; border-bottom:1px solid #4fb047;transition: color .25s ease-in-out;}
+.eFoundation .certificationItem .readMore a:hover {color: #4fb047;}
+
+
+
+/* Modals
+----------------------------------------------------------*/
+.eFoundation .innerModal{background-color:#FFF;border:solid 1px #666;box-shadow:0 0 10px rgba(0,0,0,0.4)}
+.eFoundation .reveal-modal h6, .eFoundation .reveal-modal h6 a {color:#30343d;}
+.eFoundation input[type="text"], .eFoundation .reveal-modal input[type="password"] {color: #30343d;}
+.eFoundation .reveal-modal .errorMsg {color:#4fb047;}
+.eFoundation .reveal-modal .successMsg {color:rgba(26, 33, 77, 0.7);}
+
+
+
+
+/* Alert Message Panel
+----------------------------------------------------------*/
+.eFoundation .alertMsgPnl {background-color: #4fb047;}
+.eFoundation .alertMsgPnl .alertTitle {color:#fff;}
+.eFoundation .alertMsgPnl .alertText {color:#fff;}
+.eFoundation .alertMsgPnl .alertText a {color:#fff; border-bottom:2px solid #f1913e;}
+.eFoundation .alertMsgPnl .alertText a:hover {border-bottom-color:#76e96d;}
+.eFoundation .alertMsgPnl .closePnl {color: #f1913e;}
+.eFoundation .alertMsgPnl .closePnl:hover {color: #76e96d;}
+
+
+
+
+/* Search Page
+----------------------------------------------------------*/
+.eFoundation .searchPg #searchPnl {background-color: #f4f4f4; }
+.eFoundation .searchPg #searchPnl #searchFld input[type='text'] {background-color: inherit; color: #8590a1;}
+.eFoundation .searchPg #searchPnl #searchBtn {transition: background-color 300ms ease-in-out;}
+.eFoundation .searchPg #searchPnl #searchBtn:hover {background-color: #f1b025;}
+.eFoundation .searchPg a:hover h2, .eFoundation .searchPg a:hover h5 {color:#1a214d;background-color: rgba(26, 33, 77, 0.05);}
+
+
+
+
+/* Trustee Page
+----------------------------------------------------------*/
+.eFoundation .trusteePg h1 { color:#30343d; margin-bottom: 12px; }
+.eFoundation .trusteePg h2 { color:#8590a1; }
+.eFoundation .trusteePg h3 { color:#1a214d; }
+
+
+
+
+/*// Small screens*/ /* max-width 720px (was 640)*/
+@media only screen and (max-width: 40em) {}
+
+/*// Medium screens*/ /* min-width 721px (was 641), medium screens */
+@media only screen and (min-width: 40.063em) {}
+
+/* min-width 721px (was 641) and max-width 1152px (was 1024) */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+
+/* Custom for Header min-width 1260px and max-width 1800px */
+@media only screen and (min-width: 70em) and (max-width: 100em) {}
+
+/*// Large screens*//* min-width 1153px (was 1025), large screens */
+@media only screen and (min-width: 64.063em) {}
+
+/* min-width 1153px (was 1025) and max-width 1620px (was 1440) */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
+
+/*// XLarge screens*//* min-width 1621px (was 1441), xlarge screens */
+@media only screen and (min-width: 90.063em) {}
+
+/* min-width 1621px (was 1441) and max-width 2160px (was 1920) */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+/*// XXLarge screens*//* min-width 2161px (was 1921), xxlarge screens */
+@media only screen and (min-width: 120.063em) {}
+
+
+
+
+/* Custom Client Classes- To be used by client within umbraco
+----------------------------------------------------------*/

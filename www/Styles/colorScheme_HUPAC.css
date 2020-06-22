@@ -1,0 +1,402 @@
+﻿/* Color Palette
+----------------------------------------------------------
+#00529a;
+#ab002d;
+#30343d;
+#3c3c3e;
+#cd2828;
+#666;
+#8590a1;
+#a7a9ac;
+#dcddde;
+#ddd;
+#e7e9ed;
+#ab002d;
+#efefef;
+#f1913e;
+#262f8a;
+#f4f4f4;
+#f45d5d;
+#fff;
+0, 82, 154
+0,0,0
+231, 233, 237
+241, 176, 37
+255, 255, 255
+
+----------------------------------------------------------
+*/
+
+
+
+/* General
+----------------------------------------------------------*/
+body.hupac {background-color:#fff;}
+
+.hupac p, .hupac div, .hupac a, .hupac li {color:#30343d;}
+.hupac h1{color:#fff;}
+.hupac a {color:#ab002d;}
+
+
+
+/* Miscellaneous
+----------------------------------------------------------*/
+
+.hupac select {color: #ccc;border: 1px solid #efefef;}
+
+.hupac .shadedBg {background-color: rgba(0, 0, 0, 0.05);}
+
+.hupac .box {background-color: rgba(0, 0, 0, 0.05);}
+
+.hupac .darkDropShadow {text-shadow: 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);}
+
+.hupac .readMore a {color: #00529a;border-bottom:1px solid #ab002d;transition: color .25s ease-in-out;}
+.hupac .readMore a:hover {color: #ab002d;}
+
+/* Locked Panels
+----------------------------------------------------------*/
+.hupac .panel.locked {background-color: #f4f4f4;}
+.hupac .panel.locked .readMore a {color: #00529a;border-bottom: 1px solid #ab002d;transition: color .25s ease-in-out;}
+.hupac .panel.locked .readMore a:hover {color: #ab002d;}
+
+
+
+
+/* Floating Banners
+----------------------------------------------------------*/
+
+
+
+/* Buttons
+----------------------------------------------------------*/
+.hupac a.button, .hupac span.button a { background-color: #ab002d; color:#fff; transition: background-color 300ms ease-out, color 300ms ease-out;}
+.hupac a.button:hover, .hupac span.button a:hover {background-color: #262f8a;}
+.hupac a.button.tertiary, .hupac span.button.tertiary a {background-color: #8590a1;}
+.hupac a.button.tertiary:hover, .hupac span.button.tertiary a:hover {background-color: #262f8a;}
+.hupac a.button.quaternary, .hupac span.button.quaternary a {background-color: #00529a;}
+.hupac a.button.quaternary:hover, .hupac span.button.quaternary a:hover {background-color: #262f8a;}
+.hupac a.button.secondary, .hupac span.button a.secondary {background-color: #8590a1; color:#fff;}
+.hupac a.button.secondary:hover, .hupac span.button a.secondary:hover {background-color: #30343d; color:#fff; }
+
+
+/* Minor Navigation
+----------------------------------------------------------*/
+.hupac .NavigationMinor {background-color:#f4f4f4;}
+.hupac .NavigationMinor a, .hupac .NavigationMinor div {color:#30343d;}
+.hupac .NavigationMinor .searchPnl {border-left:1px solid #8590a1;}
+
+
+
+/* Main Navigation
+----------------------------------------------------------*/
+.hupac .NavigationMain button {color:#00529a;}
+.hupac .NavigationMain button:hover {border-color:#dcddde; border-top-color:#ab002d; }
+
+.hupac .NavigationMain{border-bottom: 1px solid #dcddde;}
+
+.hupac .NavigationMain a:not(.button){color:#00529a;}
+.hupac .NavigationMain ul > li:hover{border-color:#dcddde;border-top-color:#ab002d}
+.hupac .NavigationMain ul ul{border:1px solid #dcddde;background-color:#fff}
+.hupac .NavigationMain ul ul li:hover a{color:#ab002d}
+
+
+
+
+/* Mega Navigation
+----------------------------------------------------------*/
+.hupac .NavigationMain .navMegaMenu {border-left:1px solid #dcddde;}
+.hupac .NavigationMain .navMegaMenu:hover, .hupac .NavigationMain .navMegaMenu.hover { border-top-color: #ab002d; border-right-color: #dcddde; }
+.hupac .megaMenu .row > .columns {background-color: white; border-top:1px solid #dcddde;}
+.hupac .megaMenu ul li div a {color:#30343d;}
+.hupac .megaMenu ul li div:first-of-type a {color:#00529a;}
+.hupac .megaMenu ul li div a:hover {color:#ab002d;}
+
+
+
+/* Footer
+----------------------------------------------------------*/
+.hupac footer .upper {background-color:#f4f4f4; }
+.hupac footer .upper div {color:#8590a1;}
+.hupac footer .lower .minorNav a > div {color:#8590a1;}
+.hupac footer .lower .copyright {color:#8590a1;}
+
+
+
+/* Rotating Banners
+----------------------------------------------------------*/
+.hupac .RotatingBanners h3 {color:#fff;}
+.hupac .RotatingBanners ul.sideNav {background-color: rgba(0, 0, 0, 0.2);}
+.hupac .RotatingBanners ul.sideNav > li { border: 1px solid rgba(231, 233, 237, 0.2);}
+.hupac .RotatingBanners ul.sideNav li:hover {background-color: rgba(0, 0, 0, 0.2);}
+.hupac .RotatingBanners ul.sideNav li div {color:#fff;}
+.hupac .RotatingBanners ul.sideNav li .title {color:#fff;}
+.hupac .RotatingBanners ul.sideNav li .subtitle {color:#fff;}
+
+.hupac .RotatingBanners ul.sideNav li.active {background-color: rgba(0, 0, 0, 0.4);}
+
+
+/* Quote Banner
+----------------------------------------------------------*/
+.hupac .quoteBanner h2 {color:#00529a;}
+.hupac .quoteBanner h3 {color:#30343d;}
+
+
+
+/* News Panel
+----------------------------------------------------------*/
+.hupac .newsPanel .pnlTitle {border-top:1px solid #dcddde;}
+.hupac .newsPanel .pnlTitle h2 {color:#fff;background-color:#00529a;}
+.hupac .newsPanel h3 {color:#30343d;}
+.hupac .newsPanel h4 {color:#30343d;}
+.hupac .newsPanel h5 {color:#8590a1;}
+.hupac .newsPanel h6 {border-bottom: 1px solid #ab002d;}
+.hupac .newsPanel h6:hover {border-bottom: 1px solid #00529a; }
+.hupac .newsPanel h6 a {color:#00529a;}
+
+
+/* Custom Panel
+----------------------------------------------------------*/
+.hupac .customPanels h2 {color:#fff;}
+.hupac .customPanels p {color:#fff;}
+.hupac .customPanels h6 {border-bottom: 1px solid rgba(241, 176, 37, 0.5);}
+.hupac .customPanels h6:hover {border-bottom: 1px solid #262f8a; }
+.hupac .customPanels h6 a {color:#fff;}
+
+
+
+/* Top Upcoming Events
+----------------------------------------------------------*/
+.hupac .topUpcomingEvents h2 {color:#00529a;}
+.hupac .topUpcomingEvents h4 {color:#30343d;}
+.hupac .topUpcomingEvents h5 {color:#8590a1;}
+
+
+
+/* Call to Action Panel
+----------------------------------------------------------*/
+.hupac .callToAction h2 {color:#30343d;}
+.hupac .callToAction p {color:#30343d;}
+
+
+
+/* Quick Links
+----------------------------------------------------------*/
+.hupac .quicklinks h2 {color:#fff; }
+.hupac .quicklinks h3 {color:#fff; }
+.hupac .quicklinks a .pnlWithBgImg { background-color:#262f8a; }
+
+
+
+ /* Quote Banner with Navigation
+----------------------------------------------------------*/
+.hupac .QuoteBannerWithNav h1{color:#fff;}
+.hupac .QuoteBannerWithNav h3{color:#fff;}
+.hupac .QuoteBannerWithNav ul.sideNav{background-color:rgba(0,0,0,0.2);}
+.hupac .QuoteBannerWithNav ul.sideNav > li{border:1px solid rgba(231,233,237,0.2);}
+.hupac .QuoteBannerWithNav ul.sideNav li:hover{background-color:rgba(0,0,0,0.2);}
+.hupac .QuoteBannerWithNav ul.sideNav li div{color:#fff}
+.hupac .QuoteBannerWithNav ul.sideNav li .title{color:#fff;}
+.hupac .QuoteBannerWithNav ul.sideNav li .subtitle{color:#fff;}
+.hupac .QuoteBannerWithNav ul.sideNav li.active{background-color:rgba(0,0,0,0.4)}
+
+
+
+/* Simple Banner
+----------------------------------------------------------*/
+.hupac .simpleBanner h2 {color:#fff;}
+
+
+
+/* Textblock
+----------------------------------------------------------*/
+.hupac .textBlock .sidePnl ul li {background-color:#f4f4f4; border-bottom:1px solid #dcddde; }
+.hupac .textBlock .sidePnl ul li:last-of-type {border-bottom-color: #f4f4f4;}
+.hupac .textBlock .sidePnl ul li:hover {background-color:#262f8a; }
+.hupac .textBlock .sidePnl ul li.active {background-color:#262f8a;border-bottom-color: #262f8a; }
+.hupac .textBlock .sidePnl ul li.active a {color:#fff;}
+.hupac .textBlock .sidePnl ul li a {color:#00529a; transition: background-color 300ms ease-in-out, color 300ms ease-in-out;}
+.hupac .textBlock .sidePnl ul li:hover a {color:#fff;}
+
+
+
+/* Certification Page
+----------------------------------------------------------*/
+.hupac .CertificationPg h1 {color:#30343d;}
+.hupac .CertificationPg h2 {color:#00529a; }
+.hupac .CertificationPg h5 {color:#30343d;}
+.hupac .CertificationPg h6 {color:#8590a1;}
+.hupac .CertificationPg .toggle input[type="radio"] + label {background-color: #8590a1;color: #fff;}
+.hupac .CertificationPg .toggle input[type="radio"]:checked + label {background-color: #00529a;}
+
+
+/* Event Page
+----------------------------------------------------------*/
+.hupac .EventPg h1 {color:#30343d;}
+.hupac .EventPg h2 {color:#00529a; }
+.hupac .EventPg h5 {color:#30343d;}
+.hupac .EventPg h6 {color:#8590a1;}
+
+
+
+/* Blog Page
+----------------------------------------------------------*/
+.hupac .BlogPg {}
+.hupac .BlogPg h1 {color:#30343d;}
+.hupac .BlogPg h2 {color:#00529a;}
+.hupac .BlogPg h3 {color:#00529a;}
+.hupac .BlogPg h4 {color:#8590a1;}
+.hupac .BlogPg h5 {color:#30343d;}
+.hupac .BlogPg h6 {color:#8590a1;}
+.hupac .BlogPg h6 a {color:#ab002d;}
+
+
+/* Blog Filters
+----------------------------------------------------------*/
+.hupac .BlogFilter h4 {color: #8590a1;}
+.hupac .BlogFilter h6 {color: #8590a1;}
+.hupac .BlogFilter a div {color: #00529a;}
+.hupac .blogFilters .viewAllBlog h3 {color: #00529a;}
+.hupac .blogFilters .viewAllBlog:hover h3{background-color: #262f8a;border-bottom-color: #262f8a;color: #fff;}
+.hupac .blogFilters section.accordion ul li:hover {background-color: rgba(241, 176, 37, 0.2);}
+.hupac .blogFilters section.accordion ul li.blog_year a:hover {background-color: #f4f4f4;color: #00529a;border-bottom-color: #dcddde;}
+.hupac .blogFilters section.accordion ul li.blog_year ul li.blog_month ul.blog_post_items li.blog_post_item:hover a {color: #ab002d;}
+
+.hupac .blogFilters #blogSearch {background-color: #f4f4f4;}
+.hupac .blogFilters #blogSearch #searchFld {padding: 24px;}
+.hupac .blogFilters #blogSearch #searchFld input[type='text'] {color: #8590a1;}
+.hupac .blogFilters #blogSearch #searchBtn {border-left:1px solid #dcddde; transition: background-color 300ms ease-in-out;}
+.hupac .blogFilters #blogSearch #searchBtn:hover {background-color: #262f8a; }
+
+
+/* List View Options
+----------------------------------------------------------*/
+.hupac .listViews input[type=radio] + label {color: #8590a1;}
+
+
+/* Blog List Item
+----------------------------------------------------------*/
+.hupac .blogListItem .listViewItem .articleDate {border-left:2px solid #262f8a;}
+.hupac .blogListItem .listViewItem .articleDate .month {color:#8590a1;}
+.hupac .blogListItem .listViewItem .articleDate .day {color:#30343d;}
+.hupac .blogListItem .listViewItem .articleDesc h2.title {color:#30343d; }
+.hupac .blogListItem .listViewItem .articleDesc .date {color:#8590a1;}
+.hupac .blogListItem .listViewItem .articleDesc .categories a {color: #ab002d;transition: color .25s ease-in-out;}
+.hupac .blogListItem .listViewItem .articleDesc .categories a:hover {color: #00529a;}
+.hupac .blogListItem .listViewItem .articleDesc .readMore a {color: #00529a;border-bottom:1px solid #ab002d;transition: color .25s ease-in-out;}
+.hupac .blogListItem .listViewItem .articleDesc .readMore a:hover {color: #ab002d;}
+
+.hupac .blogListItem .gridViewItem.articleDesc h2.title {color:#30343d;}
+.hupac .blogListItem .gridViewItem.articleDesc .date {color:#8590a1;}
+.hupac .blogListItem .gridViewItem.articleDesc .categories a {color: #ab002d;transition: color .25s ease-in-out;}
+.hupac .blogListItem .gridViewItem.articleDesc .categories a:hover {color: #00529a;}
+
+
+/* Trustee List
+----------------------------------------------------------*/
+.hupac .trusteeList {}
+.hupac .trusteeList h1 {color:#00529a; }
+.hupac .trusteeList h2 {color:#30343d;}
+.hupac .trusteeList h6 {color:#8590a1;}
+
+
+
+/* Event List
+----------------------------------------------------------*/
+.hupac .eventList .articleDate {text-align:center;border-left:3px solid #a7a9ac;}
+.hupac .eventList .articleDate .month {color: #3c3c3e;}
+.hupac .eventList .articleDate .day {color: #3c3c3e;}
+
+.hupac .eventList .list ul li .articleDate {border-color: #262f8a;}
+.hupac .eventList .list ul li > .row {border-bottom:1px solid #ddd;}
+
+.hupac .eventList .timeframe {border-left:1px solid #efefef;}
+.hupac .eventList .timeframe div div:nth-child(odd) {color: #a7a9ac;}
+
+
+
+/* Certification List
+----------------------------------------------------------*/
+.hupac .certificationItem h2 {color:#30343d;}
+.hupac .certificationItem h3 {color:#8590a1;}
+.hupac .certificationItem .readMore a {color: #00529a; border-bottom:1px solid #ab002d;transition: color .25s ease-in-out;}
+.hupac .certificationItem .readMore a:hover {color: #ab002d;}
+
+
+
+/* Modals
+----------------------------------------------------------*/
+.hupac .innerModal{background-color:#FFF;border:solid 1px #666;box-shadow:0 0 10px rgba(0,0,0,0.4)}
+.hupac .reveal-modal h6, .hupac .reveal-modal h6 a {color:#30343d;}
+.hupac input[type="text"], .hupac .reveal-modal input[type="password"] {color: #30343d;}
+.hupac .reveal-modal .errorMsg {color:#ab002d;}
+.hupac .reveal-modal .successMsg {color:rgba(0, 82, 154, 0.7);}
+
+
+
+
+/* Alert Message Panel
+----------------------------------------------------------*/
+.hupac .alertMsgPnl {background-color: #ab002d;}
+.hupac .alertMsgPnl .alertTitle {color:#fff;}
+.hupac .alertMsgPnl .alertText {color:#fff;}
+.hupac .alertMsgPnl .alertText a {color:#fff; border-bottom:2px solid #f1913e;}
+.hupac .alertMsgPnl .alertText a:hover {border-bottom-color:#f45d5d;}
+.hupac .alertMsgPnl .closePnl {color: #f1913e;}
+.hupac .alertMsgPnl .closePnl:hover {color: #f45d5d;}
+
+
+
+
+/* Search Page
+----------------------------------------------------------*/
+.hupac .searchPg #searchPnl {background-color: #f4f4f4; }
+.hupac .searchPg #searchPnl #searchFld input[type='text'] {background-color: inherit; color: #8590a1;}
+.hupac .searchPg #searchPnl #searchBtn {transition: background-color 300ms ease-in-out;}
+.hupac .searchPg #searchPnl #searchBtn:hover {background-color: #262f8a;}
+.hupac .searchPg a:hover h2, .hupac .searchPg a:hover h5 {color:#00529a;background-color: rgba(0, 82, 154, 0.05);}
+
+
+
+
+/* Trustee Page
+----------------------------------------------------------*/
+.hupac .trusteePg h1 { color:#30343d; margin-bottom: 12px; }
+.hupac .trusteePg h2 { color:#8590a1; }
+.hupac .trusteePg h3 { color:#00529a; }
+
+
+
+
+/*// Small screens*/ /* max-width 720px (was 640)*/
+@media only screen and (max-width: 40em) {}
+
+/*// Medium screens*/ /* min-width 721px (was 641), medium screens */
+@media only screen and (min-width: 40.063em) {}
+
+/* min-width 721px (was 641) and max-width 1152px (was 1024) */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+
+/* Custom for Header min-width 1260px and max-width 1800px */
+@media only screen and (min-width: 70em) and (max-width: 100em) {}
+
+/*// Large screens*//* min-width 1153px (was 1025), large screens */
+@media only screen and (min-width: 64.063em) {}
+
+/* min-width 1153px (was 1025) and max-width 1620px (was 1440) */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
+
+/*// XLarge screens*//* min-width 1621px (was 1441), xlarge screens */
+@media only screen and (min-width: 90.063em) {}
+
+/* min-width 1621px (was 1441) and max-width 2160px (was 1920) */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+/*// XXLarge screens*//* min-width 2161px (was 1921), xxlarge screens */
+@media only screen and (min-width: 120.063em) {}
+
+
+
+
+/* Custom Client Classes- To be used by client within umbraco
+----------------------------------------------------------*/

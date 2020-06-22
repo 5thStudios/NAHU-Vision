@@ -1,0 +1,213 @@
+﻿<%@ WebHandler Language="VB" Class="SiteSearch" %>
+
+Imports System
+Imports System.Web
+Imports System.Web.Services
+Imports Newtonsoft.Json
+Imports Common
+Imports System.IO
+Imports Examine
+Imports Umbraco.NodeFactory
+
+Public Class SiteSearch : Implements IHttpHandler
+
+
+    Sub ProcessRequest(ByVal context As HttpContext) Implements IHttpHandler.ProcessRequest
+        Try
+            'Obtain data that was sent to process
+            Dim data As String = New StreamReader(context.Request.InputStream).ReadToEnd()
+            Dim dataDictionary As Dictionary(Of String, String) = JsonConvert.DeserializeObject(Of Dictionary(Of String, String))(data)
+
+            'Instantiate new list
+            Dim lst As New List(Of DataLayer.SearchList)
+
+            'If a search request exists, search for it.
+            If dataDictionary.ContainsKey("searchFor") Then
+                lst = ObtainList(dataDictionary.Item("searchFor"))
+            End If
+
+            'Return results
+            context.Response.Clear()
+            context.Response.ContentType = "application/json; charset=utf-8"
+            context.Response.Write(JsonConvert.SerializeObject(lst))
+
+        Catch ex As Exception
+            Dim sb As New StringBuilder()
+            sb.AppendLine("\Handlers\Search.ashx : ProcessRequest()")
+            sb.AppendLine("context:" & context.ToString())
+
+            SaveErrorMessage(ex, sb, Me.GetType())
+            context.Response.Clear()
+            context.Response.ContentType = "application/json; charset=utf-8"
+            context.Response.Write(JsonConvert.SerializeObject("Error: " & ex.ToString))
+            context.Response.End()
+        End Try
+
+
+        'Finalize response
+        context.Response.End()
+    End Sub
+
+    ReadOnly Property IsReusable() As Boolean Implements IHttpHandler.IsReusable
+        Get
+            Return False
+        End Get
+    End Property
+
+
+
+
+    Private Function ObtainList(ByVal searchFor As String) As List(Of DataLayer.SearchList)
+        'USE EXAMINE.EXAMINEMANAGER TO SEARCH   https://our.umbraco.org/documentation/reference/searching/examine/overview-explanation#querying-with-examine
+        '===============================================
+        'Instantiate variables
+        Dim lstSearchList As New List(Of DataLayer.SearchList)
+        Dim searchEntry As DataLayer.SearchList
+
+        'Instantiate search provider and criteria
+        Dim searchProvider As Providers.BaseSearchProvider = Examine.ExamineManager.Instance.SearchProviderCollection(searchIndex.ExternalSearcher)
+        Dim searchCriteria As SearchCriteria.ISearchCriteria = searchProvider.CreateSearchCriteria()
+
+        'Obtain all matching items
+        'Dim query = searchCriteria.Field(nodeProperties.showInNavigation, CInt(True)) '.[And]().OrderBy(nodeProperties.sortOrder & "[Type=INT]")
+        'Dim searchResults = searchProvider.Search(query.Compile())
+        Dim query As Examine.SearchCriteria.ISearchCriteria = searchCriteria.RawQuery(searchFor)
+        Dim searchResults As ISearchResults = searchProvider.Search(query)
+
+
+        'Loop thru each id and build link list
+        For Each result As Examine.SearchResult In searchResults
+            'Create node
+            Dim thisNode As New Node(result.Id)
+
+            'Skip if there is no id
+            If thisNode.Id = 0 Then Continue For
+
+            'Skip if root node is not a site node
+            Dim rootId As Integer = getHomeNodeId(thisNode.Id)
+            Select Case rootId
+                Case siteNodes.Home, siteNodes.EducationFoundation, siteNodes.HUPAC
+                    'Proceed
+                Case Else
+                    'Skip
+                    Continue For
+            End Select
+
+
+
+
+            'Add data to class
+            searchEntry = New DataLayer.SearchList
+            searchEntry.id = thisNode.Id
+            searchEntry.title = thisNode.Name '" [" & thisNode.NodeTypeAlias & "]" 'thisNode.Name &
+            searchEntry.url = thisNode.NiceUrl
+            'searchEntry.breadcrumb = thisNode.Path
+
+            Select Case thisNode.NodeTypeAlias
+                Case aliases.lockedBlogEntry, aliases.lockedPdfEntry, aliases.template02Locked
+                    searchEntry.isLocked = True
+            End Select
+
+            'Split path to create a breadcrumb
+            Dim first As Boolean = True
+            For Each _id As String In thisNode.Path.Split(",")
+                Dim id As Integer = CInt(_id)
+                If id <> -1 Then
+                    If first Then
+                        first = False
+                    Else
+                        searchEntry.breadcrumb += "&nbsp;&nbsp;⇢&nbsp;&nbsp;" ' ↠ &rArr; ⇢
+                    End If
+                    searchEntry.breadcrumb += New Node(id).Name
+                End If
+            Next
+
+            'searchEntry.breadcrumb = " [" & thisNode.NodeTypeAlias & "]"
+
+            'Add to list
+            lstSearchList.Add(searchEntry)
+        Next
+
+        Return lstSearchList
+    End Function
+
+
+
+
+
+
+    'Private Function ObtainList(ByVal searchFor As String) As List(Of DataLayer.SearchList)
+    '    'USE EXAMINE.EXAMINEMANAGER TO SEARCH   https://our.umbraco.org/documentation/reference/searching/examine/overview-explanation#querying-with-examine
+    '    '===============================================
+    '    'Instantiate variables
+    '    Dim lstSearchList As New List(Of DataLayer.SearchList)
+    '    Dim searchEntry As DataLayer.SearchList
+
+    '    'Instantiate search provider and criteria
+    '    Dim searchProvider As Providers.BaseSearchProvider = Examine.ExamineManager.Instance.SearchProviderCollection(searchIndex.ExternalSearcher)
+    '    Dim searchCriteria As SearchCriteria.ISearchCriteria = searchProvider.CreateSearchCriteria()
+
+    '    'Obtain all matching items
+    '    'Dim query = searchCriteria.Field(nodeProperties.showInNavigation, CInt(True)) '.[And]().OrderBy(nodeProperties.sortOrder & "[Type=INT]")
+    '    'Dim searchResults = searchProvider.Search(query.Compile())
+    '    Dim query As Examine.SearchCriteria.ISearchCriteria = searchCriteria.RawQuery(searchFor)
+    '    Dim searchResults As ISearchResults = searchProvider.Search(query)
+
+
+    '    'Loop thru each id and build link list
+    '    For Each result As Examine.SearchResult In searchResults
+    '        'Create node
+    '        Dim thisNode As New Node(result.Id)
+
+    '        'Skip if there is no id
+    '        If thisNode.Id = 0 Then Continue For
+
+    '        'Skip if root node is not a site node
+    '        Dim rootId As Integer = getHomeNodeId(thisNode.Id)
+    '        Select Case rootId
+    '            Case siteNodes.Home, siteNodes.EducationFoundation, siteNodes.HUPAC
+    '                'Proceed
+    '            Case Else
+    '                'Skip
+    '                Continue For
+    '        End Select
+
+
+
+
+    '        'Add data to class
+    '        searchEntry = New DataLayer.SearchList
+    '        searchEntry.id = thisNode.Id
+    '        searchEntry.title = thisNode.Name '" [" & thisNode.NodeTypeAlias & "]" 'thisNode.Name &
+    '        searchEntry.url = thisNode.NiceUrl
+    '        'searchEntry.breadcrumb = thisNode.Path
+
+    '        Select Case thisNode.NodeTypeAlias
+    '            Case aliases.lockedBlogEntry, aliases.lockedPdfEntry, aliases.template02Locked
+    '                searchEntry.isLocked = True
+    '        End Select
+
+    '        'Split path to create a breadcrumb
+    '        Dim first As Boolean = True
+    '        For Each _id As String In thisNode.Path.Split(",")
+    '            Dim id As Integer = CInt(_id)
+    '            If id <> -1 Then
+    '                If first Then
+    '                    first = False
+    '                Else
+    '                    searchEntry.breadcrumb += "&nbsp;&nbsp;⇢&nbsp;&nbsp;" ' ↠ &rArr; ⇢
+    '                End If
+    '                searchEntry.breadcrumb += New Node(id).Name
+    '            End If
+    '        Next
+
+    '        'searchEntry.breadcrumb = " [" & thisNode.NodeTypeAlias & "]"
+
+    '        'Add to list
+    '        lstSearchList.Add(searchEntry)
+    '    Next
+
+    '    Return lstSearchList
+    'End Function
+
+End Class

@@ -1,0 +1,99 @@
+﻿@*@using Models;*@
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using NAHUvision;
+
+@inherits UmbracoViewPage
+@{ Layout = null; }
+
+
+@{
+    //Show analytics code if not a dev site.
+    bool showAnalytics = true;
+    if (Request.Url.Host.Contains("5thstudios")) { showAnalytics = false; }
+    else if (Request.Url.Host.Contains("staging")) { showAnalytics = false; }
+
+    //Obtain the site information page
+    //ContentModels.SiteInformation cmSiteInfo = new ContentModels.SiteInformation(Umbraco.TypedContent((int)Common.SiteNode.SiteInformation));
+
+    //Create the tag url for analytics
+    //var gtagUrl = "https://www.googletagmanager.com/gtag/js?id=" + @cmSiteInfo.GoogleTrackingID;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    @*@{
+            IPublishedContent ipCurrentPage = Umbraco.AssignedContentItem;
+            var meta = ipCurrentPage.GetPropertyValue<SEOChecker.MVC.MetaData>(Common.Miscellaneous.SeoChecker);
+        }
+        @meta.AllTags*@
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NAHU Video</title>
+
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/owq5dus.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+
+    <!-- STYLES AND SCRIPTS -->
+    <link rel="stylesheet" type="text/css" href="~/bundles/bundledVideoStyles.min.css?v=01" />
+
+    <!-- ANALYTICS -->
+    @if (showAnalytics)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        @*<script async src="@gtagUrl"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', '@cmSiteInfo.GoogleTrackingID');
+            </script>*@
+    }
+
+
+    @RenderSection("headContent", required: false)
+</head>
+
+<body id="nahuvision">
+
+    @{ Html.RenderPartial("~/Views/Partials/Video/Login.cshtml"); }
+
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-transition="push">
+        @{Html.RenderAction("RenderNavigation_Main", "Navigation");}
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+        <div class="grid-container small-full medium-full">
+            @{ Html.RenderPartial("~/Views/Partials/Video/Header.cshtml");}
+            <main>
+                @RenderBody()
+            </main>
+            @{ Html.RenderPartial("~/Views/Partials/Video/Footer.cshtml");}
+        </div>
+    </div>
+    <input type="hidden" id="hfldSearchPg" value="https://nahu.org/search" />
+
+    <!-- FINAL SCRIPTS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.6/what-input.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="~/bundles/bundledVideoScripts.js?v=01"></script>
+
+    @RenderSection("finalScripts", required: false)
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    @*<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-599ef39ed7056417"></script>*@
+</body>
+</html>

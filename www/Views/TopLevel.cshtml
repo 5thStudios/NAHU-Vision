@@ -1,0 +1,121 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+    var home = @CurrentPage.Site();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NAHU</title>
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/owq5dus.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <!-- STYLES AND SCRIPTS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/images/foundation_icons/foundation-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/bundles/bundledstyles.min.css?v=19" />
+
+    <script async='async' src='//www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/14444846/NAHU_NAHU.org_Footer_728x90', [728, 90], 'div-gpt-ad-1503081911370-0').addService(googletag.pubads());
+            googletag.defineSlot('/14444846/NAHU_NAHU.org_LargeBanner_970x250', [970, 250], 'div-gpt-ad-1503081911370-1').addService(googletag.pubads());
+            googletag.defineSlot('/14444846/NAHU_NAHU.org_Rectangle1_300x250', [300, 250], 'div-gpt-ad-1503081911370-2').addService(googletag.pubads());
+            googletag.defineSlot('/14444846/NAHU_NAHU.org_Rectangle2_300x250', [300, 250], 'div-gpt-ad-1503081911370-3').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+
+
+        googletag.cmd.push(function () {
+            var gptAdSlots = [];
+            gptAdSlots.push(googletag.defineSlot('/3790/Flex8:1', [1, 1], 'div-gpt-flex-ad').addService(googletag.pubads()));
+            gptAdSlots.push(googletag.defineSlot('/3790/Fixed728x90', [728, 90], 'div-gpt-fixed-ad').addService(googletag.pubads()));
+            gptAdSlots.push(googletag.defineSlot('/3790/Static8:1', [1, 1], 'div-gpt-static-ad').addService(googletag.pubads()));
+            gptAdSlots.push(googletag.defineSlot('/3790/Static728x90', [728, 90], 'div-gpt-static300-ad').addService(googletag.pubads()));
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+
+    @RenderSection("headContent", required: false)
+
+    @*<script type='text/javascript'>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3569073-10']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>*@
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js"></script>
+</head>
+
+<body id="nahu">
+
+    @*<div id="HideInLive">
+            <div class="text-center show-for-small-down" style="color: red; background-color: rgba(255, 0, 0, 0.15);">
+                <span class="show-for-landscape">MOBILE — LANDSCAPE</span><span class="show-for-portrait">MOBILE — PORTRAIT</span>
+            </div>
+            <div class="text-center show-for-medium-only" style="color: green; background-color: rgba(0, 255, 0, 0.15);">
+                <span class="show-for-landscape">TABLET — LANDSCAPE</span><span class="show-for-portrait">TABLET — PORTRAIT</span>
+            </div>
+            <div class="text-center show-for-large-up" style="color: blue; background-color: rgba(0, 0, 255, 0.15);">
+                <span class="show-for-landscape">DESKTOP — LANDSCAPE</span><span class="show-for-portrait">DESKTOP — PORTRAIT</span>
+            </div>
+        </div>*@
+
+    @{ Html.RenderPartial("/UserControls/Login.ascx"); }
+
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+            <div class="outerContent" id="top">
+                <div class="innerContent">
+
+                    @{ Html.RenderPartial("/UserControls/AlertMsg.ascx"); }
+
+                    <header>
+                        @{ Html.RenderPartial("/UserControls/Navigation_Minor.ascx", Model.Content); }
+                        @{ Html.RenderPartial("/UserControls/Navigation_Main.ascx", Model.Content); }
+                    </header>
+
+                    <main class="">
+                        @RenderBody()
+                    </main>
+
+                    @{ Html.RenderPartial("/UserControls/Footer.ascx", Model.Content); }
+
+                </div>
+            </div>
+
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+
+
+    <!-- FINAL SCRIPTS -->
+    <script type="text/javascript" src="~/bundles/bundledscripts.min.js?v=25"></script>
+    @RenderSection("finalScripts", required: false)
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-599ef39ed7056417"></script>
+</body>
+</html>

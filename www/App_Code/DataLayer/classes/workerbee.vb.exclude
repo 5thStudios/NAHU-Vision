@@ -1,0 +1,520 @@
+﻿<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True),
+ System.Xml.Serialization.XmlRootAttribute([Namespace]:="", IsNullable:=False)>
+Partial Public Class rss
+    Private channelField As rssChannel
+    Private versionField As Decimal
+
+
+    Public Property channel() As rssChannel
+        Get
+            Return Me.channelField
+        End Get
+        Set
+            Me.channelField = Value
+        End Set
+    End Property
+
+
+    <System.Xml.Serialization.XmlAttributeAttribute()>
+    Public Property version() As Decimal
+        Get
+            Return Me.versionField
+        End Get
+        Set
+            Me.versionField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannel
+
+    Private titleField As String
+
+    Private linkField As String
+
+    Private descriptionField As String
+
+    Private itemField() As rssChannelItem
+
+    Private total_resultsField As Byte
+
+
+    Public Property title() As String
+        Get
+            Return Me.titleField
+        End Get
+        Set
+            Me.titleField = Value
+        End Set
+    End Property
+
+
+    Public Property link() As String
+        Get
+            Return Me.linkField
+        End Get
+        Set
+            Me.linkField = Value
+        End Set
+    End Property
+
+
+    Public Property description() As String
+        Get
+            Return Me.descriptionField
+        End Get
+        Set
+            Me.descriptionField = Value
+        End Set
+    End Property
+
+
+    <System.Xml.Serialization.XmlElementAttribute("item")>
+    Public Property item() As rssChannelItem()
+        Get
+            Return Me.itemField
+        End Get
+        Set
+            Me.itemField = Value
+        End Set
+    End Property
+
+
+    Public Property total_results() As Byte
+        Get
+            Return Me.total_resultsField
+        End Get
+        Set
+            Me.total_resultsField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItem
+
+    Private titleField As String
+
+    Private linkField As String
+
+    Private descriptionField As String
+
+    Private guidField As rssChannelItemGuid
+
+    Private dateCreatedField As Date
+
+    Private dateModifiedField As Date
+
+    Private privacyTypeField As String
+
+    Private categoriesField As rssChannelItemCategories
+
+
+    Public Property title() As String
+        Get
+            Return Me.titleField
+        End Get
+        Set
+            Me.titleField = Value
+        End Set
+    End Property
+
+
+    Public Property link() As String
+        Get
+            Return Me.linkField
+        End Get
+        Set
+            Me.linkField = Value
+        End Set
+    End Property
+
+
+    Public Property description() As String
+        Get
+            Return Me.descriptionField
+        End Get
+        Set
+            Me.descriptionField = Value
+        End Set
+    End Property
+
+
+    Public Property guid() As rssChannelItemGuid
+        Get
+            Return Me.guidField
+        End Get
+        Set
+            Me.guidField = Value
+        End Set
+    End Property
+
+
+    <System.Xml.Serialization.XmlElementAttribute(DataType:="date")>
+    Public Property dateCreated() As Date
+        Get
+            Return Me.dateCreatedField
+        End Get
+        Set
+            Me.dateCreatedField = Value
+        End Set
+    End Property
+
+
+    <System.Xml.Serialization.XmlElementAttribute(DataType:="date")>
+    Public Property dateModified() As Date
+        Get
+            Return Me.dateModifiedField
+        End Get
+        Set
+            Me.dateModifiedField = Value
+        End Set
+    End Property
+
+
+    Public Property privacyType() As String
+        Get
+            Return Me.privacyTypeField
+        End Get
+        Set
+            Me.privacyTypeField = Value
+        End Set
+    End Property
+
+
+    Public Property categories() As rssChannelItemCategories
+        Get
+            Return Me.categoriesField
+        End Get
+        Set
+            Me.categoriesField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemGuid
+
+    Private isPermaLinkField As Boolean
+
+    Private valueField As String
+
+
+    <System.Xml.Serialization.XmlAttributeAttribute()>
+    Public Property isPermaLink() As Boolean
+        Get
+            Return Me.isPermaLinkField
+        End Get
+        Set
+            Me.isPermaLinkField = Value
+        End Set
+    End Property
+
+
+    <System.Xml.Serialization.XmlTextAttribute()>
+    Public Property Value() As String
+        Get
+            Return Me.valueField
+        End Get
+        Set
+            Me.valueField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategories
+
+    Private category_0Field As rssChannelItemCategoriesCategory_0
+
+    Private category_1Field As rssChannelItemCategoriesCategory_1
+
+    Private category_2Field As rssChannelItemCategoriesCategory_2
+
+    Private category_3Field As rssChannelItemCategoriesCategory_3
+
+    Private category_4Field As rssChannelItemCategoriesCategory_4
+
+    Private category_5Field As rssChannelItemCategoriesCategory_5
+
+    Private category_6Field As rssChannelItemCategoriesCategory_6
+
+
+    Public Property category_0() As rssChannelItemCategoriesCategory_0
+        Get
+            Return Me.category_0Field
+        End Get
+        Set
+            Me.category_0Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_1() As rssChannelItemCategoriesCategory_1
+        Get
+            Return Me.category_1Field
+        End Get
+        Set
+            Me.category_1Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_2() As rssChannelItemCategoriesCategory_2
+        Get
+            Return Me.category_2Field
+        End Get
+        Set
+            Me.category_2Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_3() As rssChannelItemCategoriesCategory_3
+        Get
+            Return Me.category_3Field
+        End Get
+        Set
+            Me.category_3Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_4() As rssChannelItemCategoriesCategory_4
+        Get
+            Return Me.category_4Field
+        End Get
+        Set
+            Me.category_4Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_5() As rssChannelItemCategoriesCategory_5
+        Get
+            Return Me.category_5Field
+        End Get
+        Set
+            Me.category_5Field = Value
+        End Set
+    End Property
+
+
+    Public Property category_6() As rssChannelItemCategoriesCategory_6
+        Get
+            Return Me.category_6Field
+        End Get
+        Set
+            Me.category_6Field = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_0
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_1
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_2
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_3
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_4
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_5
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+
+
+<System.Xml.Serialization.XmlTypeAttribute(AnonymousType:=True)>
+Partial Public Class rssChannelItemCategoriesCategory_6
+
+    Private nameField As String
+
+    Private urlField As String
+
+
+    Public Property name() As String
+        Get
+            Return Me.nameField
+        End Get
+        Set
+            Me.nameField = Value
+        End Set
+    End Property
+
+
+    Public Property url() As String
+        Get
+            Return Me.urlField
+        End Get
+        Set
+            Me.urlField = Value
+        End Set
+    End Property
+End Class
+

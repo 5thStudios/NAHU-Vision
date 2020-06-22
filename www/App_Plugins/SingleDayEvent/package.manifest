@@ -1,0 +1,17 @@
+﻿{
+    propertyEditors: [      
+        {
+			alias: "SingleDayEventController",
+            id: "B2FE9CFE-50FC-42A5-9DFE-35DE84953C65",
+            name: "Single-Day Event",
+            editor: {
+                view: "~/App_Plugins/SingleDayEvent/singledayevent.editor.html",
+                valueType: "JSON"
+            }
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/SingleDayEvent/singledayevent.controller.js'
+    ]
+}

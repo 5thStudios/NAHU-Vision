@@ -1,0 +1,3637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://imis.com/webservices/membership" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://imis.com/webservices/membership" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://imis.com/webservices/membership">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="LoginAndReturnSerializedAppPrincipal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginAndReturnSerializedAppPrincipalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginAndReturnSerializedAppPrincipalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginWithSerializedAppPrincipal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="principal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginWithSerializedAppPrincipalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginWithSerializedAppPrincipalResult" type="tns:LogonResultCodes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="LogonResultCodes">
+        <s:restriction base="s:string">
+          <s:enumeration value="Succeeded" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="LockedOut" />
+          <s:enumeration value="Disabled" />
+          <s:enumeration value="MaintenanceMode" />
+          <s:enumeration value="ProductExpired" />
+          <s:enumeration value="CannotSetPasswordToStrongerHashedValue" />
+          <s:enumeration value="PasswordExpired" />
+          <s:enumeration value="AdditionalFactorRequired" />
+          <s:enumeration value="FailedInvalidFactor" />
+          <s:enumeration value="FailedResetSecret" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoginUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="staffUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginUserResult" type="tns:LogonResultCodes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserWithSecondFactor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="secondFactor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserWithSecondFactorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginUserWithSecondFactorResult" type="tns:LogonResultCodes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserAndProvideCookies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="staffUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUserAndProvideCookiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginUserAndProvideCookiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatabaseInformation">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDatabaseInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatabaseInformationResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="server" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesBaseUri">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServicesBaseUriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServicesBaseUriResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesWithLoginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRoles">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserTypeWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserTypeWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserTypeWithLoginResult" type="tns:UserType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="UserType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Anonymous" />
+          <s:enumeration value="Public" />
+          <s:enumeration value="Casual" />
+          <s:enumeration value="Full" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetUserType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserTypeResult" type="tns:UserType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLogonAnnouncement">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLogonAnnouncementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLogonAnnouncementResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="logonDelaySeconds" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserForAuthenticatedUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userIsOnline" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserForAuthenticatedUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserForAuthenticatedUserResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneratePassword">
+        <s:complexType />
+      </s:element>
+      <s:element name="GeneratePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneratePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateImisUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="staffUser" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="webUser" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordAnswer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isApproved" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateImisUserWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateImisUserWithLoginResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateImisUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="staffUser" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="webUser" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordAnswer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isApproved" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateImisUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateImisUserResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterWebUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contactID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordAnswer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isApproved" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterWebUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisterWebUserResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImisUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteStaffUser" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="deleteWebUser" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImisUserWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteImisUserWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImisUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteStaffUser" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="deleteWebUser" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImisUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteImisUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIsOnline" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserWithLoginResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIsOnline" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserResult" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequiresQuestionAndAnswerWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequiresQuestionAndAnswerWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRequiresQuestionAndAnswerWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequiresQuestionAndAnswer">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRequiresQuestionAndAnswerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRequiresQuestionAndAnswerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordQuestionAndAnswerWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPasswordQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPasswordAnswer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordQuestionAndAnswerWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordQuestionAndAnswerWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordQuestionAndAnswer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPasswordQuestion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPasswordAnswer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordQuestionAndAnswerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordQuestionAndAnswerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockUserWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnlockUserWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnlockUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnlockUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordAnswer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPasswordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RequestLogonRecover">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestLogonRecoverResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RequestPasswordReset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestPasswordResetResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserPasswordResetToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userKey" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPasswordResetTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserPasswordResetTokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserKeyFromPasswordResetToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserKeyFromPasswordResetTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserKeyFromPasswordResetTokenResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeUsernameWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeUsernameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameForUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameForUserWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeUsernameForUserWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameForUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newUsername" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUsernameForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeUsernameForUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsernameChangesEnabled">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUsernameChangesEnabledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUsernameChangesEnabledResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPasswordWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPasswordWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUserPasswordWithLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUserPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPassword2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendEmail" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPassword2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUserPassword2Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsmu" type="tns:WebServiceProxyableMembershipUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserWithLoginResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsmu" type="tns:WebServiceProxyableMembershipUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindUsersByNameWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usernameToMatch" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUsersByNameWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FindUsersByNameWithLoginResult" nillable="true" type="tns:WebServiceProxyableSearchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceProxyableSearchResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SearchResult" type="tns:ArrayOfWebServiceProxyableMembershipUser" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRecords" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWebServiceProxyableMembershipUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebServiceProxyableMembershipUser" nillable="true" type="tns:WebServiceProxyableMembershipUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FindUsersByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usernameToMatch" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUsersByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FindUsersByNameResult" nillable="true" type="tns:WebServiceProxyableSearchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUsersWithLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginAsUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUsersWithLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllUsersWithLoginResult" nillable="true" type="tns:WebServiceProxyableSearchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllUsersResult" nillable="true" type="tns:WebServiceProxyableSearchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPropertyValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="propertyValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPropertyValueResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPropertyType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyValueResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIsAnonymous">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIsAnonymousResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIsAnonymousResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastActivityDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastActivityDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastActivityDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastUpdatedDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastUpdatedDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastUpdatedDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserName">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="LogonResultCodes" type="tns:LogonResultCodes" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="UserType" type="tns:UserType" />
+      <s:element name="WebServiceProxyableMembershipUser" nillable="true" type="tns:WebServiceProxyableMembershipUser" />
+      <s:element name="guid" type="s1:guid" />
+      <s:element name="WebServiceProxyableSearchResult" nillable="true" type="tns:WebServiceProxyableSearchResult" />
+      <s:element name="anyType" nillable="true" />
+      <s:element name="dateTime" type="s:dateTime" />
+      <s:complexType name="WebServiceProxyableMembershipUser">
+        <s:sequence>
+          <s:element name="userName" type="s:string" />
+          <s:element name="providerUserKey" type="s:string" />
+          <s:element name="email" type="s:string" />
+          <s:element name="passwordQuestion" type="s:string" />
+          <s:element name="comment" type="s:string" />
+          <s:element name="isApproved" type="s:boolean" />
+          <s:element name="isLockedOut" type="s:boolean" />
+          <s:element name="lastLockoutDate" type="s:dateTime" />
+          <s:element name="creationDate" type="s:dateTime" />
+          <s:element name="lastLoginDate" type="s:dateTime" />
+          <s:element name="lastActivityDate" type="s:dateTime" />
+          <s:element name="lastPasswordChangedDate" type="s:dateTime" />
+          <s:element name="isOnline" type="s:boolean" />
+          <s:element name="providerName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginAndReturnSerializedAppPrincipalSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginAndReturnSerializedAppPrincipal" />
+  </wsdl:message>
+  <wsdl:message name="LoginAndReturnSerializedAppPrincipalSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginAndReturnSerializedAppPrincipalResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginWithSerializedAppPrincipalSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginWithSerializedAppPrincipal" />
+  </wsdl:message>
+  <wsdl:message name="LoginWithSerializedAppPrincipalSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginWithSerializedAppPrincipalResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginUser" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserWithSecondFactorSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginUserWithSecondFactor" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserWithSecondFactorSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginUserWithSecondFactorResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserAndProvideCookiesSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginUserAndProvideCookies" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserAndProvideCookiesSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginUserAndProvideCookiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesBaseUriSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServicesBaseUri" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesBaseUriSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServicesBaseUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRolesWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserTypeWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserTypeWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserType" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLogonAnnouncementSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLogonAnnouncement" />
+  </wsdl:message>
+  <wsdl:message name="GetLogonAnnouncementSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLogonAnnouncementResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserForAuthenticatedUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserForAuthenticatedUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserForAuthenticatedUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserForAuthenticatedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneratePassword" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneratePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateImisUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateImisUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateImisUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateImisUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWebUserSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterWebUser" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWebUserSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterWebUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteImisUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteImisUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteImisUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteImisUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequiresQuestionAndAnswerWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequiresQuestionAndAnswerWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequiresQuestionAndAnswer" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequiresQuestionAndAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePasswordQuestionAndAnswerWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordQuestionAndAnswerWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePasswordQuestionAndAnswer" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordQuestionAndAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UnlockUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UnlockUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UnlockUser" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UnlockUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestLogonRecoverSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestLogonRecover" />
+  </wsdl:message>
+  <wsdl:message name="RequestLogonRecoverSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestLogonRecoverResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestPasswordResetSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestPasswordReset" />
+  </wsdl:message>
+  <wsdl:message name="RequestPasswordResetSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestPasswordResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPasswordResetTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPasswordResetToken" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPasswordResetTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPasswordResetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserKeyFromPasswordResetTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserKeyFromPasswordResetToken" />
+  </wsdl:message>
+  <wsdl:message name="GetUserKeyFromPasswordResetTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserKeyFromPasswordResetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeUsername" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameForUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameForUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameForUser" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeUsernameForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsernameChangesEnabledSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsernameChangesEnabled" />
+  </wsdl:message>
+  <wsdl:message name="GetUsernameChangesEnabledSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsernameChangesEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePasswordWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserPasswordWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserPasswordWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPassword2SoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserPassword2" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPassword2SoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserPassword2Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUsersByNameWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUsersByNameWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUsersByName" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUsersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersWithLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUsersWithLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersWithLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUsersWithLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPropertyValueSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPropertyValue" />
+  </wsdl:message>
+  <wsdl:message name="SetPropertyValueSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPropertyValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyType" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyValue" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIsAnonymousSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIsAnonymous" />
+  </wsdl:message>
+  <wsdl:message name="GetIsAnonymousSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIsAnonymousResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastActivityDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastActivityDate" />
+  </wsdl:message>
+  <wsdl:message name="GetLastActivityDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastActivityDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUpdatedDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastUpdatedDate" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUpdatedDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastUpdatedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginAndReturnSerializedAppPrincipalHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginAndReturnSerializedAppPrincipalHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginWithSerializedAppPrincipalHttpPostIn">
+    <wsdl:part name="principal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginWithSerializedAppPrincipalHttpPostOut">
+    <wsdl:part name="Body" element="tns:LogonResultCodes" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="staffUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:LogonResultCodes" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserWithSecondFactorHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="secondFactor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserWithSecondFactorHttpPostOut">
+    <wsdl:part name="Body" element="tns:LogonResultCodes" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserAndProvideCookiesHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="staffUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginUserAndProvideCookiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesBaseUriHttpPostIn" />
+  <wsdl:message name="GetServicesBaseUriHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesWithLoginHttpPostIn">
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesHttpPostIn" />
+  <wsdl:message name="GetRolesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeWithLoginHttpPostIn">
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:UserType" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeHttpPostIn" />
+  <wsdl:message name="GetUserTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:UserType" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpPostIn" />
+  <wsdl:message name="LogoutHttpPostOut" />
+  <wsdl:message name="GetUserForAuthenticatedUserHttpPostIn">
+    <wsdl:part name="userIsOnline" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserForAuthenticatedUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePasswordHttpPostIn" />
+  <wsdl:message name="GeneratePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserWithLoginHttpPostIn">
+    <wsdl:part name="staffUser" type="s:string" />
+    <wsdl:part name="webUser" type="s:string" />
+    <wsdl:part name="contactID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="passwordQuestion" type="s:string" />
+    <wsdl:part name="passwordAnswer" type="s:string" />
+    <wsdl:part name="isApproved" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserHttpPostIn">
+    <wsdl:part name="staffUser" type="s:string" />
+    <wsdl:part name="webUser" type="s:string" />
+    <wsdl:part name="contactID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="passwordQuestion" type="s:string" />
+    <wsdl:part name="passwordAnswer" type="s:string" />
+    <wsdl:part name="isApproved" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateImisUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWebUserHttpPostIn">
+    <wsdl:part name="contactID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="passwordQuestion" type="s:string" />
+    <wsdl:part name="passwordAnswer" type="s:string" />
+    <wsdl:part name="isApproved" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWebUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserWithLoginHttpPostIn">
+    <wsdl:part name="deleteStaffUser" type="s:string" />
+    <wsdl:part name="deleteWebUser" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserHttpPostIn">
+    <wsdl:part name="deleteStaffUser" type="s:string" />
+    <wsdl:part name="deleteWebUser" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImisUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWithLoginHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="userIsOnline" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="userIsOnline" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerWithLoginHttpPostIn">
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetRequiresQuestionAndAnswerHttpPostIn" />
+  <wsdl:message name="GetRequiresQuestionAndAnswerHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerWithLoginHttpPostIn">
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newPasswordQuestion" type="s:string" />
+    <wsdl:part name="newPasswordAnswer" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerHttpPostIn">
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newPasswordQuestion" type="s:string" />
+    <wsdl:part name="newPasswordAnswer" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordQuestionAndAnswerHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserWithLoginHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UnlockUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="passwordAnswer" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordHttpPostOut" />
+  <wsdl:message name="RequestLogonRecoverHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="loginUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestLogonRecoverHttpPostOut" />
+  <wsdl:message name="RequestPasswordResetHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="loginUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestPasswordResetHttpPostOut" />
+  <wsdl:message name="GetUserKeyFromPasswordResetTokenHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserKeyFromPasswordResetTokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:guid" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameWithLoginHttpPostIn">
+    <wsdl:part name="newUsername" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameHttpPostIn">
+    <wsdl:part name="newUsername" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserWithLoginHttpPostIn">
+    <wsdl:part name="oldUsername" type="s:string" />
+    <wsdl:part name="newUsername" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserHttpPostIn">
+    <wsdl:part name="oldUsername" type="s:string" />
+    <wsdl:part name="newUsername" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUsernameForUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetUsernameChangesEnabledHttpPostIn" />
+  <wsdl:message name="GetUsernameChangesEnabledHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordWithLoginHttpPostIn">
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="oldPassword" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordWithLoginHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPassword2HttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+    <wsdl:part name="sendEmail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPassword2HttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameWithLoginHttpPostIn">
+    <wsdl:part name="usernameToMatch" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableSearchResult" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameHttpPostIn">
+    <wsdl:part name="usernameToMatch" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FindUsersByNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableSearchResult" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersWithLoginHttpPostIn">
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="loginAsUser" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersWithLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableSearchResult" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersHttpPostIn">
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebServiceProxyableSearchResult" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyTypeHttpPostIn">
+    <wsdl:part name="propertyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyValueHttpPostIn">
+    <wsdl:part name="propertyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyValueHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="GetIsAnonymousHttpPostIn" />
+  <wsdl:message name="GetIsAnonymousHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetLastActivityDateHttpPostIn" />
+  <wsdl:message name="GetLastActivityDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUpdatedDateHttpPostIn" />
+  <wsdl:message name="GetLastUpdatedDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameHttpPostIn" />
+  <wsdl:message name="GetUserNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MembershipWebServiceSoap">
+    <wsdl:operation name="LoginAndReturnSerializedAppPrincipal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server and returns a serialized Asi.Security.AppPrincipal for use with the iMIS API.</wsdl:documentation>
+      <wsdl:input message="tns:LoginAndReturnSerializedAppPrincipalSoapIn" />
+      <wsdl:output message="tns:LoginAndReturnSerializedAppPrincipalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithSerializedAppPrincipal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server using the serialized Asi.Security.AppPrincipal.</wsdl:documentation>
+      <wsdl:input message="tns:LoginWithSerializedAppPrincipalSoapIn" />
+      <wsdl:output message="tns:LoginWithSerializedAppPrincipalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application. The staffUser parameter is ignored.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserSoapIn" />
+      <wsdl:output message="tns:LoginUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserWithSecondFactor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserWithSecondFactorSoapIn" />
+      <wsdl:output message="tns:LoginUserWithSecondFactorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserAndProvideCookies">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application, and returns a pipe-delimited string representing the cookies that need to be set to use the other methods of this web service.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserAndProvideCookiesSoapIn" />
+      <wsdl:output message="tns:LoginUserAndProvideCookiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application.</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the information needed to connect to the iMIS database.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInformationSoapIn" />
+      <wsdl:output message="tns:GetDatabaseInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesBaseUri">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the base uri of the scheduler service.</wsdl:documentation>
+      <wsdl:input message="tns:GetServicesBaseUriSoapIn" />
+      <wsdl:output message="tns:GetServicesBaseUriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Log on as the named user and get the list of roles the user belongs to.</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesWithLoginSoapIn" />
+      <wsdl:output message="tns:GetRolesWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the list of roles the current user belongs to.</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesSoapIn" />
+      <wsdl:output message="tns:GetRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Log on as the named user and get the user's type.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserTypeWithLoginSoapIn" />
+      <wsdl:output message="tns:GetUserTypeWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the type of the current user.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserTypeSoapIn" />
+      <wsdl:output message="tns:GetUserTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogonAnnouncement">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check whether there are any important announcements that should be displayed prior to logon. If message is non-empty and logonDelaySeconds is zero, the message should be displayed and logon should not be permitted; otherwise, the message should be displayed for logonDelaySeconds seconds.</wsdl:documentation>
+      <wsdl:input message="tns:GetLogonAnnouncementSoapIn" />
+      <wsdl:output message="tns:GetLogonAnnouncementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user out of the iMIS system.</wsdl:documentation>
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserForAuthenticatedUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the WebServiceProxyableMembershipUser for the currently authenticated user.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserForAuthenticatedUserSoapIn" />
+      <wsdl:output message="tns:GetUserForAuthenticatedUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generates a random password that conforms to the current password complexity requirements.</wsdl:documentation>
+      <wsdl:input message="tns:GeneratePasswordSoapIn" />
+      <wsdl:output message="tns:GeneratePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS user from an existing contact as either a staff user or a web only user.</wsdl:documentation>
+      <wsdl:input message="tns:CreateImisUserWithLoginSoapIn" />
+      <wsdl:output message="tns:CreateImisUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS user from an existing contact as either a staff user or a web only user.</wsdl:documentation>
+      <wsdl:input message="tns:CreateImisUserSoapIn" />
+      <wsdl:output message="tns:CreateImisUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWebUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS web user from an existing contact.</wsdl:documentation>
+      <wsdl:input message="tns:RegisterWebUserSoapIn" />
+      <wsdl:output message="tns:RegisterWebUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Removes the iMIS user's association with the specified logon name.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteImisUserWithLoginSoapIn" />
+      <wsdl:output message="tns:DeleteImisUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Removes the iMIS user's association with the specified logon name.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteImisUserSoapIn" />
+      <wsdl:output message="tns:DeleteImisUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the user with the specified username, if any. If userIsOnline is true, the user's LastLoginDate will be updated.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserWithLoginSoapIn" />
+      <wsdl:output message="tns:GetUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the user with the specified username, if any. If userIsOnline is true, the user's LastLoginDate will be updated.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserSoapIn" />
+      <wsdl:output message="tns:GetUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswerWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks whether the security question and answer are required values or not. If not, they are ignored.</wsdl:documentation>
+      <wsdl:input message="tns:GetRequiresQuestionAndAnswerWithLoginSoapIn" />
+      <wsdl:output message="tns:GetRequiresQuestionAndAnswerWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks whether the security question and answer are required values or not. If not, they are ignored.</wsdl:documentation>
+      <wsdl:input message="tns:GetRequiresQuestionAndAnswerSoapIn" />
+      <wsdl:output message="tns:GetRequiresQuestionAndAnswerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswerWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's security question and answer.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordQuestionAndAnswerWithLoginSoapIn" />
+      <wsdl:output message="tns:ChangePasswordQuestionAndAnswerWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's security question and answer.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordQuestionAndAnswerSoapIn" />
+      <wsdl:output message="tns:ChangePasswordQuestionAndAnswerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unlocks a user account which has been locked out for too many incorrect login attempts.</wsdl:documentation>
+      <wsdl:input message="tns:UnlockUserWithLoginSoapIn" />
+      <wsdl:output message="tns:UnlockUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unlocks a user account which has been locked out for too many incorrect login attempts.</wsdl:documentation>
+      <wsdl:input message="tns:UnlockUserSoapIn" />
+      <wsdl:output message="tns:UnlockUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resets the named user's password to a random value</wsdl:documentation>
+      <wsdl:input message="tns:ResetPasswordSoapIn" />
+      <wsdl:output message="tns:ResetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestLogonRecover">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a logon information request to the user, which provides the user's logon (but not password, for security reasons).</wsdl:documentation>
+      <wsdl:input message="tns:RequestLogonRecoverSoapIn" />
+      <wsdl:output message="tns:RequestLogonRecoverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestPasswordReset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a password reset request to the user, which allows them to click a link to visit the website and enter a new password.</wsdl:documentation>
+      <wsdl:input message="tns:RequestPasswordResetSoapIn" />
+      <wsdl:output message="tns:RequestPasswordResetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPasswordResetToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the URL-safe password reset token for a given user. The token has a unique identifier for the user and a creation date embedded in it.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserPasswordResetTokenSoapIn" />
+      <wsdl:output message="tns:GetUserPasswordResetTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyFromPasswordResetToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Given a URL-safe password reset token, returns the UserKey of the user the token represents. If the token has expired (as defined by the creation date compared to the Authentication.PasswordResetTokenExpireDays value in web.config, default 7) or the token cannot be deciphered, Guid.Empty is returned.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserKeyFromPasswordResetTokenSoapIn" />
+      <wsdl:output message="tns:GetUserKeyFromPasswordResetTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameWithLoginSoapIn" />
+      <wsdl:output message="tns:ChangeUsernameWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsername">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameSoapIn" />
+      <wsdl:output message="tns:ChangeUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameForUserWithLoginSoapIn" />
+      <wsdl:output message="tns:ChangeUsernameForUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameForUserSoapIn" />
+      <wsdl:output message="tns:ChangeUsernameForUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsernameChangesEnabled">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks to see whether the system administrator has enabled logon name changes.</wsdl:documentation>
+      <wsdl:input message="tns:GetUsernameChangesEnabledSoapIn" />
+      <wsdl:output message="tns:GetUsernameChangesEnabledSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordWithLoginSoapIn" />
+      <wsdl:output message="tns:ChangePasswordWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPasswordWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPasswordWithLoginSoapIn" />
+      <wsdl:output message="tns:SetUserPasswordWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value and e-mails the user to alert them password was changed (if the user has an associated e-mail address.).</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPasswordSoapIn" />
+      <wsdl:output message="tns:SetUserPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value and e-mails the user to alert them password was changed (if sendEmail is true and the user has an associated e-mail address.)</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPassword2SoapIn" />
+      <wsdl:output message="tns:SetUserPassword2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Applies changes made to the specified user to the Membership Provider store.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateUserWithLoginSoapIn" />
+      <wsdl:output message="tns:UpdateUserWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Applies changes made to the specified user to the Membership Provider store.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateUserSoapIn" />
+      <wsdl:output message="tns:UpdateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByNameWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of Membership users that match the specified username. SQL Wildcards (%, _) can be used.</wsdl:documentation>
+      <wsdl:input message="tns:FindUsersByNameWithLoginSoapIn" />
+      <wsdl:output message="tns:FindUsersByNameWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of Membership users that match the specified username. SQL Wildcards (%, _) can be used.</wsdl:documentation>
+      <wsdl:input message="tns:FindUsersByNameSoapIn" />
+      <wsdl:output message="tns:FindUsersByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of all Membership users in the system.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllUsersWithLoginSoapIn" />
+      <wsdl:output message="tns:GetAllUsersWithLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of all Membership users in the system.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllUsersSoapIn" />
+      <wsdl:output message="tns:GetAllUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the profile setting named with the supplied value. Note that currently only integral types (string, boolean, int*, uint*, byte, sbyte, decimal, single, double, char) are supported unless you know and can supply a value of the correct type (see GetPropertyType for help with that).</wsdl:documentation>
+      <wsdl:input message="tns:SetPropertyValueSoapIn" />
+      <wsdl:output message="tns:SetPropertyValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the FullName of the System.Type that is used to store values for the specified property.</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyTypeSoapIn" />
+      <wsdl:output message="tns:GetPropertyTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current value for the specified property for the current user, as the type returned from GetPropertyType.</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyValueSoapIn" />
+      <wsdl:output message="tns:GetPropertyValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAnonymous">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns true if the current user is an anonymous (not signed in) user.</wsdl:documentation>
+      <wsdl:input message="tns:GetIsAnonymousSoapIn" />
+      <wsdl:output message="tns:GetIsAnonymousSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastActivityDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The last time the current user was active (hit a page, made a web service request, etc).</wsdl:documentation>
+      <wsdl:input message="tns:GetLastActivityDateSoapIn" />
+      <wsdl:output message="tns:GetLastActivityDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUpdatedDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The last time the user's profile was modified.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastUpdatedDateSoapIn" />
+      <wsdl:output message="tns:GetLastUpdatedDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The current user's logon name.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MembershipWebServiceHttpPost">
+    <wsdl:operation name="LoginAndReturnSerializedAppPrincipal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server and returns a serialized Asi.Security.AppPrincipal for use with the iMIS API.</wsdl:documentation>
+      <wsdl:input message="tns:LoginAndReturnSerializedAppPrincipalHttpPostIn" />
+      <wsdl:output message="tns:LoginAndReturnSerializedAppPrincipalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithSerializedAppPrincipal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server using the serialized Asi.Security.AppPrincipal.</wsdl:documentation>
+      <wsdl:input message="tns:LoginWithSerializedAppPrincipalHttpPostIn" />
+      <wsdl:output message="tns:LoginWithSerializedAppPrincipalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application. The staffUser parameter is ignored.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserHttpPostIn" />
+      <wsdl:output message="tns:LoginUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserWithSecondFactor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserWithSecondFactorHttpPostIn" />
+      <wsdl:output message="tns:LoginUserWithSecondFactorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserAndProvideCookies">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application server or the customer application, and returns a pipe-delimited string representing the cookies that need to be set to use the other methods of this web service.</wsdl:documentation>
+      <wsdl:input message="tns:LoginUserAndProvideCookiesHttpPostIn" />
+      <wsdl:output message="tns:LoginUserAndProvideCookiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user in to the iMIS application.</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserHttpPostIn" />
+      <wsdl:output message="tns:ValidateUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesBaseUri">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the base uri of the scheduler service.</wsdl:documentation>
+      <wsdl:input message="tns:GetServicesBaseUriHttpPostIn" />
+      <wsdl:output message="tns:GetServicesBaseUriHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Log on as the named user and get the list of roles the user belongs to.</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesWithLoginHttpPostIn" />
+      <wsdl:output message="tns:GetRolesWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the list of roles the current user belongs to.</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesHttpPostIn" />
+      <wsdl:output message="tns:GetRolesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Log on as the named user and get the user's type.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserTypeWithLoginHttpPostIn" />
+      <wsdl:output message="tns:GetUserTypeWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the type of the current user.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserTypeHttpPostIn" />
+      <wsdl:output message="tns:GetUserTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs the user out of the iMIS system.</wsdl:documentation>
+      <wsdl:input message="tns:LogoutHttpPostIn" />
+      <wsdl:output message="tns:LogoutHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserForAuthenticatedUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the WebServiceProxyableMembershipUser for the currently authenticated user.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserForAuthenticatedUserHttpPostIn" />
+      <wsdl:output message="tns:GetUserForAuthenticatedUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generates a random password that conforms to the current password complexity requirements.</wsdl:documentation>
+      <wsdl:input message="tns:GeneratePasswordHttpPostIn" />
+      <wsdl:output message="tns:GeneratePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS user from an existing contact as either a staff user or a web only user.</wsdl:documentation>
+      <wsdl:input message="tns:CreateImisUserWithLoginHttpPostIn" />
+      <wsdl:output message="tns:CreateImisUserWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS user from an existing contact as either a staff user or a web only user.</wsdl:documentation>
+      <wsdl:input message="tns:CreateImisUserHttpPostIn" />
+      <wsdl:output message="tns:CreateImisUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWebUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates an iMIS web user from an existing contact.</wsdl:documentation>
+      <wsdl:input message="tns:RegisterWebUserHttpPostIn" />
+      <wsdl:output message="tns:RegisterWebUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Removes the iMIS user's association with the specified logon name.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteImisUserWithLoginHttpPostIn" />
+      <wsdl:output message="tns:DeleteImisUserWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Removes the iMIS user's association with the specified logon name.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteImisUserHttpPostIn" />
+      <wsdl:output message="tns:DeleteImisUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the user with the specified username, if any. If userIsOnline is true, the user's LastLoginDate will be updated.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserWithLoginHttpPostIn" />
+      <wsdl:output message="tns:GetUserWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the user with the specified username, if any. If userIsOnline is true, the user's LastLoginDate will be updated.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserHttpPostIn" />
+      <wsdl:output message="tns:GetUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswerWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks whether the security question and answer are required values or not. If not, they are ignored.</wsdl:documentation>
+      <wsdl:input message="tns:GetRequiresQuestionAndAnswerWithLoginHttpPostIn" />
+      <wsdl:output message="tns:GetRequiresQuestionAndAnswerWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks whether the security question and answer are required values or not. If not, they are ignored.</wsdl:documentation>
+      <wsdl:input message="tns:GetRequiresQuestionAndAnswerHttpPostIn" />
+      <wsdl:output message="tns:GetRequiresQuestionAndAnswerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswerWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's security question and answer.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordQuestionAndAnswerWithLoginHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordQuestionAndAnswerWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's security question and answer.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordQuestionAndAnswerHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordQuestionAndAnswerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unlocks a user account which has been locked out for too many incorrect login attempts.</wsdl:documentation>
+      <wsdl:input message="tns:UnlockUserWithLoginHttpPostIn" />
+      <wsdl:output message="tns:UnlockUserWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Unlocks a user account which has been locked out for too many incorrect login attempts.</wsdl:documentation>
+      <wsdl:input message="tns:UnlockUserHttpPostIn" />
+      <wsdl:output message="tns:UnlockUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resets the named user's password to a random value</wsdl:documentation>
+      <wsdl:input message="tns:ResetPasswordHttpPostIn" />
+      <wsdl:output message="tns:ResetPasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestLogonRecover">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a logon information request to the user, which provides the user's logon (but not password, for security reasons).</wsdl:documentation>
+      <wsdl:input message="tns:RequestLogonRecoverHttpPostIn" />
+      <wsdl:output message="tns:RequestLogonRecoverHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestPasswordReset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a password reset request to the user, which allows them to click a link to visit the website and enter a new password.</wsdl:documentation>
+      <wsdl:input message="tns:RequestPasswordResetHttpPostIn" />
+      <wsdl:output message="tns:RequestPasswordResetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyFromPasswordResetToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Given a URL-safe password reset token, returns the UserKey of the user the token represents. If the token has expired (as defined by the creation date compared to the Authentication.PasswordResetTokenExpireDays value in web.config, default 7) or the token cannot be deciphered, Guid.Empty is returned.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserKeyFromPasswordResetTokenHttpPostIn" />
+      <wsdl:output message="tns:GetUserKeyFromPasswordResetTokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameWithLoginHttpPostIn" />
+      <wsdl:output message="tns:ChangeUsernameWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsername">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameHttpPostIn" />
+      <wsdl:output message="tns:ChangeUsernameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUserWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameForUserWithLoginHttpPostIn" />
+      <wsdl:output message="tns:ChangeUsernameForUserWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's logon name to the specified value, if logon name changes are enabled.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeUsernameForUserHttpPostIn" />
+      <wsdl:output message="tns:ChangeUsernameForUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsernameChangesEnabled">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks to see whether the system administrator has enabled logon name changes.</wsdl:documentation>
+      <wsdl:input message="tns:GetUsernameChangesEnabledHttpPostIn" />
+      <wsdl:output message="tns:GetUsernameChangesEnabledHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordWithLoginHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the current user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPasswordWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value.</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPasswordWithLoginHttpPostIn" />
+      <wsdl:output message="tns:SetUserPasswordWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value and e-mails the user to alert them password was changed (if the user has an associated e-mail address.).</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPasswordHttpPostIn" />
+      <wsdl:output message="tns:SetUserPasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified user's password to the specified value and e-mails the user to alert them password was changed (if sendEmail is true and the user has an associated e-mail address.)</wsdl:documentation>
+      <wsdl:input message="tns:SetUserPassword2HttpPostIn" />
+      <wsdl:output message="tns:SetUserPassword2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByNameWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of Membership users that match the specified username. SQL Wildcards (%, _) can be used.</wsdl:documentation>
+      <wsdl:input message="tns:FindUsersByNameWithLoginHttpPostIn" />
+      <wsdl:output message="tns:FindUsersByNameWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of Membership users that match the specified username. SQL Wildcards (%, _) can be used.</wsdl:documentation>
+      <wsdl:input message="tns:FindUsersByNameHttpPostIn" />
+      <wsdl:output message="tns:FindUsersByNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersWithLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of all Membership users in the system.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllUsersWithLoginHttpPostIn" />
+      <wsdl:output message="tns:GetAllUsersWithLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a paged list of all Membership users in the system.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllUsersHttpPostIn" />
+      <wsdl:output message="tns:GetAllUsersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the FullName of the System.Type that is used to store values for the specified property.</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyTypeHttpPostIn" />
+      <wsdl:output message="tns:GetPropertyTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current value for the specified property for the current user, as the type returned from GetPropertyType.</wsdl:documentation>
+      <wsdl:input message="tns:GetPropertyValueHttpPostIn" />
+      <wsdl:output message="tns:GetPropertyValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAnonymous">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns true if the current user is an anonymous (not signed in) user.</wsdl:documentation>
+      <wsdl:input message="tns:GetIsAnonymousHttpPostIn" />
+      <wsdl:output message="tns:GetIsAnonymousHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastActivityDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The last time the current user was active (hit a page, made a web service request, etc).</wsdl:documentation>
+      <wsdl:input message="tns:GetLastActivityDateHttpPostIn" />
+      <wsdl:output message="tns:GetLastActivityDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUpdatedDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The last time the user's profile was modified.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastUpdatedDateHttpPostIn" />
+      <wsdl:output message="tns:GetLastUpdatedDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The current user's logon name.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserNameHttpPostIn" />
+      <wsdl:output message="tns:GetUserNameHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MembershipWebServiceSoap" type="tns:MembershipWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginAndReturnSerializedAppPrincipal">
+      <soap:operation soapAction="http://imis.com/webservices/membership/LoginAndReturnSerializedAppPrincipal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithSerializedAppPrincipal">
+      <soap:operation soapAction="http://imis.com/webservices/membership/LoginWithSerializedAppPrincipal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserWithSecondFactor">
+      <soap:operation soapAction="http://imis.com/webservices/membership/LoginUserWithSecondFactor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserAndProvideCookies">
+      <soap:operation soapAction="http://imis.com/webservices/membership/LoginUserAndProvideCookies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseInformation">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetDatabaseInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesBaseUri">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetServicesBaseUri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetRolesWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserTypeWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogonAnnouncement">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetLogonAnnouncement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://imis.com/webservices/membership/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserForAuthenticatedUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserForAuthenticatedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePassword">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GeneratePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/CreateImisUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/CreateImisUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWebUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/RegisterWebUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/DeleteImisUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/DeleteImisUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswerWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetRequiresQuestionAndAnswerWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswer">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetRequiresQuestionAndAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswerWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangePasswordQuestionAndAnswerWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswer">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangePasswordQuestionAndAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/UnlockUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/UnlockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestLogonRecover">
+      <soap:operation soapAction="http://imis.com/webservices/membership/RequestLogonRecover" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestPasswordReset">
+      <soap:operation soapAction="http://imis.com/webservices/membership/RequestPasswordReset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPasswordResetToken">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserPasswordResetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyFromPasswordResetToken">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserKeyFromPasswordResetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsername">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangeUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameForUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsernameChangesEnabled">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUsernameChangesEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangePasswordWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://imis.com/webservices/membership/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPasswordWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/SetUserPasswordWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap:operation soapAction="http://imis.com/webservices/membership/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword2">
+      <soap:operation soapAction="http://imis.com/webservices/membership/SetUserPassword2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/UpdateUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://imis.com/webservices/membership/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByNameWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/FindUsersByNameWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <soap:operation soapAction="http://imis.com/webservices/membership/FindUsersByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersWithLogin">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetAllUsersWithLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue">
+      <soap:operation soapAction="http://imis.com/webservices/membership/SetPropertyValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyType">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetPropertyType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetPropertyValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAnonymous">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetIsAnonymous" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastActivityDate">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetLastActivityDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUpdatedDate">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetLastUpdatedDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://imis.com/webservices/membership/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MembershipWebServiceSoap12" type="tns:MembershipWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginAndReturnSerializedAppPrincipal">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/LoginAndReturnSerializedAppPrincipal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithSerializedAppPrincipal">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/LoginWithSerializedAppPrincipal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/LoginUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserWithSecondFactor">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/LoginUserWithSecondFactor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserAndProvideCookies">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/LoginUserAndProvideCookies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseInformation">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetDatabaseInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesBaseUri">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetServicesBaseUri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetRolesWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserTypeWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogonAnnouncement">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetLogonAnnouncement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserForAuthenticatedUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserForAuthenticatedUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePassword">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GeneratePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/CreateImisUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/CreateImisUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWebUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/RegisterWebUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/DeleteImisUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/DeleteImisUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswerWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetRequiresQuestionAndAnswerWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswer">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetRequiresQuestionAndAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswerWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangePasswordQuestionAndAnswerWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswer">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangePasswordQuestionAndAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/UnlockUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/UnlockUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestLogonRecover">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/RequestLogonRecover" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestPasswordReset">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/RequestPasswordReset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPasswordResetToken">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserPasswordResetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyFromPasswordResetToken">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserKeyFromPasswordResetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsername">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangeUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameForUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangeUsernameForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsernameChangesEnabled">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUsernameChangesEnabled" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangePasswordWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPasswordWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/SetUserPasswordWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword2">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/SetUserPassword2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/UpdateUserWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByNameWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/FindUsersByNameWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/FindUsersByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersWithLogin">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetAllUsersWithLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/SetPropertyValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyType">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetPropertyType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetPropertyValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAnonymous">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetIsAnonymous" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastActivityDate">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetLastActivityDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUpdatedDate">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetLastUpdatedDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="http://imis.com/webservices/membership/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MembershipWebServiceHttpPost" type="tns:MembershipWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="LoginAndReturnSerializedAppPrincipal">
+      <http:operation location="/LoginAndReturnSerializedAppPrincipal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithSerializedAppPrincipal">
+      <http:operation location="/LoginWithSerializedAppPrincipal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <http:operation location="/LoginUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserWithSecondFactor">
+      <http:operation location="/LoginUserWithSecondFactor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUserAndProvideCookies">
+      <http:operation location="/LoginUserAndProvideCookies" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <http:operation location="/ValidateUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesBaseUri">
+      <http:operation location="/GetServicesBaseUri" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesWithLogin">
+      <http:operation location="/GetRolesWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <http:operation location="/GetRoles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeWithLogin">
+      <http:operation location="/GetUserTypeWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <http:operation location="/GetUserType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserForAuthenticatedUser">
+      <http:operation location="/GetUserForAuthenticatedUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePassword">
+      <http:operation location="/GeneratePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUserWithLogin">
+      <http:operation location="/CreateImisUserWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImisUser">
+      <http:operation location="/CreateImisUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWebUser">
+      <http:operation location="/RegisterWebUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUserWithLogin">
+      <http:operation location="/DeleteImisUserWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImisUser">
+      <http:operation location="/DeleteImisUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWithLogin">
+      <http:operation location="/GetUserWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <http:operation location="/GetUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswerWithLogin">
+      <http:operation location="/GetRequiresQuestionAndAnswerWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequiresQuestionAndAnswer">
+      <http:operation location="/GetRequiresQuestionAndAnswer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswerWithLogin">
+      <http:operation location="/ChangePasswordQuestionAndAnswerWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordQuestionAndAnswer">
+      <http:operation location="/ChangePasswordQuestionAndAnswer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUserWithLogin">
+      <http:operation location="/UnlockUserWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <http:operation location="/UnlockUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <http:operation location="/ResetPassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="RequestLogonRecover">
+      <http:operation location="/RequestLogonRecover" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="RequestPasswordReset">
+      <http:operation location="/RequestPasswordReset" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyFromPasswordResetToken">
+      <http:operation location="/GetUserKeyFromPasswordResetToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameWithLogin">
+      <http:operation location="/ChangeUsernameWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsername">
+      <http:operation location="/ChangeUsername" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUserWithLogin">
+      <http:operation location="/ChangeUsernameForUserWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUsernameForUser">
+      <http:operation location="/ChangeUsernameForUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsernameChangesEnabled">
+      <http:operation location="/GetUsernameChangesEnabled" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordWithLogin">
+      <http:operation location="/ChangePasswordWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPasswordWithLogin">
+      <http:operation location="/SetUserPasswordWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <http:operation location="/SetUserPassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword2">
+      <http:operation location="/SetUserPassword2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByNameWithLogin">
+      <http:operation location="/FindUsersByNameWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <http:operation location="/FindUsersByName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersWithLogin">
+      <http:operation location="/GetAllUsersWithLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <http:operation location="/GetAllUsers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyType">
+      <http:operation location="/GetPropertyType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue">
+      <http:operation location="/GetPropertyValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAnonymous">
+      <http:operation location="/GetIsAnonymous" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastActivityDate">
+      <http:operation location="/GetLastActivityDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUpdatedDate">
+      <http:operation location="/GetLastUpdatedDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <http:operation location="/GetUserName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MembershipWebService">
+    <wsdl:port name="MembershipWebServiceSoap" binding="tns:MembershipWebServiceSoap">
+      <soap:address location="https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MembershipWebServiceSoap12" binding="tns:MembershipWebServiceSoap12">
+      <soap12:address location="https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MembershipWebServiceHttpPost" binding="tns:MembershipWebServiceHttpPost">
+      <http:address location="https://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

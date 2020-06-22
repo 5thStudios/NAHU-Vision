@@ -1,0 +1,43 @@
+﻿Imports Umbraco
+Imports Umbraco.NodeFactory
+Imports Umbraco.Core
+Imports Umbraco.Core.Models
+Imports Umbraco.Core.Services
+Imports Common
+
+Public Class linqErrorMsgs
+
+#Region "Properties"
+#End Region
+
+#Region "Selects"
+#End Region
+
+#Region "Inserts"
+    'Public Sub saveErrorMessage(ByVal _exceptionMsg As String, ByVal _generalMsg As String)
+    '    'Create a new node
+    '    Dim cs As IContentService = ApplicationContext.Current.Services.ContentService
+    '    Dim siteErrors As IContent = cs.GetById(siteNodes.SiteErrors)
+    '    Dim timeStamp As DateTime = DateTime.Now
+    '    Dim errorMsg As IContent = cs.CreateContentWithIdentity(timeStamp.ToString, siteErrors, aliases.errorMessage)
+
+    '    'Set values
+    '    errorMsg.SetValue(nodeProperties.exceptionMessage, _exceptionMsg)
+    '    errorMsg.SetValue(nodeProperties.generalMessage, _generalMsg)
+
+    '    'Save values
+    '    cs.SaveAndPublishWithStatus(errorMsg)
+    'End Sub
+#End Region
+
+#Region "Updates"
+#End Region
+
+#Region "Delete"
+#End Region
+
+#Region "Methods"
+#End Region
+
+End Class
+

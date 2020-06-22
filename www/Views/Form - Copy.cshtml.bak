@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "TopLevel.cshtml";
+}
+
+@section headContent {}
+@{ Html.RenderPartial("~/Masterpages/Forms.ascx"); }
+<div>
+    @CurrentPage.GetGridHtml("bodyText", "Foundation5")
+</div>
+@section finalScripts {
+    <script type="text/javascript">
+        //var hidden = $('.Hidden1');
+        //$(".Button1").click(function () {
+        //    hidden.val('Button1');
+        //});
+        //$(".Submit1").click(function () {
+        //    hidden.val('Submit1');
+        //});
+        //$(".Reset1").click(function () {
+        //    hidden.val('Reset1');
+        //});
+
+        
+        //$(".Button2").click(function () {
+        //    hidden.val('Button2');
+        //});
+        //$(".Submit2").click(function () {
+        //    hidden.val('Submit2');
+        //});
+        //$(".Reset2").click(function () {
+        //    hidden.val('Reset2');
+        //});
+    </script>
+}

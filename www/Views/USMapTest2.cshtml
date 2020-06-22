@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ Layout = "TopLevel.cshtml"; }
+
+@section headContent {}
+
+@{
+    @*Html.RenderPartial("~/UserControls/USStateMap.ascx");*@
+    <div class="row">
+        <div class="columns text-center">
+            <h2>test 2: Simple Maps</h2>
+            <div>
+                <a href="http://simplemaps.com/us-examples#5">Sublink Examples</a>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+}
+
+@section finalScripts {
+    <script type="text/javascript" src="../mapTests/html5usmapv3.5_trial/mapdata.js"></script>
+    <script  type="text/javascript" src="../mapTests/html5usmapv3.5_trial/usmap.js"></script>
+
+
+}

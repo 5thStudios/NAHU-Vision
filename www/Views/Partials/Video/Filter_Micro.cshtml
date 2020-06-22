@@ -1,0 +1,265 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+
+
+<ul id="micro-filter">
+    <li>
+        <a>Browse</a>
+        <ul>
+            <li><a>Recent Episodes</a></li>
+            <li><a>All Videos</a></li>
+            <li><a>Most Viewed</a></li>
+            <li>
+                <a>Agency Membership</a>
+            </li>
+            <li>
+                <a>Chapter Leadership Training</a>
+                <ul>
+                    <li>
+                        <a>Awards</a>
+                    </li>
+                    <li>
+                        <a>BOT</a>
+                    </li>
+                    <li>
+                        <a>Chapter Relations</a>
+                    </li>
+                    <li>
+                        <a>HUPAC</a>
+                    </li>
+                    <li>
+                        <a>Legislative</a>
+                    </li>
+                    <li>
+                        <a>Media Relations</a>
+                    </li>
+                    <li>
+                        <a>Membership</a>
+                    </li>
+                    <li>
+                        <a>Professional Development</a>
+                    </li>
+                    <li>
+                        <a>Social Media</a>
+                        <ul>
+                            <li>
+                                <a>Facebook</a>
+                            </li>
+                            <li>
+                                <a>Introduction</a>
+                            </li>
+                            <li>
+                                <a>Twitter</a>
+                            </li>
+                            <li>
+                                <a>View All</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Vanguard</a>
+                    </li>
+                    <li>
+                        <a>View All</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Compliance Corner</a>
+                <ul>
+                    <li><a>Association Health Plans</a></li>
+                    <li>
+                        <a>Employer Contributions</a>
+                    </li>
+                    <li>
+                        <a>FSA</a>
+                    </li>
+                    <li>
+                        <a>HIPAA</a>
+                    </li>
+                    <li>
+                        <a>Live from NAHU!</a>
+                    </li>
+                    <li>
+                        <a>View All</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Leadership Tools</a>
+                <ul>
+                    <li>
+                        <a>Chapter Relations</a>
+                    </li>
+                    <li>
+                        <a>Professional Development</a>
+                    </li>
+                    <li>
+                        <a>VC College Playbook</a>
+                    </li>
+                    <li>
+                        <a>Working with the Media</a>
+                    </li>
+                    <li>
+                        <a>View All</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Professional Development</a>
+                <ul>
+                    <li>
+                        <a>Business Resources</a>
+                    </li>
+                    <li>
+                        <a>Running Your Business</a>
+                    </li>
+                    <li>
+                        <a>View All</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a> Latest Video</a></li>
+    <li><a>Contact Us</a></li>
+    <li><a>Viewing Tips</a></li>
+</ul>
+
+
+
+
+
+@*<ul id="micro-filter">
+        <li>
+            <a href="javascript:void(0)">Browse</a>
+            <ul>
+                <li><a href="/all-episodes" class="noArrowNav">Recent Episodes</a></li>
+                <li><a href="/all-videos" class="noArrowNav">All Videos</a></li>
+                <li><a href="/most-viewed-videos" class="noArrowNav">Most Viewed</a></li>
+                <li style="background-color:transparent">
+                    <div style="height:0;margin:5px">
+                        <hr style="background-color:transparent;margin:0 auto;width:140px;border:0 none #a80065;border-bottom:1px solid #a80065">
+                    </div>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="https://videos.nahu.org/category/agency-membership" class="noArrowNav">Agency Membership</a>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="https://videos.nahu.org/nahu-member-access?cat=106" class="">Chapter Leadership Training</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=134">Awards</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=153">BOT</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=126">Chapter Relations</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=127">HUPAC</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=128">Legislative</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=146">Media Relations</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=132">Membership</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=130">Professional Development</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-toggle" href="https://videos.nahu.org/nahu-member-access?cat=142">Social Media</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="https://videos.nahu.org/category/facebook-social-media-chapter-leadership-training">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://videos.nahu.org/category/introduction-social-media-chapter-leadership-training">Introduction</a>
+                                </li>
+                                <li>
+                                    <a href="https://videos.nahu.org/category/twitter-social-media-chapter-leadership-training">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="https://videos.nahu.org/category/social-media-chapter-leadership-training">View All</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=131">Vanguard</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/nahu-member-access?cat=106">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="https://videos.nahu.org/category/compliance-corner" class="">Compliance Corner</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">Association Health Plans</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">Employer Contributions</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">FSA</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">HIPAA</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">Live from NAHU!</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/compliance-corner">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="https://videos.nahu.org/category/leadership-tools" class="">Leadership Tools</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://videos.nahu.org/category/leadership-tools">Chapter Relations</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/leadership-tools">Professional Development</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/leadership-tools">VC College Playbook</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/leadership-tools">Working with the Media</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/leadership-tools">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="https://videos.nahu.org/category/professional-development" class="">Professional Development</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://videos.nahu.org/category/professional-development">Business Resources</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/professional-development">Running Your Business</a>
+                        </li>
+                        <li>
+                            <a href="https://videos.nahu.org/category/professional-development">View All</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="https://videos.nahu.org/"> Latest Video </a>
+        </li>
+        <li><a href="https://videos.nahu.org/contact">Contact Us</a></li>
+        <li><a href="https://videos.nahu.org/viewing-tips">Viewing Tips</a></li>
+    </ul>*@

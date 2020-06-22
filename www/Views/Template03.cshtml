@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+<div>
+    @{ Html.RenderPartial("/UserControls/RotatingBanner.ascx"); }
+    @{ Html.RenderPartial("/UserControls/CallToActionPanel.ascx"); }
+</div>
+
+
+@section finalScripts {
+}

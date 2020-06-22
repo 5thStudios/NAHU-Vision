@@ -1,0 +1,40 @@
+﻿Imports Microsoft.VisualBasic
+Imports Common
+Imports umbraco
+Imports umbraco.NodeFactory
+Imports System.Data
+
+Public Class blContactUs
+
+
+#Region "Properties"
+    Private linq As linqContactUs = New linqContactUs
+#End Region
+
+#Region "Selects"
+#End Region
+
+#Region "Insert"
+    Public Function Insert(ByVal _subject As String, ByVal _firstName As String,
+                            ByVal _lastName As String, ByVal _phone As String,
+                            ByVal _email As String, ByVal _message As String) As Integer
+
+        'INSERT FUTURE VALIDATION HERE IF REQUIRED
+
+        'Create new table and add data to it
+        Dim _contactUs As ContactUs = New ContactUs
+
+        _contactUs.firstName = _firstName
+        _contactUs.lastName = _lastName
+        _contactUs.email = _email
+        _contactUs.phone = _phone
+        _contactUs.subject = _subject
+        _contactUs.message = _message
+
+        'Submit data and return result.
+        Return linq.Insert(_contactUs)
+    End Function
+#End Region
+
+End Class
+

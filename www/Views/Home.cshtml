@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    //Parent Masterpage
+    Layout = "TopLevel.cshtml";
+}
+
+
+@section headContent {}
+
+
+<div>
+    @*@CurrentPage.GetGridHtml("bodyText", "Foundation5")*@
+
+    @{ Html.RenderPartial("/UserControls/RotatingBanner.ascx"); }
+    @{ Html.RenderPartial("/UserControls/QuoteBanner.ascx"); }
+    @{ Html.RenderPartial("/UserControls/NewsPanel.ascx"); }
+    @{ Html.RenderPartial("/UserControls/CustomPanels.ascx"); }
+    @{ Html.RenderPartial("/UserControls/TopUpcomingEvents.ascx"); }
+</div>
+
+
+@section finalScripts {}

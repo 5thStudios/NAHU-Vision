@@ -1,0 +1,187 @@
+﻿Imports System.Xml.XPath
+Imports System.Collections.Generic
+Imports Common
+Imports Examine
+Imports Umbraco
+Imports UmbracoExamine
+Imports Umbraco.NodeFactory
+Imports System.Net
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports System.Data
+Imports System.Xml
+
+Public Class SearchList
+    Inherits System.Web.Mvc.ViewUserControl
+
+
+
+#Region "Properties"
+#End Region
+
+#Region "Handles"
+    Private Sub SearchList_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            Dim tempSearchFor As String = "law"
+            'Instantiate variables
+            Dim apiCall As String = "https://bdo.workerbeetv.com/wp-content/themes/enterprise/feed/mrssMob.php?apiKey=CF2EC754FCD36&output=xml&limit=1000&sort=ASC&q=" & tempSearchFor
+            Dim webClient As WebClient = New WebClient()
+            Dim lstSearchList As New List(Of DataLayer.SearchList)
+
+            '
+            Dim apiResult As String = webClient.DownloadString(New Uri(apiCall))
+
+            Dim rssXmlDoc As XmlDocument = New XmlDocument()
+            rssXmlDoc.LoadXml(apiResult)
+
+            Dim lstItems As XmlNodeList = rssXmlDoc.DocumentElement.SelectNodes("/rss/channel/item")
+
+            For Each item As XmlNode In lstItems
+                Dim searchLstItem As New DataLayer.SearchList
+                searchLstItem.title = item.SelectSingleNode("title").InnerText
+                searchLstItem.url = item.SelectSingleNode("link").InnerText
+                searchLstItem.isVideo = True
+
+                'Split path to create a breadcrumb
+                Dim segmentId As UInt16 = 0
+                For Each segment As String In searchLstItem.url.Split("/").ToList
+                    If segmentId > 2 Then
+                        searchLstItem.breadcrumb += "&nbsp;&nbsp;⇢&nbsp;&nbsp;"
+                    End If
+                    If segmentId >= 1 Then
+                        searchLstItem.breadcrumb += UppercaseFirstLetter(segment.Replace("-", " ").ToLower)
+                    End If
+                    segmentId += 1
+                Next
+
+                lstSearchList.Add(searchLstItem)
+            Next
+
+
+            lblMsg.Text = "Results: " & lstSearchList.Count
+            gv.DataSource = lstSearchList
+            gv.DataBind()
+
+            SearchFor(tempSearchFor)
+        Catch ex As Exception
+            lblErrorMsg.Text = "Error: " & ex.ToString
+        End Try
+    End Sub
+
+#End Region
+
+#Region "Methods"
+    Private Sub SearchFor(ByVal searchFor As String)
+        'USE EXAMINE.EXAMINEMANAGER TO SEARCH   https://our.umbraco.org/documentation/reference/searching/examine/overview-explanation#querying-with-examine
+        '===============================================
+        'Instantiate variables
+        Dim lstSearchList As New List(Of DataLayer.SearchList)
+        Dim searchEntry As DataLayer.SearchList
+
+        'Instantiate search provider and criteria
+        Dim searchProvider As Providers.BaseSearchProvider = Examine.ExamineManager.Instance.SearchProviderCollection(searchIndex.ExternalSearcher)
+        Dim searchCriteria As SearchCriteria.ISearchCriteria = searchProvider.CreateSearchCriteria()
+
+        'Obtain all marked items
+        'Dim query = searchCriteria.Field(nodeProperties.showInNavigation, CInt(True)) '.[And]().OrderBy(nodeProperties.sortOrder & "[Type=INT]")
+        'Dim searchResults = searchProvider.Search(query.Compile())
+        Dim query = searchCriteria.RawQuery(searchFor)
+        Dim searchResults = searchProvider.Search(query)
+
+
+        'Loop thru each id and build link list
+        For Each result As Examine.SearchResult In searchResults
+            'Create node
+            Dim thisNode As New Node(result.Id)
+
+            'Skip if there is no id
+            If thisNode.Id = 0 Then Continue For
+
+            'Add data to class
+            searchEntry = New DataLayer.SearchList
+            searchEntry.id = thisNode.Id
+            searchEntry.title = thisNode.Name
+            searchEntry.url = thisNode.NiceUrl
+            'searchEntry.breadcrumb = thisNode.Path
+
+            Select Case thisNode.NodeTypeAlias
+                Case aliases.lockedBlogEntry, aliases.lockedPdfEntry
+                    searchEntry.isLocked = True
+            End Select
+
+            'Split path to create a breadcrumb
+            Dim first As Boolean = True
+            For Each _id As String In thisNode.Path.Split(",").ToList
+                Dim id As Integer = CInt(_id)
+                If id <> -1 Then
+                    If first Then
+                        first = False
+                    Else
+                        searchEntry.breadcrumb += "&nbsp;&nbsp;⇢&nbsp;&nbsp;" ' ↠ &rArr; ⇢
+                    End If
+                    searchEntry.breadcrumb += New Node(id).Name
+                End If
+            Next
+
+            'Add to list
+            lstSearchList.Add(searchEntry)
+        Next
+
+        gv2.DataSource = lstSearchList
+        gv2.DataBind()
+    End Sub
+    Private Function searchVideos(ByVal searchFor As String) As List(Of DataLayer.SearchList)
+        Dim lstSearchList As New List(Of DataLayer.SearchList)
+
+        Try
+            '
+            searchFor = getAlphaNumberic(searchFor).Replace(" ", "+")
+            lblMsg.Text = "searchFor: " & searchFor
+
+            'Instantiate variables
+            Dim apiCall As String = "https://bdo.workerbeetv.com/wp-content/themes/enterprise/feed/mrssMob.php?apiKey=CF2EC754FCD36&output=xml&limit=1000&sort=ASC&q=" & searchFor
+            Dim webClient As WebClient = New WebClient()
+
+            '
+            Dim apiResult As String = webClient.DownloadString(New Uri(apiCall))
+
+            Dim rssXmlDoc As XmlDocument = New XmlDocument()
+            rssXmlDoc.LoadXml(apiResult)
+
+            Dim lstItems As XmlNodeList = rssXmlDoc.DocumentElement.SelectNodes("/rss/channel/item")
+
+            For Each item As XmlNode In lstItems
+                Dim searchLstItem As New DataLayer.SearchList
+                searchLstItem.title = item.SelectSingleNode("title").InnerText
+                searchLstItem.url = item.SelectSingleNode("link").InnerText
+
+                'Split path to create a breadcrumb
+                Dim segmentId As UInt16 = 0
+                For Each segment As String In searchLstItem.url.Split("/").ToList
+                    If segmentId > 2 Then
+                        searchLstItem.breadcrumb += "&nbsp;&nbsp;⇢&nbsp;&nbsp;"
+                    End If
+                    If segmentId >= 1 Then
+                        searchLstItem.breadcrumb += UppercaseFirstLetter(segment.Replace("-", " ").ToLower)
+                    End If
+                    segmentId += 1
+                Next
+
+                lstSearchList.Add(searchLstItem)
+            Next
+
+
+            'lblMsg.Text = "Results: " & lstSearchList.Count
+            gv.DataSource = lstSearchList
+            gv.DataBind()
+
+
+        Catch ex As Exception
+            lblErrorMsg.Text = "Error: " & ex.ToString
+        End Try
+
+        Return lstSearchList
+    End Function
+#End Region
+
+End Class

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="mvcvb_org_nahu_members_MembershipWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://members.nahu.org/NAHU_Prod_Imis/AsiCommon/Services/Membership/MembershipWebService.asmx</Value>
+    </Setting>
+    <Setting Name="mvcvb_org_nahu_members1_SSO" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://members.nahu.org/NAHU_Prod_SSOProvider/SSO.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

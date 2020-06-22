@@ -1,0 +1,81 @@
+﻿<style>
+ .NAHUvisionVideoCompletionController h4{color:#666}
+.NAHUvisionVideoCompletionController input[type=text]{font-weight:700;color:#8d869c;border-width:0;background-color:transparent;width:100%;cursor:text}
+.NAHUvisionVideoCompletionController a{color:#549dd8;text-decoration:underline}
+.NAHUvisionVideoCompletionController a:hover{color:#2573B1}
+.NAHUvisionVideoCompletionController button{color:#fff;background-color:#41365a;border:1px solid #2e2247;font-size:20px;font-weight:400;padding:12px 24px}
+.NAHUvisionVideoCompletionController button:hover{background-color:#8d869c}
+.NAHUvisionVideoCompletionController button.disabled{background-color:#8d869c;opacity: 0.3;}
+.NAHUvisionVideoCompletionController button.btnExportToExcel{background: url(/App_Plugins/NAHUvisionVideoCompletion/exportAsExcel.jpg);height: 48px;width: 119px;border-width: 0;}
+.NAHUvisionVideoCompletionController .alertMsg{color:#B91800}
+
+
+.NAHUvisionVideoCompletionController table.paleBlueRows{font-family:"Trebuchet MS",Helvetica,sans-serif;width:100%;text-align:left;border-collapse:collapse}
+.NAHUvisionVideoCompletionController table.paleBlueRows td,table.paleBlueRows th{padding:6px 12px}
+.NAHUvisionVideoCompletionController table.paleBlueRows tbody td{font-size:16px;color:#333}
+.NAHUvisionVideoCompletionController table.paleBlueRows tr:nth-child(even){background:#D0E4F5}
+.NAHUvisionVideoCompletionController table.paleBlueRows thead tr{background:#1C6EA4;}
+.NAHUvisionVideoCompletionController table.paleBlueRows thead th{font-size:17px;font-weight:700;color:#FFF;text-align:left;border-left:2px solid #D0E4F5}
+.NAHUvisionVideoCompletionController table.paleBlueRows thead th:first-child{border-left:none}
+</style>
+
+
+<div class="NAHUvisionVideoCompletionController" ng-controller="NAHUvisionVideoCompletionController">
+    <button class="btnGenerateList">Generate List</button>
+
+    <br />
+    <br />
+    <div>
+        <div class="alertMsg hide">
+            An error occured.  Please reach out to your development department to correct the issue.<br /><br />
+            <strong>Error:</strong><br />
+            <span class="errorMsg"></span>
+        </div>
+
+        <div class="msg hide">
+            <div class="text-right">
+                <button class="btnExportToExcel"></button>
+            </div>
+            <br />
+
+
+
+            <!--<%--======================================================================================--%>-->
+
+            <script id="scrObtainList" type="text/x-jsrender">
+                <tr>
+                    <td valign="top"><a href="{{>MemberEditUrl}}">{{>Member}}</a></td>
+                    <td valign="top"><a href="mailto:{{>Email}}">{{>Email}}</a></td>
+                    <td valign="top">{{:ImisId}}</td>
+                    <td valign="top">{{:MemberType}}</td>
+                    <td valign="top">{{:Chapter}}</td>
+                    <td valign="top">
+                        {{for LstVideoLinks tmpl="columnTemplate"/}}
+                    </td>
+                </tr>
+            </script>
+            <script id="columnTemplate" type="text/x-jsrender">
+                <div>
+                    <a href="{{>Link}}">{{>Title}}</a>
+                </div>
+            </script>
+            <table class="paleBlueRows" id="tblVideoCompletionData">
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Email</th>
+                        <th>Imis Id</th>
+                        <th>Member Type</th>
+                        <th>Chapter</th>
+                        <th>Completed Videos</th>
+                    </tr>
+                </thead>
+                <tbody id="tblListResult">
+                </tbody>
+            </table>
+
+            <!--<%--======================================================================================--%>-->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+[
+  {
+    "outputFileName": "Bundles/bundledStyles.css",
+    "inputFiles": [
+      "Styles/Vendor/normalize.min.css",
+      "Styles/Foundation/foundation.css",
+      "Styles/Foundation/responsive-tables.css",
+      "JqueryUI/jquery-ui.css",
+      "JqueryUI/jquery-ui.structure.css",
+      "JqueryUI/jquery-ui.theme.css",
+      "Styles/simplePagination.css",
+      "Styles/Jquery/jquery.modal.css",
+      "Styles/Site.css",
+      "Styles/colorScheme_EF.css",
+      "Styles/colorScheme_HUPAC.css"
+    ]
+  },
+  {
+    "outputFileName": "Bundles/bundledScripts.js",
+    "inputFiles": [
+      "Scripts/Custom/rootClassSwap.js",
+      "Scripts/Vendor/is.js",
+      "Scripts/Custom/isOfType.js",
+      "JqueryUI/jquery-ui.min.js",
+      "Scripts/Vendor/what-input.min.js",
+      "Scripts/Foundation/foundation.min.js",
+      "Scripts/Foundation/foundation.equalizer.min.js",
+      "Scripts/Foundation/foundation.topbar.min.js",
+      "Scripts/Foundation/foundation.offcanvas.min.js",
+      "Scripts/Foundation/responsive-tables.js",
+      "Scripts/Jquery/js.cookie.min.js",
+      "Scripts/Jquery/jquery.simplePagination.js",
+      "Scripts/Vendor/TweenMax.min.js",
+      "Scripts/Custom/alertMsg.js",
+      "Scripts/Custom/blogFilters.js",
+      "Scripts/Custom/certifications.js",
+      "Scripts/Custom/createCookie.js",
+      "Scripts/Custom/eventFilters.js",
+      "Scripts/Custom/listPagination.js",
+      "Scripts/Custom/boardMemberLogin.js",
+      "Scripts/Custom/modalLogin.js",
+      "Scripts/Custom/rotatingBanner.js",
+      "Scripts/Custom/searchSite.js",
+      "Scripts/Custom/submitToSearchPg.js",
+      "Scripts/Custom/SwitchListGridViews.js",
+      "Scripts/Custom/monthlyMembershipAndRenewal.js",
+      "Scripts/Custom/megaMenu.js",
+      "Scripts/Custom/onLoad.js",
+      "Scripts/Custom/TopPodcasts.js",
+      "Scripts/Custom/donationSubmission.js"
+    ]
+  },
+  {
+    "outputFileName": "Bundles/bundledVideoStyles.css",
+    "inputFiles": [
+      "Styles/Foundation651/foundation.min.css",
+      "Styles/Site.css",
+      "Styles/Site-Video.css",
+      "Styles/simplePagination.css",
+      "JqueryUI/jquery-ui.css",
+      "JqueryUI/jquery-ui.structure.css",
+      "JqueryUI/jquery-ui.theme.css",
+      "Styles/Jquery/jquery.modal.css"
+    ]
+  },
+  {
+    "outputFileName": "Bundles/bundledVideoScripts.js",
+    "inputFiles": [
+      "Scripts/Foundation651/foundation.min.js",
+      "Scripts/Vendor/is.js",
+      "Scripts/Jquery/jquery.session.js",
+      "Scripts/Jquery/js.cookie.min.js",
+      "Scripts/Jquery/jquery.simplePagination.js",
+      "Scripts/Custom/megaMenu.js",
+      "Scripts/Custom/submitToSearchPg.js",
+      "Scripts/Custom/videoFilters.js",
+      "Scripts/Custom/modalLogin.js",
+      "Scripts/Custom/app.js"
+    ]
+  }
+]

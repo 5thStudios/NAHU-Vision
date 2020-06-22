@@ -1,0 +1,28 @@
+﻿Imports Microsoft.VisualBasic
+
+Public Class workerbee
+    Public Property lstPosts As New List(Of Post)
+    Public Property TotalResults As Long?
+End Class
+
+
+Public Class Post
+    Public Property Id As Long?
+    Public Property Title As String
+    Public Property Description As String
+    Public Property Thumbnail As Uri
+    Public Property VideoStill As Uri
+    Public Property Permalink As Uri
+    Public Property MediaId As String
+    Public Property DateCreated As DateTimeOffset?
+    Public Property DateModified As DateTimeOffset?
+    Public Property PrivacyType As String
+    Public Property Categories As New List(Of Category)
+End Class
+
+
+Public Class Category
+    Public Property CategoryCategory As Long?
+    Public Property Name As String
+    Public Property Url As Uri
+End Class

@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NAHUvision.Models.Link>>
+
+
+<ul class="show-for-large">
+    @{
+        foreach (NAHUvision.Models.Link parentLink in Model)
+        {
+            <li>
+                <a href="@parentLink.Url" data-nodeid="@parentLink.Id">@parentLink.Name</a>
+                @if (parentLink.LstChildrenLinks.Count > 0)
+                {
+                    <ul>
+                        @foreach (NAHUvision.Models.Link chdNav in parentLink.LstChildrenLinks)
+                        {
+                            <li><a href="@chdNav.Url" data-nodeid="@chdNav.Id">@chdNav.Name</a></li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    }
+</ul>
+
+
+<ul class="hide-for-large vertical menu" data-responsive-menu="drilldown">
+    <li><label>Main Menu</label></li>
+    <li><a href="https://nahu.org/">Home</a></li>
+    @foreach (NAHUvision.Models.Link parentLink in Model)
+    {
+        <li>
+            @if (parentLink.LstChildrenLinks.Count == 0)
+            {
+                <a href="@parentLink.Url" data-nodeid="@parentLink.Id">@parentLink.Name</a>
+            }
+            else
+            {
+                <a href="#" data-nodeid="@parentLink.Id">@parentLink.Name</a>
+
+                <ul class="vertical menu">
+                    <li><label>@parentLink.Name</label></li>
+
+                    @foreach (NAHUvision.Models.Link chdNav in parentLink.LstChildrenLinks)
+                    {
+                        <li><a href="@chdNav.Url" data-nodeid="@chdNav.Id">@chdNav.Name</a></li>
+                    }
+                </ul>
+            }
+        </li>
+    }
+</ul>

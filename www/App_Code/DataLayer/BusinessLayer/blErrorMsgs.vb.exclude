@@ -1,0 +1,38 @@
+﻿Imports System.Data
+Imports Common
+Imports umbraco
+Imports umbraco.NodeFactory
+Imports umbraco.Core
+Imports umbraco.Core.Models
+Imports umbraco.Core.Services
+Imports umbraco.Core.Publishing
+Imports System.Xml.XPath
+
+Public Class blErrorMsgs
+
+#Region "Properties"
+    Private linqErrorMsgs As linqErrorMsgs = New linqErrorMsgs
+#End Region
+
+
+#Region "Selects"
+#End Region
+
+#Region "Insert"
+    'Public Sub saveErrorMessage(ByVal _exceptionMsg As String, ByVal _generalMsg As String)
+    '    linqErrorMsgs.saveErrorMessage(_exceptionMsg, _generalMsg)
+    'End Sub
+#End Region
+
+#Region "Updates"
+#End Region
+
+#Region "Delete"
+#End Region
+
+#Region "Methods"
+#End Region
+
+#Region "Validations"
+#End Region
+End Class

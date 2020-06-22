@@ -1,0 +1,63 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+<header>
+    <div class="title-bar hide-for-large">
+        <div class="title-bar-left">
+            <img src="~/Images/Common/nahu-vision.png" alt="NAHU Vision">
+        </div>
+        <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-open="offCanvas"></button>
+        </div>
+    </div>
+
+    @{Html.RenderAction("RenderNavigation_Minor", "Navigation");}
+
+    <div class="show-for-large">
+        <nav class="grid-x grid-padding-x NavigationMain">
+            <div class="medium-24 large-5 cell text-center">
+                <a href="/">
+                    <img class="siteLogo" src="~/Images/Common/nahu-vision.png" alt="NAHU Vision">
+                </a>
+            </div>
+
+            <div class="show-for-large small-24 large-13 cell medium-text-center large-text-left">
+                @{Html.RenderAction("RenderNavigation_Main", "Navigation");}
+            </div>
+
+            <div class="medium-6 large-2 cell large-text-right">
+                <button id="btnSignIn" onclick="return false;">Sign In</button>
+                <button id="btnSignOut" onclick="return false;" class="hide" style="display: none;">Sign Out</button>
+            </div>
+
+            <div class="medium-6 medium-offset-10 large-offset-0 large-3 cell medium-text-center">
+                <div class="buttonContainer">
+                    <a class="button" target="_blank" href="https://nahu.org/membership/join-now">JOIN NAHU</a>
+                </div>
+            </div>
+
+            <div class="medium-2 medium-offset-10 large-offset-0 large-1 cell text-center navMegaMenu">
+                <img alt="" src="/images/common/icons/navmenu.png">
+            </div>
+            <br>
+        </nav>
+        @{Html.RenderAction("RenderNavigation_Mega", "Navigation");}
+    </div>
+    <div class="hide-for-large">
+        <div class="grid-x collapse mblMainNav small-up-3 text-center">
+            <div class="cell">
+                <a href="/membership/join-now">Join Nahu</a>
+            </div>
+            <div class="cell">
+                <a id="btnSignIn_Mbl" onclick="return false;">Sign In</a>
+                <a id="btnSignOut_Mbl" class="hide" onclick="return false;">Sign Out</a>
+            </div>
+            <div class="cell">
+                <a href="/search">
+                    Search
+                    <img alt="search" src="/images/common/icons/search_white.png" class="imgBtnSearch">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

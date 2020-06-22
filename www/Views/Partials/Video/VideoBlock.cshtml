@@ -1,0 +1,74 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<NAHUvision.Models.Video>
+
+
+@{
+    Boolean isFirst = true;
+    string categories = String.Join(" ", Model.LstCategories);
+    string searchResult = "";
+    if (Model.IsSearchResult) { searchResult = NAHUvision.Models.Common.Miscellaneous.SearchResult; }
+}
+
+
+<div class="cell videoBlock @categories @searchResult">
+    <br />
+    <a href="@Model.PageUrl">
+        <div class="text-center featuredImgPnl">
+            @if (string.IsNullOrEmpty(Model.ImgUrl))
+            {
+                <img alt="@Model.Title" align="middle" class="featuredImg" src="~/Images/Common/img-not-available.jpg">
+            }
+            else
+            {
+                <img alt="@Model.Title" align="middle" class="featuredImg" src="@Model.ImgUrl">
+            }
+
+
+            <div class="videoStatus">
+                <br />
+                <div class="grid-x grid-padding-x grid-padding-y grid-margin-x">
+                    @if (Model.CompletedVideo)
+                    {
+                        <div class="cell small-6 small-offset-17 large-7 large-offset-16">
+                            <img alt="Completed" src="~/Images/Common/icons/completedIcon.png" title="Completed" />
+                        </div>
+                    }
+                    @if (Model.LockedVideo)
+                    {
+                        <div class="cell small-6 small-offset-17 large-7 large-offset-16">
+                            <img alt="Locked Video" src="/Images/Common/icons/LockIcon.png" title="Locked Video" />
+                        </div>
+                    }
+                    @if (Model.UnlockedVideo)
+                    {
+                        <div class="cell small-6 small-offset-17 large-7 large-offset-16">
+                            <img alt="Unlocked Video" src="/Images/Common/icons/UnlockIcon.png" title="Unlocked Video" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <h2 class="title">
+            @Model.Title
+        </h2>
+    </a>
+    <div>
+        <span class="date">
+            @Model.DatePublished.ToString("MMMM dd, yyyy") |
+        </span>
+        <span class="categories">
+
+            @foreach (var link in Model.LstCategoryLinks)
+            {
+                if (isFirst)
+                {
+                    isFirst = false;
+                }
+                else
+                {
+                    <span>&nbsp;|&nbsp;</span>
+                }
+                <a class="filter" data-filterby=".@link.Category" data-filterid="@link.Id">@link.Name</a>
+            }
+        </span>
+    </div>
+</div>

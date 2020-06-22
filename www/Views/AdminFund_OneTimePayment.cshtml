@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "TopLevel.cshtml";
+}
+
+@section headContent {
+    <link type="text/css" rel="stylesheet" href="~/Styles/Vendor/BluePay_Styles.css" />
+    <script type="text/javascript" src="~/Scripts/Vendor/BluePay_Head.js"></script>
+}
+
+
+@{Html.RenderPartial("~/UserControls/AdminFund_OneTimePayment.ascx"); }
+
+
+@section finalScripts {
+    <script type="text/javascript" src="~/Scripts/Vendor/BluePay_Main.js"></script>
+}

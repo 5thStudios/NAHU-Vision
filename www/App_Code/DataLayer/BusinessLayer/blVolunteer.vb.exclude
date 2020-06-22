@@ -1,0 +1,39 @@
+﻿Imports Microsoft.VisualBasic
+Imports Common
+Imports umbraco
+Imports umbraco.NodeFactory
+Imports System.Data
+
+Public Class blVolunteer
+
+
+#Region "Properties"
+    Private linq As linqVolunteer = New linqVolunteer
+#End Region
+
+#Region "Selects"
+#End Region
+
+#Region "Insert"
+    Public Function Insert(ByVal _firstName As String,
+                            ByVal _lastName As String, ByVal _phone As String,
+                            ByVal _email As String, ByVal _message As String) As Integer
+
+        'INSERT FUTURE VALIDATION HERE IF REQUIRED
+
+        'Create new table and add data to it
+        Dim _volunteer As Volunteer = New Volunteer
+
+        _volunteer.firstName = _firstName
+        _volunteer.lastName = _lastName
+        _volunteer.email = _email
+        _volunteer.phone = _phone
+        _volunteer.message = _message
+
+        'Submit data and return result.
+        Return linq.Insert(_volunteer)
+    End Function
+#End Region
+
+End Class
+

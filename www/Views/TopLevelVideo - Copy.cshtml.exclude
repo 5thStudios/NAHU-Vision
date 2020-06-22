@@ -1,0 +1,184 @@
+﻿@*@using Models;*@
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using NAHUvision;
+
+@inherits UmbracoViewPage
+@{ Layout = null; }
+
+
+@{
+    //Show analytics code if not a dev site.
+    bool showAnalytics = true;
+    if (Request.Url.Host.Contains("5thstudios")) { showAnalytics = false; }
+    else if (Request.Url.Host.Contains("staging")) { showAnalytics = false; }
+
+    //Obtain the site information page
+    //ContentModels.SiteInformation cmSiteInfo = new ContentModels.SiteInformation(Umbraco.TypedContent((int)Common.SiteNode.SiteInformation));
+
+    //Create the tag url for analytics
+    //var gtagUrl = "https://www.googletagmanager.com/gtag/js?id=" + @cmSiteInfo.GoogleTrackingID;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    @*@{
+            IPublishedContent ipCurrentPage = Umbraco.AssignedContentItem;
+            var meta = ipCurrentPage.GetPropertyValue<SEOChecker.MVC.MetaData>(Common.Miscellaneous.SeoChecker);
+        }
+        @meta.AllTags*@
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NAHU Video</title>
+    @*<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">*@
+
+
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/owq5dus.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+
+    <!-- STYLES AND SCRIPTS -->
+    @*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />*@
+    @*<link rel="stylesheet" type="text/css" href="/images/foundation_icons/foundation-icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/bundles/bundledstyles.min.css?v=19" />*@
+
+    @*<link rel="stylesheet" type="text/css" href="~/Styles/Vendor/normalize.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/Styles/Foundation/foundation.css" />
+        <link rel="stylesheet" type="text/css" href="~/Styles/Foundation/responsive-tables.css" />
+        <link rel="stylesheet" type="text/css" href="~/Styles/Site.css" />
+        <link rel="stylesheet" type="text/css" href="~/Styles/colorScheme_EF.css" />
+        <link rel="stylesheet" type="text/css" href="~Styles/colorScheme_HUPAC.css" />*@
+
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/Foundation651/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/Site.css?v=03" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/Site-Video.css?v=03" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/simplePagination.css" />
+    <link rel="stylesheet" type="text/css" href="~/JqueryUI/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="~/JqueryUI/jquery-ui.structure.css" />
+    <link rel="stylesheet" type="text/css" href="~/JqueryUI/jquery-ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/Jquery/jquery.modal.css" />
+
+
+    <!-- ANALYTICS -->
+    @if (showAnalytics)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        @*<script async src="@gtagUrl"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', '@cmSiteInfo.GoogleTrackingID');
+            </script>*@
+    }
+
+
+    @RenderSection("headContent", required: false)
+</head>
+
+<body id="nahuvision">
+
+    @*@{ Html.RenderPartial("/UserControls/Login.ascx"); }*@
+
+    @*<div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+            <div class="outerContent" id="top">
+                <div class="innerContent">*@
+
+
+                    <div class="grid-container">
+
+                        @{Html.RenderAction("RenderHeader", "Generic");}
+                        <main class="show-for-large">
+                            @RenderBody()
+                        </main>
+                        @{Html.RenderAction("RenderFooter", "Generic");}
+
+                    </div>
+                @*</div>
+            </div>
+
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>*@
+
+
+    <!-- FINAL SCRIPTS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Foundation651/foundation.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.6/what-input.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Custom/megaMenu.js"></script>
+    <script type="text/javascript" src="~/Scripts/Custom/blogFilters.js"></script>
+    <script type="text/javascript" src="~/Scripts/Jquery/js.cookie.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Jquery/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="~/Scripts/Custom/videoFilters.js?v=01"></script>
+    <script type="text/javascript" src="~/Scripts/Custom/app.js"></script>
+
+    @*<script type="text/javascript" src="~/bundles/bundledscripts.min.js?v=24"></script>*@
+
+    @*<script type="text/javascript" src="~/Scripts/Custom/rootClassSwap.js"></script>
+        <script type="text/javascript" src="~/Scripts/Vendor/is.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/isOfType.js"></script>
+        <script type="text/javascript" src="~/Scripts/Vendor/what-input.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Foundation/foundation.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Foundation/foundation.equalizer.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Foundation/foundation.topbar.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Foundation/foundation.offcanvas.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Foundation/responsive-tables.js"></script>
+        <script type="text/javascript" src="~/Scripts/Vendor/TweenMax.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/alertMsg.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/certifications.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/createCookie.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/eventFilters.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/listPagination.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/boardMemberLogin.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/modalLogin.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/rotatingBanner.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/searchSite.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/submitToSearchPg.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/SwitchListGridViews.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/monthlyMembershipAndRenewal.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/onLoad.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/TopPodcasts.js"></script>
+        <script type="text/javascript" src="~/Scripts/Custom/donationSubmission.js"></script>*@
+
+
+
+    @RenderSection("finalScripts", required: false)
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    @*<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-599ef39ed7056417"></script>*@
+</body>
+</html>

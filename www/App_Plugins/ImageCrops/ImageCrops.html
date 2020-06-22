@@ -1,0 +1,10 @@
+﻿<div ng-controller="My.ImageCropsController">
+    <div class="radio" ng-repeat="crop in crops" id="selectstatus-{{crop.Name}}">
+        <label>
+            <input type="radio" name="crop" ng-model="model.value" value="{{crop.Name}}">{{crop.Name}}
+        </label>
+    </div>
+</div>
+
+
+

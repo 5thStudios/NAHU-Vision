@@ -1,0 +1,100 @@
+﻿
+label{
+    cursor:default;
+}
+
+div.fullWidth {
+    width:100%;
+    margin-top:5px;
+}
+
+    div.fullWidth label {
+        width:150px;
+    }
+
+    div.fullWidth select.full {
+        width:250px;
+    }
+
+    div.fullWidth .selectLabel {
+        line-height:30px;
+        padding:0 10px;
+    }
+
+
+div.days {
+    margin-top:10px;
+}
+
+div.days label {
+    margin-right: 32px;
+}
+
+    div.days label input {
+        margin-right:10px;
+    }
+
+span.selectPreText {
+
+}
+
+span.selectPostText {
+}
+
+div.fullWidth.top20 {
+    margin-top:20px;
+}
+
+div.divider {
+    margin: 25px 10px;
+    border-top:1px solid #dedede;
+    height:1px;
+    width:50%;
+}
+
+div.fullWidth.monthYearOption label,
+div.fullWidth.monthOption label {
+    display:block;
+
+}
+
+    div.fullWidth.monthYearOption label input,
+    div.fullWidth.monthOption label input {
+        margin-right:10px;
+    }
+
+div .monthYearDD {
+    margin-left:10px;
+    margin-top:5px;
+}
+
+div.fullWidth.monthOption {
+    margin-top:10px;
+}
+
+div#exceptedDays {
+}
+
+#exceptedDays .exceptDay {
+    padding: 5px 25px 0;
+    margin: 0;
+
+}
+
+    #exceptedDays .exceptDay span.exDate {
+         margin-right:50px;
+        display:inline-block;
+        *display:block;
+        *zoom:1;
+    }
+
+    #exceptedDays .exceptDay span.exDateWrap {
+       display:block;
+       margin-left:150px;
+       width:313px;
+       text-align:right;
+    }
+
+    #exceptedDays .exceptDay .btn {
+        width:72px;
+    }

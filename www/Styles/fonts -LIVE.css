@@ -1,0 +1,36 @@
+﻿@font-face {
+  font-family: 'tofino';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://nahu.org/fonts/Tofino/Tofino-Regular.woff') format('woff') local('tofino');
+}
+
+@font-face {
+  font-family: 'tofino';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://nahu.org/fonts/Tofino/Tofino-Medium.woff') format('woff'), local('tofino');
+}
+
+@font-face {
+  font-family: 'tofino';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://nahu.org/fonts/Tofino/Tofino-Medium.woff') format('woff'), local('tofino');
+}
+
+@font-face {
+  font-family: 'tofino';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://nahu.org/fonts/Tofino/Tofino-Bold.woff') format('woff'), local('tofino');
+}
+
+@font-face {
+  font-family: 'tofino';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://nahu.org/fonts/Tofino/Tofino-Ultra.woff') format('woff'), local('tofino');
+}
+
+

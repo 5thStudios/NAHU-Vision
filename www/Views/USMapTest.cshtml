@@ -1,0 +1,153 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ Layout = "TopLevel.cshtml"; }
+
+@section headContent {
+    <style>
+        #alert {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: #ddd;
+            color: #333;
+            padding: 5px;
+            font-weight: bold;
+        }
+    </style>
+}
+
+@{
+    @*Html.RenderPartial("~/UserControls/USStateMap.ascx");*@
+    <div class="row">
+        <div class="columns text-center">
+            <div id="alert">Click alerts</div>
+            <div id="map" style="width: 930px; height: 630px;"></div>
+            <button id="over-md">mouseover MD</button>
+            <button id="out-md">mouseout MD</button>
+            <div id="map2" style="width: 300px; height: 300px;"></div>
+        </div>
+    </div>
+}
+
+@section finalScripts {
+    @*
+        <script src="../mapTests/us-map-1.0.1/lib/raphael.js"></script>
+        <script src="../mapTests/us-map-1.0.1/jquery.usmap.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.no-deps.min.js"></script>
+    *@
+
+    <script type="text/javascript" src="../mapTests/us-map-1.0.1/lib/raphael.js"></script>
+    @*<script type="text/javascript" src="../mapTests/us-map-1.0.1/example/color.jquery.js"></script>*@
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#map').usmap({
+                'stateStyles': {
+                    fill: '#025',
+                    "stroke-width": 1,
+                    'stroke': 'White'
+                },
+                'stateSpecificStyles': {
+                    'AK': { fill: '#f00' }
+                },
+                'stateSpecificHoverStyles': {
+                    'HI': { fill: '#ff0' }
+                },
+
+                'mouseoverState': {
+                    'HI': function (event, data) {
+                        //return false;
+                    }
+                },
+
+
+                'click': function (event, data) {
+                    $('#alert')
+                        .text('Click ' + data.name + ' on map 1')
+                        .stop()
+                        .css('backgroundColor', '#ff0')
+                        .animate({ backgroundColor: '#ddd' }, 1000);
+                }
+            });
+
+            $('#map2').usmap({
+                'stateStyles': {
+                    fill: '#025',
+                    "stroke-width": 1,
+                    'stroke': '#036'
+                },
+                'stateHoverStyles': {
+                    fill: 'teal'
+                },
+
+                'click': function (event, data) {
+                    $('#alert')
+                        .text('Click ' + data.name + ' on map 2')
+                        .stop()
+                        .css('backgroundColor', '#af0')
+                        .animate({ backgroundColor: '#ddd' }, 1000);
+                }
+            });
+
+            $('#over-md').click(function (event) {
+                $('#map').usmap('trigger', 'MD', 'mouseover', event);
+            });
+
+            $('#out-md').click(function (event) {
+                $('#map').usmap('trigger', 'MD', 'mouseout', event);
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        //$('#map').usmap({
+        //    // The click action
+        //    click: function (event, data) {
+        //        $('#clicked-state')
+        //            .text('You clicked: ' + data.name)
+        //            .parent().effect('highlight', { color: '#C7F464' }, 2000);
+        //    }
+        //});
+
+        //$('#map').usmap({
+        //    'stateStyles': {
+        //        fill: "#4ECDC4",
+        //        stroke: "#41A59B",
+        //        "stroke-width": 1,
+        //        "stroke-linejoin": "round",
+        //        scale: [1, 1]
+        //    },
+        //    'stateHoverStyles': {
+        //        fill: "#C7F464",
+        //        stroke: "#ADCC56",
+        //        scale: [1.1, 1.1]
+        //    },
+        //    'labelBackingStyles': {
+        //        fill: "#4ECDC4",
+        //        stroke: "#41A59B",
+        //        "stroke-width": 1,
+        //        "stroke-linejoin": "round",
+        //        scale: [1, 1]
+        //    },
+
+        //    // The styles for the hover
+        //    'labelBackingHoverStyles': {
+        //        fill: "#C7F464",
+        //        stroke: "#ADCC56",
+        //    },
+        //    'labelTextStyles': {
+        //        fill: "#222",
+        //        'stroke': 'none',
+        //        'font-weight': 300,
+        //        'stroke-width': 0,
+        //        'font-size': '10px'
+        //    },
+        //    click: function (event, data) {
+        //        $('#clicked-state').text('You clicked: ' + data.name).parent().effect('highlight', { color: '#C7F464' }, 2000);
+        //    }
+        //});
+    </script>
+
+
+
+}
