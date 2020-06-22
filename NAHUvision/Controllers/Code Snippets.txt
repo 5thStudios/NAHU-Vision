@@ -1,0 +1,90 @@
+﻿//VIMEO IMAGE EXAMPLE
+//================================================================================================
+//================================================================================================
+//================================================================================================
+
+////Split url into segments.  The first full numeric set is the video id. 
+//foreach (String seg in video.VimeoLink.Split('/'))
+//{
+//    bool isNumeric = int.TryParse(seg, out vimeoId);
+//    if (isNumeric)
+//        break;
+//}
+
+//if (vimeoId > 0)
+//{
+//    //Instantiate variables
+//    string[] uriParts;
+//    long pictureId;
+//    VimeoDotNet.Models.Picture picture = new VimeoDotNet.Models.Picture();
+//    Task<VimeoDotNet.Models.Paginated<VimeoDotNet.Models.Picture>> pictures = client.GetPicturesAsync(vimeoId);
+
+//    //
+//    if (pictures != null)
+//    {
+//        if (pictures.Result.Data.Count > 0)
+//        {
+//            uriParts = pictures.Result.Data[0].Uri.Split('/');
+//            pictureId = long.Parse(uriParts[uriParts.Length - 1]);
+//            picture = client.GetPictureAsync(vimeoId, pictureId).Result;
+//        }
+//    }
+
+
+//    //Extract all image sizes and determine the best one to use for the image.
+//    if (picture.Sizes.Count > 0)
+//    {
+//        //Instantiate variables
+//        int index = 0;
+//        int minWidth = 482;//Minimum is 482x271 which translates to an aspect ratio of 640x360
+//        Dictionary<int, int> DictWidthIndex = new Dictionary<int, int>();
+//        List<int> LstMatches = new List<int>();
+//        List<VimeoDotNet.Models.Size> LstSizes = picture.Sizes;
+
+//        //Extract all images into a dictionary with an index
+//        foreach (VimeoDotNet.Models.Size size in LstSizes)
+//        {
+//            DictWidthIndex.Add(index, size.Width);
+//            index++;
+//        }
+
+//        //Obtain all images with a minimum width
+//        for (var i = index - 1; i >= 0; i--)
+//        {
+//            if (DictWidthIndex[i] >= minWidth)
+//            {
+//                LstMatches.Add(i);
+//            }
+//        }
+
+//        //Determine what image to show
+//        if (LstMatches.Count == 1)
+//        {
+//            //Show this image
+//            video.ImgUrl = LstSizes[LstMatches.FirstOrDefault()].Link;
+//        }
+//        else
+//        {
+//            //Determine which image to show
+//            int smallestMatch = 99999;
+//            int smallestIndex = 0;
+//            foreach (int i in LstMatches)
+//            {
+//                if (DictWidthIndex[i] < smallestMatch)
+//                {
+//                    smallestMatch = DictWidthIndex[i];
+//                    smallestIndex = i;
+//                }
+//            }
+//            video.ImgUrl = LstSizes[smallestIndex].Link;
+//        }
+//    }
+//}
+
+
+
+//================================================================================================
+//================================================================================================
+//================================================================================================
+
+
