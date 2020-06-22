@@ -1,0 +1,16 @@
+{
+  "id": "d3a57830-3160-47c2-a735-32dede5136cb",
+  "name": "Send template email to agencymembership@nahu.org",
+  "form": "bf3a0f0c-9c46-4391-8a64-0246eca564b3",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "agencymembership@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Agency Eligibility' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "983fe2c0-1ce0-481f-90ac-0f36b51b82f7",
+  "name": "Send template email to amoyle@nahu.org",
+  "form": "56073453-5524-44f7-a79d-1d0fb9063e6c",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "abishop@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Vision Speak 2019' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

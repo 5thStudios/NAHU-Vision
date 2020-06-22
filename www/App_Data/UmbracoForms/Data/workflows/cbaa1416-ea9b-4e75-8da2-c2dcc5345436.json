@@ -1,0 +1,16 @@
+{
+  "id": "cbaa1416-ea9b-4e75-8da2-c2dcc5345436",
+  "name": "Send template email to legislative@nahu.org",
+  "form": "bc31d3d7-ecb6-475d-99be-9ace35403b89",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "legislative@nahu.org",
+    "SenderEmail": "info@nahu.org",
+    "Subject": "The Form 'Ask A Question' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

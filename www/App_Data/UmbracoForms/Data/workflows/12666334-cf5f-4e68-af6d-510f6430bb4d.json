@@ -1,0 +1,16 @@
+{
+  "id": "12666334-cf5f-4e68-af6d-510f6430bb4d",
+  "name": "Send template email to meetings@nahu.org",
+  "form": "87f53bfd-61ce-4517-b860-158ff310045b",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "meetings@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Badge Correction' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

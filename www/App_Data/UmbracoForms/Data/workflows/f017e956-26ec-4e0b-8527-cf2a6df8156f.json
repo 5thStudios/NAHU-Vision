@@ -1,0 +1,16 @@
+{
+  "id": "f017e956-26ec-4e0b-8527-cf2a6df8156f",
+  "name": "Send template email to chapters@nahu.org",
+  "form": "ea2260a7-789d-410b-b949-d4e5369c5837",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "chapters@nahu.org",
+    "SenderEmail": "info@nahu.org",
+    "Subject": "This information was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

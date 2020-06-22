@@ -1,0 +1,657 @@
+{
+  "name": "January/February CPC Quiz",
+  "created": "2018-01-16T14:45:47.9766452-05:00",
+  "pages": [
+    {
+      "fieldSets": [
+        {
+          "caption": null,
+          "sortOrder": 0,
+          "id": "cbf3a269-d77f-4819-855b-278949b21e6a",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": null,
+              "width": 12,
+              "fields": [
+                {
+                  "caption": "1. Which of the following features and functionality is the least important when evaluating a benefits administration system?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whichOfTheFollowingFeaturesAndFunctionalityIsTheLeastImportantWhenEvaluatingABenefitsAdministrationSystem",
+                  "id": "f6c53a0b-e771-4c0f-bd5f-132b39471d97",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Eligibility and Enrollment Configuration Limitations",
+                    "Online Enrollment Experience",
+                    "Ability to Host Enrollment Webinars through the Platform",
+                    "Robust Reporting both Canned and Ad Hoc"
+                  ]
+                },
+                {
+                  "caption": "2. When evaluating a benefits administration system from a cost perspective, which component below is not typically part of calculating the “Total Cost of Ownership”?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whenEvaluatingABenefitsAdministrationSystemFromACostPerspectiveWhichComponentBelowIsNotTypicallyPartOfCalculatingTheTotalCostOfOwnership",
+                  "id": "7771a4c9-93d8-4e88-ce8b-e15c3020f03b",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Setup and Annual Fees",
+                    "Per Employee Per Month Fees",
+                    "Service & Support Fee Structure",
+                    "Actual Group Insurance Premiums"
+                  ]
+                },
+                {
+                  "caption": "3. When evaluating a vendor from a viability and longevity perspective, which one of these questions is the best to ask:",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whenEvaluatingAVendorFromAViabilityAndLongevityPerspectiveWhichOneOfTheseQuestionsIsTheBestToAsk",
+                  "id": "a29bc6b6-1b85-41b8-e4fb-866f8d409e97",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "How many years has the company been in business and are they profitable?",
+                    "Were you comfortable with the sales process and representative?",
+                    "What kind of training is offered and what is the cost?",
+                    "How long has your staff been in the insurance industry on average?"
+                  ]
+                },
+                {
+                  "caption": "4. Pharmacy benefit managers can most effectively reduce the cost of healthcare through which activity?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "PharmacyBenefitsManagers",
+                  "id": "a847f114-ce9a-4863-f88e-94a7df6ba4b4",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Focus on reducing prescription utilization",
+                    "Negotiate discounts",
+                    "Seek higher rebates",
+                    "Improve shareholder value"
+                  ]
+                },
+                {
+                  "caption": "5. How can Pharmacy Benefit Managers ensure members receive clinically appropriate care?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "howCanPharmacyBenefitManagersEnsureMembersReceiveClinicallyAppropriateCare",
+                  "id": "47f1e9f4-1e96-411c-d5a2-8a6e9c658a3a",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Drive members to medications that return the biggest rebate",
+                    "Use data integration to create a whole-health picture of each individual member",
+                    "Implement clinical programs that take a retrospective review",
+                    "Expect members to manage the coordination of their own healthcare across specialties"
+                  ]
+                },
+                {
+                  "caption": "6. Functional medicine is an approach to care that reduces costs through:",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "functionalMedicineIsAnApproachToCareThatReducesCostsThrough",
+                  "id": "d7a9974e-8cf7-4968-fc5a-926e39b1f1cf",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Finding the root cause of a disease and reducing dependence on medication",
+                    "Reliance on natural and herbal remedies for treatment",
+                    "Avoiding the use of medication through surgical approaches",
+                    "Using primary care physicians only board-certified in internal medicine"
+                  ]
+                },
+                {
+                  "caption": "7. The following may cause extension of the 60-day COBRA election period:",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "theFollowingMayCauseExtensionOfThe60DayCOBRAElectionPeriod",
+                  "id": "50c78367-0ba1-4afd-b354-1e16b24a48c6",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "The qualified beneficiary is incapacitated",
+                    "The qualified beneficiary is on a vacation",
+                    "The qualified beneficiary is incapacitated and a legal representative has been appointed",
+                    "The qualified beneficiary is a minor"
+                  ]
+                },
+                {
+                  "caption": "8. Who can pay COBRA premiums?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whoCanPayCOBRAPremiums",
+                  "id": "b4af4b5c-5983-4427-c256-7ba0992006d5",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Only the qualified beneficiary",
+                    "Only the provider of medical services",
+                    "Only the parents of minor qualified beneficiaries",
+                    "Any third party can pay COBRA premiums"
+                  ]
+                },
+                {
+                  "caption": "9. How does COBRA define “gross misconduct”?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "howDoesCOBRADefineGrossMisconduct",
+                  "id": "c7caf6c9-853e-48b8-fab7-ec07f5b411ce",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Conduct that shocks the conscience",
+                    "COBRA does not define gross misconduct",
+                    "Conduct that is illegal",
+                    "Conduct that harms the financial interests of the employer"
+                  ]
+                },
+                {
+                  "caption": "10. According to a 2016 Kaiser Family Foundation survey, the average yearly medical insurance cost for an employee’s family was nearly ___________?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "accordingToA2016KaiserFamilyFoundationSurveyTheAverageYearlyMedicalInsuranceCostForAnEmployeeSFamilyWasNearly___________",
+                  "id": "42e5d4a3-58b9-4744-f147-15cbe515836b",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "$3,000",
+                    "$13,000",
+                    "$7,500",
+                    "$21,000"
+                  ]
+                },
+                {
+                  "caption": "11. One of the advantages of self-insured health plans when compared to fully-insured plans is:",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "oneOfTheAdvantagesOfSelfInsuredHealthPlansWhenComparedToFullyInsuredPlansIs",
+                  "id": "807d6ad7-0182-4098-ba6e-758b3d9465db",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "If claims are lower than expected, the employer keeps the difference",
+                    "The health insurer covers expected claims, administrative costs and risk",
+                    "Limited risk for the employer associated with claim cost fluctuation",
+                    "Stop loss coverage does not need to be purchased when an employer self-funds their health plan"
+                  ]
+                },
+                {
+                  "caption": "12. Which of the options below is not something advisors should do when their customers are evaluating self-insurance?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whichOfTheOptionsBelowIsNotSomethingAdvisorsShouldDoWhenTheirCustomersAreEvaluatingSelfInsurance",
+                  "id": "414f164f-eb2f-42ba-de40-96ec29e959c4",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Examine the client’s financial performance, industry trends and cash flow to first assess its risk tolerance",
+                    "Be ready to recommend a strong third-party administrator",
+                    "Aid in designing an employer’s medical plan by filling in coverage needs with supplemental and voluntary benefits",
+                    "Assume that the stop loss carrier will match the employer’s health plan to ensure that there aren’t any gaps in coverage"
+                  ]
+                },
+                {
+                  "caption": "13. What rate has employers’ healthcare cost per year been increasing by?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whatRateHasEmployersHealthcareCostPerYearBeenIncreasingBy",
+                  "id": "29e23efb-b719-4b87-ec4a-1e3ea600d886",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "0.3%",
+                    "2.2%",
+                    "5.4%",
+                    "10.8%"
+                  ]
+                },
+                {
+                  "caption": "14. Which of the follow is stated as a reason why healthcare costs are rising?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whichOfTheFollowIsStatedAsAReasonWhyHealthcareCostsAreRising",
+                  "id": "5527d693-7d4d-43a8-f499-fa5c98e7e8a0",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Sharp increases in spending on primary care services",
+                    "Provider consolidation",
+                    "An increase in the price paid for immunizations and vaccinations",
+                    "A spike in younger populations seeking healthcare services"
+                  ]
+                },
+                {
+                  "caption": "15. Which of the following is not an example of a strategy that employers are pursuing to get better value?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "whichOfTheFollowingIsNotAnExampleOfAStrategyThatEmployersArePursuingToGetBetterValue",
+                  "id": "231ec1a0-3725-4675-d0ed-a402784b4fb2",
+                  "fieldTypeId": "903df9b0-a78c-11de-9fc1-db7a56d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Lower unit prices for services",
+                    "Experimenting with benefit designs",
+                    "Paying providers based on value",
+                    "Pushing for evaluations"
+                  ]
+                },
+                {
+                  "caption": "I hereby affirm that I have read the material in ABS Magazine upon which the questions are based and have personally pre-pared the answers without the assistance of any other person.",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "iHerebyAffirmThatIHaveReadTheMaterialInABSMagazineUponWhichTheQuestionsAreBasedAndHavePersonallyPreParedTheAnswersWithoutTheAssistanceOfAnyOtherPerson",
+                  "id": "29f6bcc7-0188-4db8-e14c-ae97352b9815",
+                  "fieldTypeId": "fab43f20-a6bf-11de-a28f-9b5755d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "I Affirm"
+                  ]
+                },
+                {
+                  "caption": "First Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "firstName",
+                  "id": "f7e877f4-da2b-49c6-f04c-7dbdc057591c",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {},
+                  "preValues": []
+                },
+                {
+                  "caption": "Last Name",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "lastName",
+                  "id": "71a4d745-6690-4cdb-e1fa-cfd75f92ea42",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {},
+                  "preValues": []
+                },
+                {
+                  "caption": "Email",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "email",
+                  "id": "3a3d3050-2318-4eab-ff80-018dc1b0b89d",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {},
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        },
+        {
+          "caption": "",
+          "sortOrder": 0,
+          "id": "bc1f38a4-1bd0-4d7d-aa35-58affb09c749",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": "",
+              "width": 12,
+              "fields": [
+                {
+                  "caption": "Are You A Robot?",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "areYouARobot",
+                  "id": "b2b7baa1-936c-47bb-a6a5-b9b26169fade",
+                  "fieldTypeId": "9c804aa5-d7d6-42d8-b492-2e06101987ad",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": "*Required",
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "ErrorMessage": "*Required"
+                  },
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        }
+      ],
+      "caption": null,
+      "sortOrder": 0,
+      "id": "00000000-0000-0000-0000-000000000000",
+      "form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "id": "0f8010b3-f99a-4481-80c0-0c74b69980e0",
+  "fieldIndicationType": "MarkMandatoryFields",
+  "indicator": "*",
+  "showValidationSummary": false,
+  "hideFieldValidation": false,
+  "requiredErrorMessage": "Please provide a value for {0}",
+  "invalidErrorMessage": "Please provide a valid value for {0}",
+  "messageOnSubmit": "Thank you for submitting the CPC Quiz. The NAHU Professional Develoment Department will get back to you shortly regarding your grade and CPC credit  tracking.",
+  "goToPageOnSubmit": 0,
+  "xPathOnSubmit": null,
+  "manualApproval": false,
+  "storeRecordsLocally": true,
+  "cssClass": null,
+  "disableDefaultStylesheet": false,
+  "useClientDependency": false,
+  "workflows": [
+    "dc375587-17ee-47ff-b1ce-846883efd242"
+  ],
+  "datasource": null,
+  "submitLabel": "Submit",
+  "nextLabel": "Next",
+  "prevLabel": "Previous"
+}

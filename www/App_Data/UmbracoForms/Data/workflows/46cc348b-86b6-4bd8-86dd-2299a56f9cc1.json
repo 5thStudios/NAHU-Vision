@@ -1,0 +1,16 @@
+{
+  "id": "46cc348b-86b6-4bd8-86dd-2299a56f9cc1",
+  "name": "Send template email to abishop@nahu.org",
+  "form": "b3140acc-5124-4534-96f4-a0ed68b55d22",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "abishop@nahu.org",
+    "SenderEmail": "info@nahu.org",
+    "Subject": "The Form 'Speaker Bureau Application' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": "False"
+  },
+  "sortOrder": 1
+}

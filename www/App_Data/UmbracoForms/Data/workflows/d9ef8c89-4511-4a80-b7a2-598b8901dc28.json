@@ -1,0 +1,16 @@
+{
+  "id": "d9ef8c89-4511-4a80-b7a2-598b8901dc28",
+  "name": "Send template email to kloussedes@nahu.org",
+  "form": "9e0bf751-0890-47b9-aa98-44b02f5b02f0",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "kloussedes@nahu.org",
+    "SenderEmail": "info@nahu.org",
+    "Subject": "The Form 'Media Spokesperson Database' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

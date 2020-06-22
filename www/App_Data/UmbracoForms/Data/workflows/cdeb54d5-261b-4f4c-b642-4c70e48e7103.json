@@ -1,0 +1,16 @@
+{
+  "id": "cdeb54d5-261b-4f4c-b642-4c70e48e7103",
+  "name": "Send template email to corporatepartner@nahu.org",
+  "form": "3f6cc899-54b3-46bb-a63a-f4ac139cabae",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "corporatepartner@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'UBA Agency Eligibility' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

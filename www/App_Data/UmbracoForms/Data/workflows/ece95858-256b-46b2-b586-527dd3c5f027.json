@@ -1,0 +1,16 @@
+{
+  "id": "ece95858-256b-46b2-b586-527dd3c5f027",
+  "name": "Send template email to professionaldevelopment@nahu.org",
+  "form": "e0fe1363-88e2-4c30-b540-ae0883354796",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "professionaldevelopment@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Emeritus Status' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

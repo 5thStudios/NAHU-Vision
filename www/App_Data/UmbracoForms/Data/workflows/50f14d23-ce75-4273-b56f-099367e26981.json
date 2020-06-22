@@ -1,0 +1,16 @@
+{
+  "id": "50f14d23-ce75-4273-b56f-099367e26981",
+  "name": "Send template email to amoyle@nahu.org",
+  "form": "48f45466-e04e-4969-99fb-ed5684c8a5ee",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "abishop@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Breakout Session' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

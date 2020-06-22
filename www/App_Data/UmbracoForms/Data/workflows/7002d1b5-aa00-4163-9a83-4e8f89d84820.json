@@ -1,0 +1,16 @@
+{
+  "id": "7002d1b5-aa00-4163-9a83-4e8f89d84820",
+  "name": "Send template email to corporatepartner@nahu.org",
+  "form": "78bc3980-be3d-4363-8e78-540c3fd4ac9d",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "corporatepartner@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'Keystone Membership Application' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

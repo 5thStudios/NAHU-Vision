@@ -1,0 +1,16 @@
+{
+  "id": "8d0df96f-8c35-4aac-be30-38863196eaa1",
+  "name": "Send template email to dparker@nahu.org",
+  "form": "f7fe1de0-683f-4c39-bf7b-2898adfc1c83",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "dparker@nahu.org",
+    "SenderEmail": "info@nahu.org",
+    "Subject": "The Form 'Speaker Request' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

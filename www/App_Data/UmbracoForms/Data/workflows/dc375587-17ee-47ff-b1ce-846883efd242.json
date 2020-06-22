@@ -1,0 +1,16 @@
+{
+  "id": "dc375587-17ee-47ff-b1ce-846883efd242",
+  "name": "Send template email to abishop@nahu.org",
+  "form": "0f8010b3-f99a-4481-80c0-0c74b69980e0",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "abishop@nahu.org",
+    "SenderEmail": "",
+    "Subject": "The Form 'CPC Quiz' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}
