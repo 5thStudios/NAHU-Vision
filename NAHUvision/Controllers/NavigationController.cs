@@ -13,6 +13,21 @@ using Examine.Providers;
 using Umbraco.Web;
 using System.Linq;
 
+
+//using Models;
+//using System.Text;
+using System.Text.RegularExpressions;
+using Newtonsoft;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+//using System;
+//using System.Collections.Generic;
+using System.Web.UI;
+//using System.Web.Script.Serialization;
+using ContentModels = Umbraco.Web.PublishedContentModels;
+
+
+
 namespace NAHUvision.Controller
 {
     public class NavigationController : SurfaceController
@@ -126,7 +141,7 @@ namespace NAHUvision.Controller
                 sb.AppendLine("NavigationController | RenderNavigation_Main()");
                 Common.SaveErrorMessage(ex, sb, typeof(NavigationController));
             }
-            
+
             return PartialView("~/Views/Partials/Video/Navigation_Main.cshtml", lstSortedNavLink);
         }
         public ActionResult RenderNavigation_Mega()
@@ -227,7 +242,7 @@ namespace NAHUvision.Controller
 
 
         #region "Methods"
-        public static List<NAHUvision.Models.Link> ObtainMinorNavLinks()
+        public static List<NAHUvision.Models.NavLink> ObtainMinorNavLinks()
         {
             //Instantiate variables
             UmbracoHelper umbHelper = new UmbracoHelper(UmbracoContext.Current);
@@ -235,48 +250,53 @@ namespace NAHUvision.Controller
             //int rootHomeNodeId = umbHelper.TypedContentAtRoot().FirstOrDefault().Id;
             IPublishedContent ipRoot = umbHelper.TypedContentAtRoot().FirstOrDefault();
 
-            // Loop thru each id and build link list
-            foreach (IPublishedContent ipNode in ipRoot.Descendants().Where(x => x.GetPropertyValue<Boolean>(Common.NodeProperties.ShowInEyebrowNavigation) == true))
+            List<NavLink> lstNavLinks = null;
+            //// Loop thru each id and build link list
+            //foreach (IPublishedContent ipNode in ipRoot.Descendants().Where(x => x.GetPropertyValue<Boolean>(Common.NodeProperties.ShowInEyebrowNavigation) == true))
+            //{
+            //    //Create link
+            //    Link link = new Link();
+            //    link.Id = ipNode.Id;
+            //    link.Name = ipNode.Name;
+            //    link.Url = ipNode.UrlAbsolute();
+            //    lstLinks.Add(link);
+            //}
+
+            if (ipRoot.HasValue("minorNavLinks"))
             {
-                //Create link
-                Link link = new Link();
-                link.Id = ipNode.Id;
-                link.Name = ipNode.Name;
-                link.Url = ipNode.UrlAbsolute();
-                lstLinks.Add(link);
+                //Extract address
+                lstNavLinks = JsonConvert.DeserializeObject<List<NavLink>>(ipRoot.GetPropertyValue<string>("minorNavLinks"));
+
+                //if (lstNavLinks.Count > 0)
+                //{
+                //    //Build address
+                //    StringBuilder strAddress = new StringBuilder();
+                //    foreach (var record in lstAddressRecord)
+                //    {
+                //        strAddress.Append(record.address + "<br />");
+                //        strAddress.Append(record.city + ", ");
+                //        strAddress.Append(record.state + " ");
+                //        strAddress.Append(record.postal);
+                //        break;
+                //    }
+
+                //    //< div class="cell small-24 large-12">
+                //    //    <div class="grid-x grid-padding-x">
+                //    //        <div class="cell shrink">
+                //    //            <h4>Address</h4>
+                //    //        </div>
+                //    //        <div class="cell auto content">
+                //    //            <h4>@Html.Raw(strAddress.ToString())</h4>
+                //    //        </div>
+                //    //    </div>
+                //    //</div>
+                //}
             }
 
-            //=========================================================================================
-            //// Instantiate search provider and criteria
-            ////BaseSearchProvider searchProvider = ExamineManager.Instance.SearchProviderCollection[Common.SearchProviders.NavigationSearcher];
-            //BaseSearchProvider searchProvider = ExamineManager.Instance.DefaultSearchProvider;
-            //Examine.SearchCriteria.ISearchCriteria searchCriteria = searchProvider.CreateSearchCriteria();
 
-            //// Obtain all marked items sorted by name
-            //var query = searchCriteria.Field(Common.NodeProperties.ShowInEyebrowNavigation, System.Convert.ToInt32(true).ToString()).And().OrderBy(Common.NodeProperties.NodeName);
-            //query.And().Field("isPublished", "true");
-            //var searchResults = searchProvider.Search(query.Compile());
+            return lstNavLinks;
 
-            //// Loop thru each id and build links
-            //foreach (Examine.SearchResult result in searchResults)
-            //{
-            //    //Instantiate variables
-            //    IPublishedContent ipNode = umbHelper.TypedContent(result.Id);
-
-            //    // Add to list only if the node's level does not exceed the max level and is part of the main site.
-            //    if (ipNode.AncestorOrSelf(1).Id == rootHomeNodeId)
-            //    {
-            //        //Create link
-            //        Link link = new Link();
-            //        link.Id = ipNode.Id;
-            //        link.Name = ipNode.Name;
-            //        link.Url = ipNode.UrlAbsolute();
-            //        lstLinks.Add(link);
-            //    }
-            //}
-            //=========================================================================================
-
-            return lstLinks;
+            //return lstLinks;
         }
         public static List<NAHUvision.Models.SocialLink> ObtainSocialLinks()
         {

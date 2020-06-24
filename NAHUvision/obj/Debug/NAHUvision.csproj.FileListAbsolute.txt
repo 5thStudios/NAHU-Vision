@@ -196,3 +196,12 @@ D:\websites\NAHU-HUPAC-EF-org\NAHUvision\obj\Debug\NAHUvision.csproj.CopyComplet
 D:\websites\NAHU-HUPAC-EF-org\NAHUvision\obj\Debug\NAHUvision.dll
 D:\websites\NAHU-HUPAC-EF-org\NAHUvision\obj\Debug\NAHUvision.pdb
 D:\websites\NAHU-HUPAC-EF-org\NAHUvision\obj\Debug\NAHUvision.csprojAssemblyReference.cache
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\bin\Debug\NAHUvision.dll.config
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\bin\Debug\NAHUvision.dll
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\bin\Debug\NAHUvision.pdb
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\bin\Debug\MySql.Data.dll
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.csprojAssemblyReference.cache
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.csproj.CoreCompileInputs.cache
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.csproj.CopyComplete
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.dll
+D:\websites\Staging-NAHU-HUPAC-EF-org\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.pdb

@@ -283,6 +283,7 @@
     <Compile Include="Models\ImisMember.cs" />
     <Compile Include="Models\FullLoginResponse.cs" />
     <Compile Include="Models\CookieStructure.cs" />
+    <Compile Include="Models\NavLink.cs" />
     <Compile Include="Models\SocialLink.cs" />
     <Compile Include="Models\VideoLink.cs" />
     <Compile Include="Models\Video.cs" />

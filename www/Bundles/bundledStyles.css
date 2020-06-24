@@ -10511,7 +10511,7 @@ a.button .arrow-right, span.button a .arrow-right {font-size: small;float: right
 .NavigationMinor {background-color:#f4f4f4;}
 .NavigationMinor a {margin: 0 0;}
 .NavigationMinor a > div {display:inline-block; margin: 16px 24px;}
-.NavigationMinor a, .NavigationMinor div {font-family: 'tofino', sans-serif; font-size:11px; font-weight:400; color:#8590a1;}
+.NavigationMinor a, .NavigationMinor div {font-family: 'tofino', sans-serif; font-size:11px; font-weight:700; color:#8590a1;}
 .NavigationMinor a:hover div { text-decoration: underline; }
 .NavigationMinor a > div {text-transform:uppercase;}
 .NavigationMinor .searchPnl {border-left:1px solid #8590a1;padding: 6px 0;}
