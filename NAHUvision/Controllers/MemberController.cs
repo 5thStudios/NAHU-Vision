@@ -110,7 +110,6 @@ namespace NAHUvision.Controller
             IMember _member = memberService.CreateMember(imisUser.WebLogin.Trim(), imisUser.EmailAddress.Trim().ToLower(), imisUser.FullName.Trim(), "Member");
 
             //Set member values
-            memberService.SavePassword(_member, "NAHUvision2020");
             _member.IsApproved = true;
             _member.SetValue(Common.NodeProperties.Email, imisUser.EmailAddress.Trim().ToLower());
             _member.SetValue(Common.NodeProperties.FirstName, imisUser.FirstName.Trim().ToFirstUpper());
@@ -122,6 +121,8 @@ namespace NAHUvision.Controller
 
             //Update member
             memberService.Save(_member);
+
+            memberService.SavePassword(_member, "NAHUvision2020");
 
             //Return newly created member
             return _member;
@@ -137,7 +138,7 @@ namespace NAHUvision.Controller
             if (!string.IsNullOrWhiteSpace(imisUser.WorkPhone)) _member.SetValue(Common.NodeProperties.PhoneNumber, imisUser.WorkPhone.Trim());
             if (!string.IsNullOrWhiteSpace(imisUser.Chapter)) _member.SetValue(Common.NodeProperties.Chapter, imisUser.Chapter.Trim().ToLower());
             if (!string.IsNullOrWhiteSpace(imisUser.FullName)) _member.Name = imisUser.FullName;
-            
+
             // Save data to member.
             memberService.Save(_member);
         }
@@ -227,28 +228,32 @@ namespace NAHUvision.Controller
             List<int> lstVideoIDs = new List<int>();
 
             //Add member to list if the member has completed videos
-            if (!string.IsNullOrWhiteSpace(member.GetValue<string>(Common.NodeProperties.CompletedVideos)))
+            if (member.HasProperty(Common.NodeProperties.CompletedVideos))
             {
-                //Instantiate variables
-                UmbracoHelper umbHelper = new UmbracoHelper(UmbracoContext.Current);
-                List<string> lstCompletedVideos;
-                string allCompletedVideos;
-
-                //Obtain all existing videos within member
-                allCompletedVideos = member.GetValue<string>(Common.NodeProperties.CompletedVideos);
-                lstCompletedVideos = allCompletedVideos.Split(',').ToList<string>();
-
-                //Loop though each completed video in list
-                foreach (string guid in lstCompletedVideos)
+                if (!string.IsNullOrWhiteSpace(member.GetValue<string>(Common.NodeProperties.CompletedVideos)))
                 {
-                    IPublishedContent ipVideo = umbHelper.TypedContent(guid);
-                    //VideoLink videoLink = new VideoLink();
-                    //videoLink.Link = "/umbraco#/content/content/edit/" + ipVideo.Id;
-                    //videoLink.Title = ipVideo.GetPropertyValue<string>(Common.NodeProperties.Title);
-                    //lstVideoLinks.Add(videoLink);
-                    lstVideoIDs.Add(ipVideo.Id);
+                    //Instantiate variables
+                    UmbracoHelper umbHelper = new UmbracoHelper(UmbracoContext.Current);
+                    List<string> lstCompletedVideos;
+                    string allCompletedVideos;
+
+                    //Obtain all existing videos within member
+                    allCompletedVideos = member.GetValue<string>(Common.NodeProperties.CompletedVideos);
+                    lstCompletedVideos = allCompletedVideos.Split(',').ToList<string>();
+
+                    //Loop though each completed video in list
+                    foreach (string guid in lstCompletedVideos)
+                    {
+                        IPublishedContent ipVideo = umbHelper.TypedContent(guid);
+                        //VideoLink videoLink = new VideoLink();
+                        //videoLink.Link = "/umbraco#/content/content/edit/" + ipVideo.Id;
+                        //videoLink.Title = ipVideo.GetPropertyValue<string>(Common.NodeProperties.Title);
+                        //lstVideoLinks.Add(videoLink);
+                        lstVideoIDs.Add(ipVideo.Id);
+                    }
                 }
             }
+
 
             //Return member.
             return lstVideoIDs;
