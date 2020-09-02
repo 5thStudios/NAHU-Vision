@@ -198,8 +198,7 @@ namespace NAHUvision.Controller
                 Common.SaveErrorMessage(ex, sb, typeof(VideoController));
             }
 
-
-            return PartialView("~/Views/Partials/Video/VideoList.cshtml", LstVideos);
+            return PartialView("~/Views/Partials/Video/VideoList.cshtml", LstVideos.OrderByDescending(x => x.DatePublished).ToList());
         }
         #endregion
 

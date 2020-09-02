@@ -250,48 +250,19 @@ namespace NAHUvision.Controller
             //int rootHomeNodeId = umbHelper.TypedContentAtRoot().FirstOrDefault().Id;
             IPublishedContent ipRoot = umbHelper.TypedContentAtRoot().FirstOrDefault();
 
-            List<NavLink> lstNavLinks = null;
-            //// Loop thru each id and build link list
-            //foreach (IPublishedContent ipNode in ipRoot.Descendants().Where(x => x.GetPropertyValue<Boolean>(Common.NodeProperties.ShowInEyebrowNavigation) == true))
+            List<NavLink> lstNavLinks = new List<NavLink>();
+
+            //if (ipRoot.HasValue("minorNavLinks"))
             //{
-            //    //Create link
-            //    Link link = new Link();
-            //    link.Id = ipNode.Id;
-            //    link.Name = ipNode.Name;
-            //    link.Url = ipNode.UrlAbsolute();
-            //    lstLinks.Add(link);
+            //    //Extract address
+            //    lstNavLinks = JsonConvert.DeserializeObject<List<NavLink>>(ipRoot.GetPropertyValue<string>("minorNavLinks"));
             //}
 
-            if (ipRoot.HasValue("minorNavLinks"))
-            {
-                //Extract address
-                lstNavLinks = JsonConvert.DeserializeObject<List<NavLink>>(ipRoot.GetPropertyValue<string>("minorNavLinks"));
-
-                //if (lstNavLinks.Count > 0)
-                //{
-                //    //Build address
-                //    StringBuilder strAddress = new StringBuilder();
-                //    foreach (var record in lstAddressRecord)
-                //    {
-                //        strAddress.Append(record.address + "<br />");
-                //        strAddress.Append(record.city + ", ");
-                //        strAddress.Append(record.state + " ");
-                //        strAddress.Append(record.postal);
-                //        break;
-                //    }
-
-                //    //< div class="cell small-24 large-12">
-                //    //    <div class="grid-x grid-padding-x">
-                //    //        <div class="cell shrink">
-                //    //            <h4>Address</h4>
-                //    //        </div>
-                //    //        <div class="cell auto content">
-                //    //            <h4>@Html.Raw(strAddress.ToString())</h4>
-                //    //        </div>
-                //    //    </div>
-                //    //</div>
-                //}
-            }
+            //Add only link to home site.
+            NavLink homeLink = new NavLink();
+            homeLink.Title = "NAHU.org";
+            homeLink.Url = "https://nahu.org/";
+            lstNavLinks.Add(homeLink);
 
 
             return lstNavLinks;

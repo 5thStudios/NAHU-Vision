@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>MediaCleaner.BusinessLogic.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>MediaCleaner.BusinessLogic.dll</orgName>
+    </file>
+    <file>
+      <guid>package.manifest</guid>
+      <orgPath>/App_Plugins/MediaCleaner</orgPath>
+      <orgName>package.manifest</orgName>
+    </file>
+    <file>
+      <guid>Logo.png</guid>
+      <orgPath>/App_Plugins/MediaCleaner/backoffice</orgPath>
+      <orgName>Logo.png</orgName>
+    </file>
+    <file>
+      <guid>MediaCleaner.controller.js</guid>
+      <orgPath>/App_Plugins/MediaCleaner/backoffice</orgPath>
+      <orgName>MediaCleaner.controller.js</orgName>
+    </file>
+    <file>
+      <guid>PoweredBy.png</guid>
+      <orgPath>/App_Plugins/MediaCleaner/backoffice</orgPath>
+      <orgName>PoweredBy.png</orgName>
+    </file>
+    <file>
+      <guid>MediaCleaner_96.html</guid>
+      <orgPath>/App_Plugins/MediaCleaner/backoffice</orgPath>
+      <orgName>MediaCleaner_96.html</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>MediaCleaner</name>
+      <version>0.97</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://www.nt2.it/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Michele Di Maria - NT2 - Nuove Tecnologie S.r.l.</name>
+      <website>http://www.nt2.it/</website>
+    </author>
+    <readme><![CDATA[MediaCleaner: an efficient way to keep your Media clean. 
+
+MediaCleaner analyzes the content of the Media folder and the content of the Media section of Umbraco, then extracts the files that are present in the media folder but not in the Umbraco Backoffice and the Media items without a valid file in the Media folder.
+
+Unlike other similar packages, it uses the Umbraco Business Objects, there are no direct queries to the database, which means lightweight execution and compatibility with all the database types supported by Umbraco (SQL Server and MySQL).
+
+Consider to make a backup before cleaning the files and folders. 
+
+ChangeLog for version 0.97
+* Solved a problem during the installation of the package;
+
+ChangeLog for version 0.96
+* Optimizations to perform a quicker scan;
+
+ChangeLog for version 0.95
+* Service release for version 0.94 that fails on websites with large content;
+
+ChangeLog for version 0.94
+* Now all the content (published or not) is parsed in order to filter the orphan files that may be present in the content as URL but without Media Item;
+* The folder created-packages is excluded from the processing;
+
+]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

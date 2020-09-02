@@ -1,0 +1,132 @@
+<form novalidate name="MediaCleaner" ng-controller="MediaCleaner.MediaCleanerController">
+    <h3>
+        <img src="/App_Plugins/MediaCleaner/backoffice/Logo.png" alt="Media Cleaner" />
+        MediaCleaner <small>Keep your media folder clean</small>
+        <button type="button" class="btn btn-warning btn-small pull-right bottom" style="margin-left:10px;" ng-disabled="DisabledRefresh" ng-click="RefreshAndDelete()">
+            <span class="umb-button__content">
+                <i class="icon-delete"></i>
+                <span>Scan &amp; fix</span>
+            </span>
+        </button>
+        <button type="button" class="btn btn-primary btn-small pull-right bottom" ng-disabled="DisabledRefresh" ng-click="Refresh()">
+            <span class="umb-button__content">
+                <i class="icon-search"></i>
+                <span>Scan</span>
+            </span>
+        </button>
+    </h3>
+    <umb-pane ng-show="ShowProgress" ng-hide="!ShowProgress">
+        <div class="row-fluid">
+            <div class="span12">
+                Processing {{progTotalContentItems|number}} content items, {{progProcessedMediaItems|number}} of {{progTotalMediaItems|number}} media items, please wait...
+                <div class="label label-default" ng-show="ShowComputing" ng-hide="!ShowComputing">Processing results</div>
+                <div class="label label-warning" ng-show="ShowDeleting" ng-hide="!ShowDeleting">Deletion in progress</div>
+            </div>
+        </div>
+    </umb-pane>
+    <umb-pane ng-show="ShowResults" ng-hide="!ShowResults">
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>General info <small>(summary of this Umbraco instance)</small></h4>
+                <ul>
+                    <li>
+                        Number of files: {{TotalFiles|number}},
+                        Size: {{TotalFileSize|number}} Kb
+                    </li>
+                    <li>
+                        Number of orphaned files: {{OrphanFileCount|number}},
+                        Size: {{OrphanFileSize|number}} Kb
+                    </li>
+                    <li>
+                        Number of content items: {{TotalContentItems|number}}
+                    </li>
+                    <li>
+                        Number of media items: {{TotalMediaItems|number}}
+                    </li>
+                    <li>
+                        Number of broken media items: {{BrokenMediaCount|number}}
+                    </li>
+                    <li>
+                        Number of folders: {{TotalFolders|number}}
+                    </li>
+                    <li>
+                        Number of empty folders: {{OrphanFolderCount|number}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>Orphaned files <small>(files saved in the Media folder not related to a Media Item)</small></h4>                
+                <table class="table table-striped">
+                    <tr>
+                        <th>File</th>
+                        <th>Size</th>
+                    </tr>
+                    <tr ng-repeat="x in FileList">
+                        <td><small>{{x.File}}</small></td>
+                        <td style="white-space: nowrap;">
+                            <p class="text-right">{{x.FileSize|number}} Kb</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>Empty folders <small>(folders with no content in the Media folder)</small></h4>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Folder path</th>
+                    </tr>
+                    <tr ng-repeat="x in EmptyFolders">
+                        <td>{{x}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <h4>Broken media items <small>(media items without a valid file in the Media folder)</small></h4>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Media ID</th>
+                        <th>Broken file</th>
+                    </tr>
+                    <tr ng-repeat="x in BrokenMedia">
+                        <td>{{x.MediaID}}</td>
+                        <td>{{x.File}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h4>Update stats <small>(info about the above elaboration)</small></h4>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="span3">
+                    <i class="icon sprTree icon-time"></i>
+                    Last data update:
+                </div>
+                <div class="span9">
+                    {{updateTime|date:'yyyy-MM-dd HH:mm:ss'}}
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <i class="icon sprTree icon-time"></i>
+                Elaboration time:
+            </div>
+            <div class="span9">
+                {{processTime|date: "HH:mm:ss"}}
+            </div>
+        </div>
+    </umb-pane>
+    <div class="row-fluid" style="margin-top:25px;">
+        <div class="span12 text-right">
+            <a href="http://www.nt2.it/" target="_blank" title="Powered by NT2 - Nuove Tecnologie">
+                <img src="/App_Plugins/MediaCleaner/backoffice/PoweredBy.png" alt="NT2 - Nuove Tecnologie" />
+            </a>
+        </div>
+    </div>
+</form>

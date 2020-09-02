@@ -31,7 +31,7 @@ Public Class SiteSearch : Implements IHttpHandler
 
             '
             If dataDictionary.ContainsKey("searchFor") Then
-                searchFor = dataDictionary.Item("searchFor")
+                searchFor = dataDictionary.Item("searchFor").ToLower()
             End If
 
             'Search for data in videos
@@ -123,39 +123,39 @@ Public Class SiteSearch : Implements IHttpHandler
 
                 'Search within the following fields if they exist
                 Dim match As Boolean = False
-                If thisNode.Name.Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.title).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.bl_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_title).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.sb_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.sb_title).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.qb_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_title).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.pageTitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.pageTitle).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.ctap_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_title).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Title1) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title1).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Title2) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title2).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Title3) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title3).Contains(searchFor) Then match = True
+                If thisNode.Name.ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.title).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.bl_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_title).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.sb_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.sb_title).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.qb_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_title).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.pageTitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.pageTitle).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.ctap_title) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_title).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Title1) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title1).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Title2) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title2).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Title3) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Title3).ToLower().Contains(searchFor) Then match = True
 
-                If thisNode.HasProperty(Common.nodeProperties.sb_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.sb_subtitle).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.bl_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_subtitle).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.subtitle).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.qb_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_subtitle).Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.sb_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.sb_subtitle).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.bl_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_subtitle).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.subtitle).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.qb_subtitle) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_subtitle).ToLower().Contains(searchFor) Then match = True
 
-                If thisNode.HasProperty(Common.nodeProperties.summary) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.summary).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.content).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.tb_content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.tb_content).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.bn_Content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bn_Content).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.ctap_content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_content).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.bodyText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bodyText).Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.summary) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.summary).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.content).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.tb_content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.tb_content).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.bn_Content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bn_Content).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.ctap_content) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_content).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.bodyText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bodyText).ToLower().Contains(searchFor) Then match = True
 
-                If thisNode.HasProperty(Common.nodeProperties.bl_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_callToActionText).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.callToActionText).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.ctap_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_callToActionText).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.qb_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_callToActionText).Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.bl_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.bl_callToActionText).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.callToActionText).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.ctap_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.ctap_callToActionText).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.qb_callToActionText) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.qb_callToActionText).ToLower().Contains(searchFor) Then match = True
 
-                If thisNode.HasProperty(Common.nodeProperties.description) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.description).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.shortDescription) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.shortDescription).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Description1) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description1).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Description2) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description2).Contains(searchFor) Then match = True
-                If thisNode.HasProperty(Common.nodeProperties.cp_Description3) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description3).Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.description) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.description).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.shortDescription) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.shortDescription).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Description1) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description1).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Description2) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description2).ToLower().Contains(searchFor) Then match = True
+                If thisNode.HasProperty(Common.nodeProperties.cp_Description3) AndAlso thisNode.GetPropertyValue(Of String)(Common.nodeProperties.cp_Description3).ToLower().Contains(searchFor) Then match = True
 
 
 
