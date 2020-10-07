@@ -51,8 +51,12 @@ namespace NAHUvision.Controller
                     LstSearchIDs = ObtainSearchResults(searchParam.Trim().ToLower(), ipModel);
                 }
 
+                //Recursively obtain all vidoes
+                List<IPublishedContent> lstIpVideos = new List<IPublishedContent>();
+                ObtainAllVideos(ref lstIpVideos, ipModel);
+
                 //Loop through all videos
-                foreach (IPublishedContent ipVideo in ipModel.Children.Where(x => x.DocumentTypeAlias == Common.DocType.Video).ToList())
+                foreach (IPublishedContent ipVideo in lstIpVideos)
                 {
                     //Instantiate variables
                     NAHUvision.Models.Video video = new NAHUvision.Models.Video();
@@ -215,6 +219,21 @@ namespace NAHUvision.Controller
 
 
         #region "Methods"
+        private void ObtainAllVideos(ref List<IPublishedContent> lstIpVideos, IPublishedContent ipParentFolder)
+        {
+            //Add all children & decendants to list.
+            foreach (IPublishedContent ipChild in ipParentFolder.Children)
+            {
+                if (ipChild.DocumentTypeAlias == Common.DocType.VideoFolder)
+                {
+                    ObtainAllVideos(ref lstIpVideos, ipChild);
+                }
+                else if (ipChild.DocumentTypeAlias == Common.DocType.Video)
+                {
+                    lstIpVideos.Add(ipChild);
+                }
+            }
+        }
         public static Models.Video ObtainVideoData(IPublishedContent ipModel, Boolean isLoggedIn, string loginResponse = "")
         {
             //Instantiate variables

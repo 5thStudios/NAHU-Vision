@@ -70,6 +70,7 @@ namespace NAHUvision.Models
             public const string HomeMicrosite = "homeMicrosite";
             public const string HomeVideo = "homeVideo";
             public const string Video = "video";
+            public const string VideoFolder = "videoFolder";
         }
         public struct DataType
         {

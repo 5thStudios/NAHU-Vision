@@ -247,19 +247,18 @@ namespace NAHUvision.Controller
             //Instantiate variables
             UmbracoHelper umbHelper = new UmbracoHelper(UmbracoContext.Current);
             List<NAHUvision.Models.Link> lstLinks = new List<Link>();
-            //int rootHomeNodeId = umbHelper.TypedContentAtRoot().FirstOrDefault().Id;
             IPublishedContent ipRoot = umbHelper.TypedContentAtRoot().FirstOrDefault();
+            List<NAHUvision.Models.NavLink> lstNavLinks = new List<NAHUvision.Models.NavLink>();
 
-            List<NavLink> lstNavLinks = new List<NavLink>();
-
-            //if (ipRoot.HasValue("minorNavLinks"))
-            //{
-            //    //Extract address
-            //    lstNavLinks = JsonConvert.DeserializeObject<List<NavLink>>(ipRoot.GetPropertyValue<string>("minorNavLinks"));
-            //}
+            if (ipRoot.HasValue("minorNavLinks"))
+            {
+                //Extract address
+                var jsonSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+                lstNavLinks = JsonConvert.DeserializeObject<List<NAHUvision.Models.NavLink>>(ipRoot.GetPropertyValue<string>("minorNavLinks"), jsonSettings);
+            }
 
             //Add only link to home site.
-            NavLink homeLink = new NavLink();
+            NAHUvision.Models.NavLink homeLink = new NAHUvision.Models.NavLink();
             homeLink.Title = "NAHU.org";
             homeLink.Url = "https://nahu.org/";
             lstNavLinks.Add(homeLink);

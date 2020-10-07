@@ -26,10 +26,10 @@
 <head>
     <!-- Meta tags -->
     @*@{
-            IPublishedContent ipCurrentPage = Umbraco.AssignedContentItem;
-            var meta = ipCurrentPage.GetPropertyValue<SEOChecker.MVC.MetaData>(Common.Miscellaneous.SeoChecker);
-        }
-        @meta.AllTags*@
+        IPublishedContent ipCurrentPage = Umbraco.AssignedContentItem;
+        var meta = ipCurrentPage.GetPropertyValue<SEOChecker.MVC.MetaData>(Common.Miscellaneous.SeoChecker);
+    }
+    @meta.AllTags*@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,12 +49,12 @@
     {
         <!-- Global site tag (gtag.js) - Google Analytics -->
         @*<script async src="@gtagUrl"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', '@cmSiteInfo.GoogleTrackingID');
-            </script>*@
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', '@cmSiteInfo.GoogleTrackingID');
+        </script>*@
     }
 
 
