@@ -101,6 +101,7 @@ namespace NAHUvision.Controller
                     if (ipVideo.HasValue(Common.NodeProperties.ComplianceCorner)) video.LstComplianceCorner = ipVideo.GetPropertyValue<string>(Common.NodeProperties.ComplianceCorner).Split(',').ToList();
                     if (ipVideo.HasValue(Common.NodeProperties.LeadershipTools)) video.LstLeadershipTools = ipVideo.GetPropertyValue<string>(Common.NodeProperties.LeadershipTools).Split(',').ToList();
                     if (ipVideo.HasValue(Common.NodeProperties.Membership)) video.LstMembership = ipVideo.GetPropertyValue<string>(Common.NodeProperties.Membership).Split(',').ToList();
+                    if (ipVideo.HasValue(Common.NodeProperties.NationalCommittees)) video.LstNationalCommittees = ipVideo.GetPropertyValue<string>(Common.NodeProperties.NationalCommittees).Split(',').ToList();
                     if (ipVideo.HasValue(Common.NodeProperties.ProfessionalDevelopment)) video.LstProfessionalDevelopment = ipVideo.GetPropertyValue<string>(Common.NodeProperties.ProfessionalDevelopment).Split(',').ToList();
                     if (ipVideo.HasValue(Common.NodeProperties.SocialMedia)) video.LstSocialMedia = ipVideo.GetPropertyValue<string>(Common.NodeProperties.SocialMedia).Split(',').ToList();
 
@@ -151,6 +152,16 @@ namespace NAHUvision.Controller
                         categoryLink.Name = category;
                         categoryLink.Abr = Regex.Replace(category.Replace(" ", ""), "[^a-zA-Z0-9]", "");
                         categoryLink.ParentName = Common.NodeProperties.Membership;
+                        categoryLink.Category = categoryLink.ParentName + "-" + categoryLink.Abr;
+                        video.LstCategoryLinks.Add(categoryLink);
+                        video.LstCategories.Add(categoryLink.Category);
+                    }
+                    foreach (string category in video.LstNationalCommittees)
+                    {
+                        Link categoryLink = new Link();
+                        categoryLink.Name = category;
+                        categoryLink.Abr = Regex.Replace(category.Replace(" ", ""), "[^a-zA-Z0-9]", "");
+                        categoryLink.ParentName = Common.NodeProperties.NationalCommittees;
                         categoryLink.Category = categoryLink.ParentName + "-" + categoryLink.Abr;
                         video.LstCategoryLinks.Add(categoryLink);
                         video.LstCategories.Add(categoryLink.Category);

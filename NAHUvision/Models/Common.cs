@@ -44,6 +44,7 @@ namespace NAHUvision.Models
             public const string LinkedInFollowUSURL = "linkedInFollowUSURL";
             public const string Membership = "membership";
             public const string MemberType = "memberType";
+            public const string NationalCommittees = "nationalCommittees";
             public const string NodeName = "nodeName";
             public const string PhoneNumber = "phoneNumber";
             public const string PrivateVideo = "privateVideo";
@@ -77,19 +78,14 @@ namespace NAHUvision.Models
             public const string ComplianceCorner = "Compliance Corner";
             public const string LeadershipTools = "Leadership Tools";
             public const string Membership = "Membership";
+            public const string NationalCommittees = "National Committees";
             public const string ProfessionalDevelopment = "Professional Development";
             public const string SocialMedia = "Social Media";
         }
         public struct Crop
         {
             public const string Square_500x500 = "Square_500x500";
-        }
-        //public struct SearchProviders
-        //{
-        //    //public const string NAHUvisionSearcher = "NAHUvisionSearcher";
-        //    public const string NavigationSearcher = "NavigationSearcher";
-        //    public const string ExternalSearcher = "ExternalSearcher";
-        //}
+        }     
         public struct Miscellaneous
         {
             public const string SearchResult = "search-result";

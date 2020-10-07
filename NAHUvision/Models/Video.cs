@@ -30,6 +30,7 @@ namespace NAHUvision.Models
         public List<string> LstLeadershipTools { get; set; }
         public List<string> LstMembership { get; set; }
         public List<string> LstProfessionalDevelopment { get; set; }
+        public List<string> LstNationalCommittees { get; set; }
         public List<string> LstSocialMedia { get; set; }
         public List<string> LstCategories { get; set; }
         public List<Link> LstCategoryLinks { get; set; }
@@ -43,6 +44,7 @@ namespace NAHUvision.Models
             LstComplianceCorner = new List<string>();
             LstLeadershipTools = new List<string>();
             LstMembership = new List<string>();
+            LstNationalCommittees = new List<string>();
             LstProfessionalDevelopment = new List<string>();
             LstSocialMedia = new List<string>();
             LstCategories = new List<string>();

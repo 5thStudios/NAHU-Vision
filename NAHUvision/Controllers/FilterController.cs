@@ -23,6 +23,8 @@ namespace NAHUvision.Controller
             LstFilters.Add(ObtainFilterCollection(Common.DataType.ComplianceCorner, Common.NodeProperties.ComplianceCorner));
             LstFilters.Add(ObtainFilterCollection(Common.DataType.LeadershipTools, Common.NodeProperties.LeadershipTools));
             LstFilters.Add(ObtainFilterCollection(Common.DataType.Membership, Common.NodeProperties.Membership));
+            LstFilters.Add(ObtainFilterCollection(Common.DataType.NationalCommittees, Common.NodeProperties.NationalCommittees));
+            LstFilters.Add(ObtainFilterCollection(Common.DataType.ProfessionalDevelopment, Common.NodeProperties.ProfessionalDevelopment));
             LstFilters.Add(ObtainFilterCollection(Common.DataType.SocialMedia, Common.NodeProperties.SocialMedia));
 
 
