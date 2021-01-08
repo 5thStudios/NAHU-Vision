@@ -214,3 +214,5 @@ D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.csproj.Cor
 D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.csproj.CopyComplete
 D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.dll
 D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\obj\Debug\NAHUvision.pdb
+D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\websites\Staging-Sites\NAHU-Vision\NAHUvision\bin\Debug\System.ValueTuple.dll

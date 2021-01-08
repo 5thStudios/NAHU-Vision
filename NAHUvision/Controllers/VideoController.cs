@@ -389,60 +389,12 @@ namespace NAHUvision.Controller
         }
         private List<int> ObtainSearchResults(string searchFor, IPublishedContent ipModel)
         {
-            //// Create new stopwatch.
-            //Stopwatch stopwatch = new Stopwatch();
-            //stopwatch.Start();
-
-            ////Instantiate variables
-            //List<int> LstSearchIDs = new List<int>();
-            //BaseSearchProvider mySearcher = ExamineManager.Instance.SearchProviderCollection[Common.SearchProviders.ExternalSearcher];
-            //ISearchCriteria criteria = mySearcher.CreateSearchCriteria(BooleanOperation.Or);
-
-            ////Setup up search fields by importance
-            //IBooleanOperation query = criteria.Field(Common.NodeProperties.NodeName, searchFor.MultipleCharacterWildcard());
-            //query.Or().Field(Common.NodeProperties.Title, searchFor.MultipleCharacterWildcard());
-            //query.Or().Field(Common.NodeProperties.Description, searchFor.MultipleCharacterWildcard());
-
-            ////Obtain result with query
-            //ISearchResults searchResults = mySearcher.Search(query.Compile());
-
-            ////Add IDs to list
-            //foreach (SearchResult sRecord in searchResults)
-            //{
-            //    LstSearchIDs.Add(sRecord.Id);
-            //}
-
-
-            ////Instantiate variables
-            //List<int> LstSearchIDs = new List<int>();
-            //BaseSearchProvider mySearcher = ExamineManager.Instance.DefaultSearchProvider;
-            //ISearchCriteria criteria = mySearcher.CreateSearchCriteria("content");
-
-            ////IBooleanOperation query = criteria.Field("nodeTypeAlias", "video");
-            //IBooleanOperation query = criteria.NodeTypeAlias("video");
-            ////query.And().Field("isPublished", "true");
-            //query.And().GroupedOr(new string[] {
-            //    Common.NodeProperties.NodeName,
-            //    Common.NodeProperties.Title,
-            //    Common.NodeProperties.Description },
-            //    searchFor.MultipleCharacterWildcard());
-
-            ////Obtain result with query
-            //ISearchResults searchResults = mySearcher.Search(query.Compile());
-
-            ////Add IDs to list
-            //foreach (SearchResult sRecord in searchResults)
-            //{
-            //    LstSearchIDs.Add(sRecord.Id);
-            //}
-
-
-            //=========================================================================================
-
+            
             //Instantiate variables
             List<int> LstSearchIDs = new List<int>();
 
-            foreach (IPublishedContent ipVideo in ipModel.Children.Where(
+            //Search all nodes (by doctype)
+            foreach (IPublishedContent ipVideo in ipModel.Descendants(Common.DocType.Video).OrderBy(f => f.Name).Where(
                 x => x.Name.ToLower().Contains(searchFor) ||
                 x.GetPropertyValue<string>(Common.NodeProperties.Title).ToLower().Contains(searchFor) ||
                 x.GetPropertyValue<string>(Common.NodeProperties.Description).ToLower().Contains(searchFor)
@@ -450,18 +402,6 @@ namespace NAHUvision.Controller
             {
                 LstSearchIDs.Add(ipVideo.Id);
             }
-
-            //=========================================================================================
-
-            //// Stop timing and record in log
-            //stopwatch.Stop();
-            //StringBuilder sb = new StringBuilder();
-            //sb.AppendLine("VideoController | ObtainSearchResults()");
-            //sb.AppendLine("Time Lapse for Examine NAHUvisionSearcher:");
-            //sb.AppendLine(stopwatch.Elapsed.ToString(@"m\:ss\.fff"));
-            //Exception ex = new Exception("Time Lapse for Examine NAHUvisionSearcher");
-            //Common.SaveErrorMessage(ex, sb, typeof(VideoController), true);
-
 
 
             return LstSearchIDs;
